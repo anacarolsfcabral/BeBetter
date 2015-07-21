@@ -15,8 +15,14 @@
 		F01AA2361B5E869A002C2EF6 /* BeBetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2351B5E869A002C2EF6 /* BeBetterTests.swift */; };
 		F01AA2441B5E8946002C2EF6 /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2421B5E8946002C2EF6 /* PerformanceViewController.swift */; };
 		F01AA2451B5E8946002C2EF6 /* PerformanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */; };
-		F01AA24A1B5E89E6002C2EF6 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2481B5E89E6002C2EF6 /* CategoryViewController.swift */; };
-		F01AA24B1B5E89E6002C2EF6 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2491B5E89E6002C2EF6 /* CategoryView.xib */; };
+		F01AA24E1B5E907A002C2EF6 /* RegisterCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA24C1B5E907A002C2EF6 /* RegisterCategoryViewController.swift */; };
+		F01AA24F1B5E907A002C2EF6 /* RegisterCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA24D1B5E907A002C2EF6 /* RegisterCategoryView.xib */; };
+		F01AA2521B5E9359002C2EF6 /* RegisterActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2501B5E9359002C2EF6 /* RegisterActivityViewController.swift */; };
+		F01AA2531B5E9359002C2EF6 /* RegisterActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2511B5E9359002C2EF6 /* RegisterActivityView.xib */; };
+		F01AA2561B5E9485002C2EF6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */; };
+		F01AA2571B5E9485002C2EF6 /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2551B5E9485002C2EF6 /* ActivityView.xib */; };
+		F01AA25A1B5E9542002C2EF6 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2581B5E9542002C2EF6 /* CategoryCollectionViewController.swift */; };
+		F01AA25B1B5E9542002C2EF6 /* CategoryCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2591B5E9542002C2EF6 /* CategoryCollectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +48,14 @@
 		F01AA2351B5E869A002C2EF6 /* BeBetterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBetterTests.swift; sourceTree = "<group>"; };
 		F01AA2421B5E8946002C2EF6 /* PerformanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
 		F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceView.xib; sourceTree = "<group>"; };
-		F01AA2481B5E89E6002C2EF6 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		F01AA2491B5E89E6002C2EF6 /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
+		F01AA24C1B5E907A002C2EF6 /* RegisterCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCategoryViewController.swift; sourceTree = "<group>"; };
+		F01AA24D1B5E907A002C2EF6 /* RegisterCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterCategoryView.xib; sourceTree = "<group>"; };
+		F01AA2501B5E9359002C2EF6 /* RegisterActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterActivityViewController.swift; sourceTree = "<group>"; };
+		F01AA2511B5E9359002C2EF6 /* RegisterActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterActivityView.xib; sourceTree = "<group>"; };
+		F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		F01AA2551B5E9485002C2EF6 /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
+		F01AA2581B5E9542002C2EF6 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
+		F01AA2591B5E9542002C2EF6 /* CategoryCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +138,11 @@
 		F01AA23F1B5E87D9002C2EF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F01AA2591B5E9542002C2EF6 /* CategoryCollectionView.xib */,
+				F01AA24D1B5E907A002C2EF6 /* RegisterCategoryView.xib */,
 				F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */,
-				F01AA2491B5E89E6002C2EF6 /* CategoryView.xib */,
+				F01AA2551B5E9485002C2EF6 /* ActivityView.xib */,
+				F01AA2511B5E9359002C2EF6 /* RegisterActivityView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -135,8 +150,11 @@
 		F01AA2401B5E87E8002C2EF6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F01AA2581B5E9542002C2EF6 /* CategoryCollectionViewController.swift */,
+				F01AA24C1B5E907A002C2EF6 /* RegisterCategoryViewController.swift */,
 				F01AA2421B5E8946002C2EF6 /* PerformanceViewController.swift */,
-				F01AA2481B5E89E6002C2EF6 /* CategoryViewController.swift */,
+				F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */,
+				F01AA2501B5E9359002C2EF6 /* RegisterActivityViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -228,11 +246,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01AA2531B5E9359002C2EF6 /* RegisterActivityView.xib in Resources */,
 				F01AA2251B5E869A002C2EF6 /* Main.storyboard in Resources */,
 				F01AA22A1B5E869A002C2EF6 /* LaunchScreen.xib in Resources */,
 				F01AA2271B5E869A002C2EF6 /* Images.xcassets in Resources */,
-				F01AA24B1B5E89E6002C2EF6 /* CategoryView.xib in Resources */,
+				F01AA24F1B5E907A002C2EF6 /* RegisterCategoryView.xib in Resources */,
 				F01AA2451B5E8946002C2EF6 /* PerformanceView.xib in Resources */,
+				F01AA25B1B5E9542002C2EF6 /* CategoryCollectionView.xib in Resources */,
+				F01AA2571B5E9485002C2EF6 /* ActivityView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,10 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F01AA24A1B5E89E6002C2EF6 /* CategoryViewController.swift in Sources */,
 				F01AA2221B5E869A002C2EF6 /* ViewController.swift in Sources */,
+				F01AA2521B5E9359002C2EF6 /* RegisterActivityViewController.swift in Sources */,
+				F01AA24E1B5E907A002C2EF6 /* RegisterCategoryViewController.swift in Sources */,
+				F01AA2561B5E9485002C2EF6 /* ActivityViewController.swift in Sources */,
 				F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */,
 				F01AA2441B5E8946002C2EF6 /* PerformanceViewController.swift in Sources */,
+				F01AA25A1B5E9542002C2EF6 /* CategoryCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +473,7 @@
 				F01AA23B1B5E869A002C2EF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F01AA23C1B5E869A002C2EF6 /* Build configuration list for PBXNativeTarget "BeBetterTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +482,7 @@
 				F01AA23E1B5E869A002C2EF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

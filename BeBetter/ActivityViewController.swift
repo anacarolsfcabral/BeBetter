@@ -1,5 +1,5 @@
 //
-//  CategoryViewController.swift
+//  ActivityViewController.swift
 //  BeBetter
 //
 //  Created by Ana Carolina Cabral on 21/07/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class ActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
