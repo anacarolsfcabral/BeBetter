@@ -7,3 +7,46 @@
 //
 
 import Foundation
+
+
+private let _DAO = DAO()
+
+class DAO {
+
+    class var sharedInstance: DAO{
+        
+        return _DAO
+    }
+    
+    func getAcitivitiesForCategory(Category) -> [Activity]{
+    
+        var activities = [Activity]()
+        return activities
+    }
+    
+    func saveActivity(activity: Activity) -> Bool{
+    
+        return false
+    }
+    
+    func deleteActivity(activity: Activity) -> Bool{
+     
+        return true
+    }
+    
+    func editAcitivity(activity: Activity) -> Bool {
+        
+        return false
+    }
+    
+    func increaseAmountForDay() -> Bool {
+    
+        return true
+    }
+
+    func increaseWeekAmount() -> Bool {
+    
+        return false
+    }
+
+}
