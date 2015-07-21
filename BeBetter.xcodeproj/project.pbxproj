@@ -26,6 +26,10 @@
 		F01AA25D1B5EB729002C2EF6 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA25C1B5EB729002C2EF6 /* DAO.swift */; };
 		F01AA25F1B5EB74E002C2EF6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA25E1B5EB74E002C2EF6 /* Activity.swift */; };
 		F01AA2611B5EB763002C2EF6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2601B5EB763002C2EF6 /* Category.swift */; };
+		F01AA2641B5EC3CA002C2EF6 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2621B5EC3CA002C2EF6 /* CategoryViewController.swift */; };
+		F01AA2651B5EC3CA002C2EF6 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */; };
+		F01AA26A1B5ECB6E002C2EF6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2681B5ECB6E002C2EF6 /* CategoryCell.swift */; };
+		F01AA26B1B5ECB6E002C2EF6 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		F01AA25C1B5EB729002C2EF6 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		F01AA25E1B5EB74E002C2EF6 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F01AA2601B5EB763002C2EF6 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F01AA2621B5EC3CA002C2EF6 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
+		F01AA2681B5ECB6E002C2EF6 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,8 @@
 		F01AA23F1B5E87D9002C2EF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */,
+				F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */,
 				F01AA24D1B5E907A002C2EF6 /* RegisterCategoryView.xib */,
 				F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */,
 				F01AA2551B5E9485002C2EF6 /* ActivityView.xib */,
@@ -155,6 +165,8 @@
 		F01AA2401B5E87E8002C2EF6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F01AA2621B5EC3CA002C2EF6 /* CategoryViewController.swift */,
+				F01AA2681B5ECB6E002C2EF6 /* CategoryCell.swift */,
 				F01AA24C1B5E907A002C2EF6 /* RegisterCategoryViewController.swift */,
 				F01AA2421B5E8946002C2EF6 /* PerformanceViewController.swift */,
 				F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */,
@@ -255,12 +267,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01AA2651B5EC3CA002C2EF6 /* CategoryView.xib in Resources */,
 				F01AA2531B5E9359002C2EF6 /* RegisterActivityView.xib in Resources */,
 				F01AA2251B5E869A002C2EF6 /* Main.storyboard in Resources */,
 				F01AA22A1B5E869A002C2EF6 /* LaunchScreen.xib in Resources */,
 				F01AA2271B5E869A002C2EF6 /* Images.xcassets in Resources */,
 				F01AA24F1B5E907A002C2EF6 /* RegisterCategoryView.xib in Resources */,
 				F01AA2451B5E8946002C2EF6 /* PerformanceView.xib in Resources */,
+				F01AA26B1B5ECB6E002C2EF6 /* CategoryCell.xib in Resources */,
 				F01AA2571B5E9485002C2EF6 /* ActivityView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,10 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01AA26A1B5ECB6E002C2EF6 /* CategoryCell.swift in Sources */,
 				F01AA25D1B5EB729002C2EF6 /* DAO.swift in Sources */,
 				F01AA2611B5EB763002C2EF6 /* Category.swift in Sources */,
 				F01AA2221B5E869A002C2EF6 /* ViewController.swift in Sources */,
 				F01AA2521B5E9359002C2EF6 /* RegisterActivityViewController.swift in Sources */,
+				F01AA2641B5EC3CA002C2EF6 /* CategoryViewController.swift in Sources */,
 				F01AA24E1B5E907A002C2EF6 /* RegisterCategoryViewController.swift in Sources */,
 				F01AA2561B5E9485002C2EF6 /* ActivityViewController.swift in Sources */,
 				BE7868F01B5EBB050097E1DE /* FrequencyActivity.swift in Sources */,

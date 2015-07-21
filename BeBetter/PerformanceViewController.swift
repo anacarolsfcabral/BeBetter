@@ -8,10 +8,37 @@
 
 import UIKit
 
-class PerformanceViewController: UIViewController {
+class PerformanceViewController: UIViewController
+{
 
+    
+    var semanas: Int
+    
+    var bolinhas: Int
+    
+    init(semanas: Int, bolinhas: Int)
+    {
+        
+        self.semanas = semanas
+        self.bolinhas = bolinhas
+        
+        super.init(nibName: "", bundle: nil)
+
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //aqui verifica quantas semanas o cara tem, sei la, nao sei direito
+        if(semanas == 1)
+        {
+            
+        }
 
         // Do any additional setup after loading the view.
     }

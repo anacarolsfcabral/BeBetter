@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController" customModule="BeBetter" customModuleProvider="target">
+            <connections>
+                <outlet property="categoryCollection" destination="wSk-7z-6Kk" id="aap-B2-4gr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wSk-7z-6Kk">
+                    <rect key="frame" x="30" y="30" width="540" height="540"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="18" minimumInteritemSpacing="100" id="xTv-4k-MYX">
+                        <size key="itemSize" width="200" height="150"/>
+                        <size key="headerReferenceSize" width="0.0" height="10"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wSk-7z-6Kk" secondAttribute="trailing" constant="30" id="7zB-qy-VqU"/>
+                <constraint firstItem="wSk-7z-6Kk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="hN3-eD-2OT"/>
+                <constraint firstItem="wSk-7z-6Kk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="oMi-9T-rWV"/>
+                <constraint firstAttribute="bottom" secondItem="wSk-7z-6Kk" secondAttribute="bottom" constant="30" id="ryh-53-9Ua"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
