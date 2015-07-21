@@ -18,9 +18,9 @@ class CategoryCell: UICollectionViewCell {
     }
     @IBAction func enterCategory(sender: UIButton) {
         
-        let n = PerformanceViewController(semanas: 20, bolinhas: 10)
-       // let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
-        self.controllerCollection.presentViewController(n, animated: true, completion: nil)
+//        let n = PerformanceViewController(semanas: 20, bolinhas: 10)
+        let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
+        self.controllerCollection.presentViewController(nextWindow, animated: true, completion: nil)
         
     }
 

@@ -19,8 +19,6 @@
 		F01AA2451B5E8946002C2EF6 /* PerformanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */; };
 		F01AA24E1B5E907A002C2EF6 /* RegisterCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA24C1B5E907A002C2EF6 /* RegisterCategoryViewController.swift */; };
 		F01AA24F1B5E907A002C2EF6 /* RegisterCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA24D1B5E907A002C2EF6 /* RegisterCategoryView.xib */; };
-		F01AA2521B5E9359002C2EF6 /* RegisterActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2501B5E9359002C2EF6 /* RegisterActivityViewController.swift */; };
-		F01AA2531B5E9359002C2EF6 /* RegisterActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2511B5E9359002C2EF6 /* RegisterActivityView.xib */; };
 		F01AA2561B5E9485002C2EF6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */; };
 		F01AA2571B5E9485002C2EF6 /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2551B5E9485002C2EF6 /* ActivityView.xib */; };
 		F01AA25D1B5EB729002C2EF6 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA25C1B5EB729002C2EF6 /* DAO.swift */; };
@@ -30,6 +28,8 @@
 		F01AA2651B5EC3CA002C2EF6 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */; };
 		F01AA26A1B5ECB6E002C2EF6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2681B5ECB6E002C2EF6 /* CategoryCell.swift */; };
 		F01AA26B1B5ECB6E002C2EF6 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */; };
+		F01AA26E1B5EF031002C2EF6 /* PerformanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */; };
+		F01AA26F1B5EF031002C2EF6 /* PerformanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,6 @@
 		F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceView.xib; sourceTree = "<group>"; };
 		F01AA24C1B5E907A002C2EF6 /* RegisterCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCategoryViewController.swift; sourceTree = "<group>"; };
 		F01AA24D1B5E907A002C2EF6 /* RegisterCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterCategoryView.xib; sourceTree = "<group>"; };
-		F01AA2501B5E9359002C2EF6 /* RegisterActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterActivityViewController.swift; sourceTree = "<group>"; };
-		F01AA2511B5E9359002C2EF6 /* RegisterActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterActivityView.xib; sourceTree = "<group>"; };
 		F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		F01AA2551B5E9485002C2EF6 /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
 		F01AA25C1B5EB729002C2EF6 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
@@ -70,6 +68,8 @@
 		F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
 		F01AA2681B5ECB6E002C2EF6 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceCell.swift; sourceTree = "<group>"; };
+		F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +156,8 @@
 				F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */,
 				F01AA24D1B5E907A002C2EF6 /* RegisterCategoryView.xib */,
 				F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */,
+				F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */,
 				F01AA2551B5E9485002C2EF6 /* ActivityView.xib */,
-				F01AA2511B5E9359002C2EF6 /* RegisterActivityView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -169,8 +169,8 @@
 				F01AA2681B5ECB6E002C2EF6 /* CategoryCell.swift */,
 				F01AA24C1B5E907A002C2EF6 /* RegisterCategoryViewController.swift */,
 				F01AA2421B5E8946002C2EF6 /* PerformanceViewController.swift */,
+				F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */,
 				F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */,
-				F01AA2501B5E9359002C2EF6 /* RegisterActivityViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F01AA2651B5EC3CA002C2EF6 /* CategoryView.xib in Resources */,
-				F01AA2531B5E9359002C2EF6 /* RegisterActivityView.xib in Resources */,
+				F01AA26F1B5EF031002C2EF6 /* PerformanceCell.xib in Resources */,
 				F01AA2251B5E869A002C2EF6 /* Main.storyboard in Resources */,
 				F01AA22A1B5E869A002C2EF6 /* LaunchScreen.xib in Resources */,
 				F01AA2271B5E869A002C2EF6 /* Images.xcassets in Resources */,
@@ -297,7 +297,7 @@
 				F01AA25D1B5EB729002C2EF6 /* DAO.swift in Sources */,
 				F01AA2611B5EB763002C2EF6 /* Category.swift in Sources */,
 				F01AA2221B5E869A002C2EF6 /* ViewController.swift in Sources */,
-				F01AA2521B5E9359002C2EF6 /* RegisterActivityViewController.swift in Sources */,
+				F01AA26E1B5EF031002C2EF6 /* PerformanceCell.swift in Sources */,
 				F01AA2641B5EC3CA002C2EF6 /* CategoryViewController.swift in Sources */,
 				F01AA24E1B5E907A002C2EF6 /* RegisterCategoryViewController.swift in Sources */,
 				F01AA2561B5E9485002C2EF6 /* ActivityViewController.swift in Sources */,
