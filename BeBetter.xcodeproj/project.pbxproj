@@ -23,6 +23,9 @@
 		F01AA2571B5E9485002C2EF6 /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2551B5E9485002C2EF6 /* ActivityView.xib */; };
 		F01AA25A1B5E9542002C2EF6 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2581B5E9542002C2EF6 /* CategoryCollectionViewController.swift */; };
 		F01AA25B1B5E9542002C2EF6 /* CategoryCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2591B5E9542002C2EF6 /* CategoryCollectionView.xib */; };
+		F01AA25D1B5EB729002C2EF6 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA25C1B5EB729002C2EF6 /* DAO.swift */; };
+		F01AA25F1B5EB74E002C2EF6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA25E1B5EB74E002C2EF6 /* Activity.swift */; };
+		F01AA2611B5EB763002C2EF6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2601B5EB763002C2EF6 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		F01AA2551B5E9485002C2EF6 /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
 		F01AA2581B5E9542002C2EF6 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		F01AA2591B5E9542002C2EF6 /* CategoryCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionView.xib; sourceTree = "<group>"; };
+		F01AA25C1B5EB729002C2EF6 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		F01AA25E1B5EB74E002C2EF6 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		F01AA2601B5EB763002C2EF6 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,9 @@
 		F01AA2411B5E87EE002C2EF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F01AA25C1B5EB729002C2EF6 /* DAO.swift */,
+				F01AA25E1B5EB74E002C2EF6 /* Activity.swift */,
+				F01AA2601B5EB763002C2EF6 /* Category.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -271,11 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01AA25D1B5EB729002C2EF6 /* DAO.swift in Sources */,
+				F01AA2611B5EB763002C2EF6 /* Category.swift in Sources */,
 				F01AA2221B5E869A002C2EF6 /* ViewController.swift in Sources */,
 				F01AA2521B5E9359002C2EF6 /* RegisterActivityViewController.swift in Sources */,
 				F01AA24E1B5E907A002C2EF6 /* RegisterCategoryViewController.swift in Sources */,
 				F01AA2561B5E9485002C2EF6 /* ActivityViewController.swift in Sources */,
 				F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */,
+				F01AA25F1B5EB74E002C2EF6 /* Activity.swift in Sources */,
 				F01AA2441B5E8946002C2EF6 /* PerformanceViewController.swift in Sources */,
 				F01AA25A1B5E9542002C2EF6 /* CategoryCollectionViewController.swift in Sources */,
 			);
