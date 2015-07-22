@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BE7868F01B5EBB050097E1DE /* FrequencyActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7868EF1B5EBB050097E1DE /* FrequencyActivity.swift */; };
 		BE7868F21B5EBB150097E1DE /* PerformanceForWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7868F11B5EBB150097E1DE /* PerformanceForWeek.swift */; };
+		BE7C554D1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */; };
+		BE7C554E1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */; };
 		F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA21F1B5E869A002C2EF6 /* AppDelegate.swift */; };
 		F01AA2221B5E869A002C2EF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2211B5E869A002C2EF6 /* ViewController.swift */; };
 		F01AA2251B5E869A002C2EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2231B5E869A002C2EF6 /* Main.storyboard */; };
@@ -17,8 +19,8 @@
 		F01AA2361B5E869A002C2EF6 /* BeBetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2351B5E869A002C2EF6 /* BeBetterTests.swift */; };
 		F01AA2441B5E8946002C2EF6 /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2421B5E8946002C2EF6 /* PerformanceViewController.swift */; };
 		F01AA2451B5E8946002C2EF6 /* PerformanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */; };
-		F01AA24E1B5E907A002C2EF6 /* RegisterCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA24C1B5E907A002C2EF6 /* RegisterCategoryViewController.swift */; };
-		F01AA24F1B5E907A002C2EF6 /* RegisterCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA24D1B5E907A002C2EF6 /* RegisterCategoryView.xib */; };
+		F01AA24E1B5E907A002C2EF6 /* RegisterVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA24C1B5E907A002C2EF6 /* RegisterVideoViewController.swift */; };
+		F01AA24F1B5E907A002C2EF6 /* RegisterVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA24D1B5E907A002C2EF6 /* RegisterVideoView.xib */; };
 		F01AA2561B5E9485002C2EF6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */; };
 		F01AA2571B5E9485002C2EF6 /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2551B5E9485002C2EF6 /* ActivityView.xib */; };
 		F01AA25D1B5EB729002C2EF6 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA25C1B5EB729002C2EF6 /* DAO.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		BE7868EF1B5EBB050097E1DE /* FrequencyActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyActivity.swift; sourceTree = "<group>"; };
 		BE7868F11B5EBB150097E1DE /* PerformanceForWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceForWeek.swift; sourceTree = "<group>"; };
+		BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceHeaderCell.swift; sourceTree = "<group>"; };
+		BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceHeaderCell.xib; sourceTree = "<group>"; };
 		F01AA21A1B5E869A002C2EF6 /* BeBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01AA21E1B5E869A002C2EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F01AA21F1B5E869A002C2EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,8 +61,8 @@
 		F01AA2351B5E869A002C2EF6 /* BeBetterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBetterTests.swift; sourceTree = "<group>"; };
 		F01AA2421B5E8946002C2EF6 /* PerformanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
 		F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceView.xib; sourceTree = "<group>"; };
-		F01AA24C1B5E907A002C2EF6 /* RegisterCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCategoryViewController.swift; sourceTree = "<group>"; };
-		F01AA24D1B5E907A002C2EF6 /* RegisterCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterCategoryView.xib; sourceTree = "<group>"; };
+		F01AA24C1B5E907A002C2EF6 /* RegisterVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVideoViewController.swift; sourceTree = "<group>"; };
+		F01AA24D1B5E907A002C2EF6 /* RegisterVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVideoView.xib; sourceTree = "<group>"; };
 		F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		F01AA2551B5E9485002C2EF6 /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
 		F01AA25C1B5EB729002C2EF6 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
@@ -154,9 +158,10 @@
 			children = (
 				F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */,
 				F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */,
-				F01AA24D1B5E907A002C2EF6 /* RegisterCategoryView.xib */,
 				F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */,
 				F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */,
+				BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */,
+				F01AA24D1B5E907A002C2EF6 /* RegisterVideoView.xib */,
 				F01AA2551B5E9485002C2EF6 /* ActivityView.xib */,
 			);
 			name = View;
@@ -167,9 +172,10 @@
 			children = (
 				F01AA2621B5EC3CA002C2EF6 /* CategoryViewController.swift */,
 				F01AA2681B5ECB6E002C2EF6 /* CategoryCell.swift */,
-				F01AA24C1B5E907A002C2EF6 /* RegisterCategoryViewController.swift */,
+				F01AA24C1B5E907A002C2EF6 /* RegisterVideoViewController.swift */,
 				F01AA2421B5E8946002C2EF6 /* PerformanceViewController.swift */,
 				F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */,
+				BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */,
 				F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */,
 			);
 			name = Controller;
@@ -268,11 +274,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F01AA2651B5EC3CA002C2EF6 /* CategoryView.xib in Resources */,
+				BE7C554E1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib in Resources */,
 				F01AA26F1B5EF031002C2EF6 /* PerformanceCell.xib in Resources */,
 				F01AA2251B5E869A002C2EF6 /* Main.storyboard in Resources */,
 				F01AA22A1B5E869A002C2EF6 /* LaunchScreen.xib in Resources */,
 				F01AA2271B5E869A002C2EF6 /* Images.xcassets in Resources */,
-				F01AA24F1B5E907A002C2EF6 /* RegisterCategoryView.xib in Resources */,
+				F01AA24F1B5E907A002C2EF6 /* RegisterVideoView.xib in Resources */,
 				F01AA2451B5E8946002C2EF6 /* PerformanceView.xib in Resources */,
 				F01AA26B1B5ECB6E002C2EF6 /* CategoryCell.xib in Resources */,
 				F01AA2571B5E9485002C2EF6 /* ActivityView.xib in Resources */,
@@ -296,10 +303,11 @@
 				F01AA26A1B5ECB6E002C2EF6 /* CategoryCell.swift in Sources */,
 				F01AA25D1B5EB729002C2EF6 /* DAO.swift in Sources */,
 				F01AA2611B5EB763002C2EF6 /* Category.swift in Sources */,
+				BE7C554D1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift in Sources */,
 				F01AA2221B5E869A002C2EF6 /* ViewController.swift in Sources */,
 				F01AA26E1B5EF031002C2EF6 /* PerformanceCell.swift in Sources */,
 				F01AA2641B5EC3CA002C2EF6 /* CategoryViewController.swift in Sources */,
-				F01AA24E1B5E907A002C2EF6 /* RegisterCategoryViewController.swift in Sources */,
+				F01AA24E1B5E907A002C2EF6 /* RegisterVideoViewController.swift in Sources */,
 				F01AA2561B5E9485002C2EF6 /* ActivityViewController.swift in Sources */,
 				BE7868F01B5EBB050097E1DE /* FrequencyActivity.swift in Sources */,
 				F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */,

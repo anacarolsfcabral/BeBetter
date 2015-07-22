@@ -8,10 +8,17 @@
 
 import UIKit
 
-class PerformanceViewController: UIViewController, UITableViewDelegate
+class PerformanceViewController: UIViewController, UITableViewDelegate , UITableViewDataSource
 {
     @IBOutlet weak var performanceTable: UITableView!
+    
+    var weeks = ["Semana 1", "Semana 2", "Semana 3", "Semana 4", "Semana 5"]
 
+    @IBAction func addExercise(sender: UIButton) {
+        
+        let nextWindow = RegisterVideoViewController(nibName:"RegisterVideoView", bundle: nil)
+        self.presentViewController(nextWindow, animated: true, completion: nil)
+    }
     
 //    var semanas: Int
 //    
@@ -42,7 +49,16 @@ class PerformanceViewController: UIViewController, UITableViewDelegate
 //        }
 
         performanceTable.delegate = self
-    }
+        performanceTable.dataSource = self
+        
+        
+        performanceTable.registerNib(UINib(nibName: "PerformanceCell", bundle: nil), forCellReuseIdentifier: "PerformanceCell")
+        
+        
+        performanceTable.registerNib(UINib(nibName: "PerformanceHeaderCell", bundle: nil), forCellReuseIdentifier: "PerformanceHeaderCell")
+        
+
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,11 +66,70 @@ class PerformanceViewController: UIViewController, UITableViewDelegate
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = performanceTable.dequeueReusableCellWithIdentifier("PerformanceCell", forIndexPath: indexPath) as! PerformanceCell
+        
+        //self.performanceTable.registerClass(PerformanceCell.self, forCellWithReuseIdentifier: "PerformanceCell")
+
+        
+        // 3
+        // Configure the cell...
+        switch (indexPath.section) {
+        case 0:
+            cell.backgroundColor=UIColor.whiteColor()
+        case 1:
+            cell.backgroundColor=UIColor.whiteColor()
+        case 2:
+            cell.backgroundColor=UIColor.whiteColor()
+            //return sectionHeaderView
+        case 3:
+            cell.backgroundColor=UIColor.whiteColor()
+        case 4:
+            cell.backgroundColor=UIColor.whiteColor()
+        default:
+            cell.backgroundColor=UIColor.whiteColor()
+        }
+        
+        return cell
+    }
+    
+    
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let  headerCell = performanceTable.dequeueReusableCellWithIdentifier("PerformanceHeaderCell") as! PerformanceHeaderCell
+        
+    
+        headerCell.weekLabel.text = weeks[section]
+        
+//        switch (section) {
+//        case 0:
+//            headerCell.backgroundColor = UIColor.redColor()
+//            //return sectionHeaderView
+//        case 1:
+//            headerCell.backgroundColor = UIColor.blackColor()
+//
+//            //return sectionHeaderView
+//        case 2:
+//            headerCell.backgroundColor = UIColor.blueColor()
+//            //return sectionHeaderView
+//        case 3:
+//            headerCell.backgroundColor = UIColor.blueColor()
+//        case 4:
+//            headerCell.backgroundColor = UIColor.blueColor()
+//        default:
+//            //headerCell.backgroundColor = UIColor.greenColor()
+//
+//        }
+        
+        return headerCell
     }
     
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PerformanceHeaderCell" id="KGk-i7-Jjw" customClass="PerformanceHeaderCell" customModule="BeBetter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDv-rL-JOn">
+                        <rect key="frame" x="8" y="14" width="100" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="hYB-2h-qTS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars_4" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-MI-lvI">
+                        <rect key="frame" x="138" y="11" width="251" height="30.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="ccw-MI-lvI" secondAttribute="centerY" id="5xp-1d-97o"/>
+                    <constraint firstItem="ccw-MI-lvI" firstAttribute="leading" secondItem="JDv-rL-JOn" secondAttribute="trailing" constant="30" id="QIA-fo-O9X"/>
+                    <constraint firstItem="JDv-rL-JOn" firstAttribute="centerY" secondItem="ccw-MI-lvI" secondAttribute="centerY" constant="-2" id="RXk-Vy-3ub"/>
+                    <constraint firstItem="ccw-MI-lvI" firstAttribute="leading" secondItem="JDv-rL-JOn" secondAttribute="trailing" id="UdG-tu-vNo"/>
+                    <constraint firstItem="ccw-MI-lvI" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-20" id="WtB-wE-2gs"/>
+                    <constraint firstItem="JDv-rL-JOn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="acH-Fd-gxG"/>
+                    <constraint firstAttribute="centerY" secondItem="JDv-rL-JOn" secondAttribute="centerY" constant="0.25" id="boW-eq-JzK"/>
+                    <constraint firstItem="ccw-MI-lvI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="eTS-ex-9Vl"/>
+                    <constraint firstAttribute="bottom" secondItem="ccw-MI-lvI" secondAttribute="bottom" constant="8" id="fU8-p9-XZQ"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="5xp-1d-97o"/>
+                        <exclude reference="UdG-tu-vNo"/>
+                        <exclude reference="WtB-wE-2gs"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.97254908084869385" green="0.92941182851791382" blue="0.90588241815567017" alpha="1" colorSpace="deviceRGB"/>
+            <connections>
+                <outlet property="starImage" destination="ccw-MI-lvI" id="fqS-ZP-lg3"/>
+                <outlet property="weekLabel" destination="JDv-rL-JOn" id="nDn-lc-vyh"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="stars_4" width="251" height="50"/>
+    </resources>
+</document>
