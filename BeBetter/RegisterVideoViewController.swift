@@ -46,6 +46,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     }
     
     @IBAction func cancelButton(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: {})
     }
     
     @IBAction func sabeButton(sender: UIButton) {
