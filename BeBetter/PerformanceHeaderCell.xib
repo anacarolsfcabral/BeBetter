@@ -23,7 +23,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars_4" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-MI-lvI">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stars_4" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-MI-lvI">
                         <rect key="frame" x="367" y="10" width="251" height="29.5"/>
                     </imageView>
                 </subviews>

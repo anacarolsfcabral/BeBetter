@@ -11,6 +11,7 @@
 		BE7868F21B5EBB150097E1DE /* PerformanceForWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7868F11B5EBB150097E1DE /* PerformanceForWeek.swift */; };
 		BE7C554D1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */; };
 		BE7C554E1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */; };
+		BE7C55541B616917005D23B0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C55531B616917005D23B0 /* Player.swift */; };
 		E1209AAD135591969D64A7D1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3129CF344C9C623455718DDE /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA21F1B5E869A002C2EF6 /* AppDelegate.swift */; };
 		F01AA2221B5E869A002C2EF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2211B5E869A002C2EF6 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		BE7868F11B5EBB150097E1DE /* PerformanceForWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceForWeek.swift; sourceTree = "<group>"; };
 		BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceHeaderCell.swift; sourceTree = "<group>"; };
 		BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceHeaderCell.xib; sourceTree = "<group>"; };
+		BE7C55531B616917005D23B0 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Pods/Player/Source/Player.swift; sourceTree = SOURCE_ROOT; };
 		E0732AF362222D149925E985 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F01AA21A1B5E869A002C2EF6 /* BeBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01AA21E1B5E869A002C2EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				F01AA2601B5EB763002C2EF6 /* Category.swift */,
 				BE7868EF1B5EBB050097E1DE /* FrequencyActivity.swift */,
 				BE7868F11B5EBB150097E1DE /* PerformanceForWeek.swift */,
+				BE7C55531B616917005D23B0 /* Player.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */,
 				BE7868F21B5EBB150097E1DE /* PerformanceForWeek.swift in Sources */,
 				F01AA25F1B5EB74E002C2EF6 /* Activity.swift in Sources */,
+				BE7C55541B616917005D23B0 /* Player.swift in Sources */,
 				F01AA2441B5E8946002C2EF6 /* PerformanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

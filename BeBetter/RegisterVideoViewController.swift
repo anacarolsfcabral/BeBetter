@@ -11,7 +11,7 @@ import MediaPlayer
 import MobileCoreServices
 import AVFoundation
 
-class RegisterVideoViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
+class RegisterVideoViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, PlayerDelegate {
 
     let captureSession = AVCaptureSession()
     var previewLayer : AVCaptureVideoPreviewLayer?
@@ -21,7 +21,11 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     var pathString : String!
     var tempImage: NSURL!
     
+    var player = Player()
+    
     var screenTap : UITapGestureRecognizer!
+    var videoLoop : UITapGestureRecognizer!
+    var videoIsPlaying : Bool = true
     
     @IBOutlet var videoPlayerView: UIView!
     @IBOutlet var nameExerciseTextField: UITextField!
@@ -108,6 +112,8 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
             dayStepper.wraps = true
             dayStepper.autorepeat = true
             dayStepper.maximumValue = 20
+            self.videoLoop = UITapGestureRecognizer(target: self, action: "playerLoopControl:")
+            self.videoPlayerView.addGestureRecognizer(videoLoop)
             
             
         }
@@ -143,7 +149,30 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         
         alreadyRecorded = true
         self.dismissViewControllerAnimated(true, completion: {})
+        player.delegate = self
+        player.view.frame = videoPlayerView.bounds
+        videoPlayerView.addSubview(player.view)
+        player.path = pathString
+        player.playFromBeginning()
+        player.fillMode = "AVLayerVideoGravityResizeAspect"
+        player.playbackLoops = true
+        
 
+    }
+    
+    func playerLoopControl(tap: UITapGestureRecognizer) {
+        
+        if videoIsPlaying == true
+        {
+            player.stop()
+            videoIsPlaying = false
+        }
+        else if videoIsPlaying == false
+        {
+            player.playFromCurrentTime()
+            videoIsPlaying = true
+        }
+        
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -152,5 +181,19 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         didCancel=true
     }
     
+    func playerReady(player: Player) {
+    }
+    
+    func playerPlaybackStateDidChange(player: Player) {
+    }
+    
+    func playerBufferingStateDidChange(player: Player) {
+    }
+    
+    func playerPlaybackWillStartFromBeginning(player: Player) {
+    }
+    
+    func playerPlaybackDidEnd(player: Player) {
+    }
 }
 
