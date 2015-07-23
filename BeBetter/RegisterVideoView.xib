@@ -106,12 +106,12 @@
                     </connections>
                 </button>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="muY-uN-5l7">
-                    <rect key="frame" x="161" y="431" width="94" height="29"/>
+                    <rect key="frame" x="140" y="431" width="94" height="29"/>
                     <connections>
                         <action selector="weekStepper:" destination="-1" eventType="valueChanged" id="4X6-lf-xnu"/>
                     </connections>
                 </stepper>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihm-XJ-rfp">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihm-XJ-rfp">
                     <rect key="frame" x="103" y="433" width="46" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="46" id="0nk-YS-XVm"/>
@@ -122,7 +122,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lx-gD-FAd">
-                    <rect key="frame" x="188" y="529" width="10" height="25"/>
+                    <rect key="frame" x="159" y="529" width="10" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="kM7-zK-uq4"/>
                     </constraints>
@@ -131,7 +131,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9Iy-Re-YKQ">
-                    <rect key="frame" x="222" y="527" width="94" height="29"/>
+                    <rect key="frame" x="193" y="527" width="94" height="29"/>
                     <connections>
                         <action selector="dayStepper:" destination="-1" eventType="valueChanged" id="4v0-uI-CyQ"/>
                     </connections>
@@ -143,13 +143,13 @@
                         <constraint firstAttribute="height" constant="250" id="tR7-Hb-Vfz"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semanas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbB-dy-g40">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weeks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbB-dy-g40">
                     <rect key="frame" x="9" y="435" width="71.5" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercício" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do3-0t-4nW">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Exercise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do3-0t-4nW">
                     <rect key="frame" x="9" y="345" width="70" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -168,8 +168,8 @@
                         <action selector="cancelButton:" destination="-1" eventType="touchUpInside" id="XZL-S8-1xM"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repetições diárias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkx-yn-CyH">
-                    <rect key="frame" x="9" y="531" width="142" height="20.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily repetitions     " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkx-yn-CyH">
+                    <rect key="frame" x="9" y="531" width="147" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -179,7 +179,7 @@
             <constraints>
                 <constraint firstItem="7hp-Bm-NIp" firstAttribute="top" secondItem="2K0-gf-wgN" secondAttribute="bottom" constant="26" id="273-Bd-C5s"/>
                 <constraint firstItem="qzd-26-ll4" firstAttribute="centerY" secondItem="N9o-fO-eIU" secondAttribute="centerY" id="4rm-UZ-F4D"/>
-                <constraint firstItem="3Lx-gD-FAd" firstAttribute="leading" secondItem="rkx-yn-CyH" secondAttribute="trailing" constant="37" id="6A2-9P-SXu"/>
+                <constraint firstItem="3Lx-gD-FAd" firstAttribute="leading" secondItem="rkx-yn-CyH" secondAttribute="trailing" constant="3" id="6A2-9P-SXu"/>
                 <constraint firstItem="ULu-Gx-wSz" firstAttribute="leading" secondItem="N9o-fO-eIU" secondAttribute="trailing" constant="8" id="6Ue-do-zUi"/>
                 <constraint firstItem="muY-uN-5l7" firstAttribute="leading" secondItem="ihm-XJ-rfp" secondAttribute="trailing" constant="12" id="7Sp-CK-U76"/>
                 <constraint firstItem="58L-4C-Aw7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="86g-Xz-TMy"/>

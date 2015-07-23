@@ -17,6 +17,9 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     var previewLayer : AVCaptureVideoPreviewLayer?
     var captureDevice : AVCaptureDevice?
     var alreadyRecorded = false
+    var didCancel = false
+    
+    var screenTap : UITapGestureRecognizer!
     
     @IBOutlet var videoPlayerView: UIView!
     @IBOutlet var nameExerciseTextField: UITextField!
@@ -65,7 +68,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     
     override func viewDidAppear(animated: Bool) {
         
-        if alreadyRecorded == false{
+        if alreadyRecorded == false && didCancel == false{
             
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
                 
@@ -93,6 +96,8 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         
         else {
             println("ola")
+            self.screenTap = UITapGestureRecognizer(target: self, action: "keyboardTap:")
+            self.view.addGestureRecognizer(screenTap)
             
             weekStepper.wraps = true
             weekStepper.autorepeat = true
@@ -116,6 +121,10 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     
+    func keyboardTap(tap: UITapGestureRecognizer){
+        nameExerciseTextField.resignFirstResponder()
+    }
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject: AnyObject]) {
         
         let tempImage = info[UIImagePickerControllerMediaURL] as! NSURL!
@@ -131,8 +140,12 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         alreadyRecorded = true
         self.dismissViewControllerAnimated(true, completion: {})
 
-        
-        
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
+        didCancel=true
     }
     
 }

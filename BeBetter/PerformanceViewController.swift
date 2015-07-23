@@ -12,8 +12,12 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
 {
     @IBOutlet weak var performanceTable: UITableView!
     
+
     var weeks = ["Semana 1", "Semana 2", "Semana 3", "Semana 4", "Semana 5"]
 
+    @IBAction func backButton(sender: UIButton) {
+       self.dismissViewControllerAnimated(true, completion: nil)
+    }
     @IBAction func addExercise(sender: UIButton) {
         
         let nextWindow = RegisterVideoViewController(nibName:"RegisterVideoView", bundle: nil)
