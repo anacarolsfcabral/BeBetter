@@ -18,6 +18,8 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     var captureDevice : AVCaptureDevice?
     var alreadyRecorded = false
     var didCancel = false
+    var pathString : String!
+    var tempImage: NSURL!
     
     var screenTap : UITapGestureRecognizer!
     
@@ -106,7 +108,8 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
             dayStepper.wraps = true
             dayStepper.autorepeat = true
             dayStepper.maximumValue = 20
-           
+            
+            
         }
     }
     
@@ -127,8 +130,8 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject: AnyObject]) {
         
-        let tempImage = info[UIImagePickerControllerMediaURL] as! NSURL!
-        let pathString = tempImage.relativePath
+        tempImage = info[UIImagePickerControllerMediaURL] as! NSURL!
+        pathString = tempImage.relativePath
         
         
         
@@ -136,6 +139,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         //UISaveVideoAtPathToSavedPhotosAlbum(pathString, self, nil, nil)
         
         // SALVAR NO PLIST PORRA AQUIIIII
+    
         
         alreadyRecorded = true
         self.dismissViewControllerAnimated(true, completion: {})

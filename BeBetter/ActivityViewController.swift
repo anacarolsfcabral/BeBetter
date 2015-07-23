@@ -10,6 +10,12 @@ import UIKit
 
 class ActivityViewController: UIViewController {
 
+    @IBOutlet var exerciseNameLabel: UILabel!
+    @IBOutlet var videoTutorialView: UIView!
+    @IBOutlet var recordVideoView: UIView!
+    @IBAction func backButton(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
