@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83FD89F7E3885D8D46A84F22 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA7346DA65B93E276568E4D /* libPods.a */; };
 		BE7868F01B5EBB050097E1DE /* FrequencyActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7868EF1B5EBB050097E1DE /* FrequencyActivity.swift */; };
 		BE7868F21B5EBB150097E1DE /* PerformanceForWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7868F11B5EBB150097E1DE /* PerformanceForWeek.swift */; };
 		BE7C554D1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */; };
 		BE7C554E1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */; };
-		BE7C55541B616917005D23B0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C55531B616917005D23B0 /* Player.swift */; };
-		E1209AAD135591969D64A7D1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3129CF344C9C623455718DDE /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA21F1B5E869A002C2EF6 /* AppDelegate.swift */; };
 		F01AA2221B5E869A002C2EF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2211B5E869A002C2EF6 /* ViewController.swift */; };
 		F01AA2251B5E869A002C2EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2231B5E869A002C2EF6 /* Main.storyboard */; };
@@ -47,13 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3129CF344C9C623455718DDE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25EA85421B61783F00EA2D4C /* BeBetter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeBetter-Bridging-Header.h"; sourceTree = "<group>"; };
 		907DAAB517BD508F4CC2912E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BE7868EF1B5EBB050097E1DE /* FrequencyActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyActivity.swift; sourceTree = "<group>"; };
 		BE7868F11B5EBB150097E1DE /* PerformanceForWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceForWeek.swift; sourceTree = "<group>"; };
 		BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceHeaderCell.swift; sourceTree = "<group>"; };
 		BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceHeaderCell.xib; sourceTree = "<group>"; };
-		BE7C55531B616917005D23B0 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Pods/Player/Source/Player.swift; sourceTree = SOURCE_ROOT; };
 		E0732AF362222D149925E985 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F01AA21A1B5E869A002C2EF6 /* BeBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01AA21E1B5E869A002C2EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +78,7 @@
 		F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceCell.swift; sourceTree = "<group>"; };
 		F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceCell.xib; sourceTree = "<group>"; };
+		FEA7346DA65B93E276568E4D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1209AAD135591969D64A7D1 /* Pods.framework in Frameworks */,
+				83FD89F7E3885D8D46A84F22 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +103,7 @@
 		ADBB49A2F85BE3A0707F8035 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3129CF344C9C623455718DDE /* Pods.framework */,
+				FEA7346DA65B93E276568E4D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,6 +125,7 @@
 				F01AA21B1B5E869A002C2EF6 /* Products */,
 				E127A54FA78236F8F87B306F /* Pods */,
 				ADBB49A2F85BE3A0707F8035 /* Frameworks */,
+				25EA85421B61783F00EA2D4C /* BeBetter-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,7 +215,6 @@
 				F01AA2601B5EB763002C2EF6 /* Category.swift */,
 				BE7868EF1B5EBB050097E1DE /* FrequencyActivity.swift */,
 				BE7868F11B5EBB150097E1DE /* PerformanceForWeek.swift */,
-				BE7C55531B616917005D23B0 /* Player.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -231,7 +230,6 @@
 				F01AA2161B5E869A002C2EF6 /* Sources */,
 				F01AA2171B5E869A002C2EF6 /* Frameworks */,
 				F01AA2181B5E869A002C2EF6 /* Resources */,
-				50E0B538790B4DFA1284BBD9 /* Embed Pods Frameworks */,
 				D6E3273A6EFBFDC3908185E8 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -326,21 +324,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		50E0B538790B4DFA1284BBD9 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B6F948386E464AEB63459DDA /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -391,7 +374,6 @@
 				F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */,
 				BE7868F21B5EBB150097E1DE /* PerformanceForWeek.swift in Sources */,
 				F01AA25F1B5EB74E002C2EF6 /* Activity.swift in Sources */,
-				BE7C55541B616917005D23B0 /* Player.swift in Sources */,
 				F01AA2441B5E8946002C2EF6 /* PerformanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,9 +502,12 @@
 			baseConfigurationReference = 907DAAB517BD508F4CC2912E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BeBetter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeBetter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -531,9 +516,11 @@
 			baseConfigurationReference = E0732AF362222D149925E985 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BeBetter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeBetter-Bridging-Header.h";
 			};
 			name = Release;
 		};

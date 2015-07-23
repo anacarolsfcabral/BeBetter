@@ -11,7 +11,7 @@ import MediaPlayer
 import MobileCoreServices
 import AVFoundation
 
-class RegisterVideoViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, PlayerDelegate {
+class RegisterVideoViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, PBJVideoPlayerControllerDelegate {
 
     let captureSession = AVCaptureSession()
     var previewLayer : AVCaptureVideoPreviewLayer?
@@ -21,7 +21,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     var pathString : String!
     var tempImage: NSURL!
     
-    var player = Player()
+    var player = PBJVideoPlayerController()
     
     var screenTap : UITapGestureRecognizer!
     var videoLoop : UITapGestureRecognizer!
@@ -152,9 +152,9 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         player.delegate = self
         player.view.frame = videoPlayerView.bounds
         videoPlayerView.addSubview(player.view)
-        player.path = pathString
+        player.videoPath = pathString
         player.playFromBeginning()
-        player.fillMode = "AVLayerVideoGravityResizeAspect"
+        player.videoFillMode = "AVLayerVideoGravityResizeAspect"
         player.playbackLoops = true
         
 
@@ -181,19 +181,26 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         didCancel=true
     }
     
-    func playerReady(player: Player) {
+    
+    func videoPlayerBufferringStateDidChange(videoPlayer: PBJVideoPlayerController!) {
+        
     }
     
-    func playerPlaybackStateDidChange(player: Player) {
+    func videoPlayerPlaybackWillStartFromBeginning(videoPlayer: PBJVideoPlayerController!) {
+        
     }
     
-    func playerBufferingStateDidChange(player: Player) {
+    func videoPlayerPlaybackDidEnd(videoPlayer: PBJVideoPlayerController!) {
+        
     }
     
-    func playerPlaybackWillStartFromBeginning(player: Player) {
+    func videoPlayerPlaybackStateDidChange(videoPlayer: PBJVideoPlayerController!) {
+        
     }
     
-    func playerPlaybackDidEnd(player: Player) {
+    func videoPlayerReady(videoPlayer: PBJVideoPlayerController!) {
+        
     }
+    
 }
 
