@@ -11,6 +11,11 @@ import UIKit
 class CategoryViewController: UIViewController {
 
     
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
+    @IBOutlet weak var thirdButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +27,12 @@ class CategoryViewController: UIViewController {
     }
     
     
+    
+    @IBAction func goToPerformance(sender: AnyObject) {
+        
+        let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
+        self.presentViewController(nextWindow, animated: true, completion: nil)
+    }
     
     
     

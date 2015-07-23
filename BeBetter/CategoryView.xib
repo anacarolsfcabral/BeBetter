@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController" customModule="BeBetter" customModuleProvider="target">
             <connections>
+                <outlet property="firstButton" destination="qYn-xv-ynG" id="tLs-F7-NSJ"/>
+                <outlet property="secondButton" destination="Wnd-OB-Va0" id="dI1-bZ-0Dg"/>
+                <outlet property="thirdButton" destination="JuS-90-oW3" id="Eo2-QT-MOS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +16,64 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYn-xv-ynG">
+                    <rect key="frame" x="200" y="62" width="200" height="142"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="UzR-3c-9jw"/>
+                        <constraint firstAttribute="width" constant="150" id="dwl-ra-Mgz"/>
+                    </constraints>
+                    <state key="normal" image="speech">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goToPerformance:" destination="-1" eventType="touchUpInside" id="prH-ci-iXh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnd-OB-Va0">
+                    <rect key="frame" x="227" y="229" width="145" height="142"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="Mzy-Jd-5j3"/>
+                        <constraint firstAttribute="width" constant="150" id="sar-Pd-rGH"/>
+                    </constraints>
+                    <state key="normal" image="physio">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goToPerformance:" destination="-1" eventType="touchUpInside" id="Ypp-pK-eGa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuS-90-oW3">
+                    <rect key="frame" x="200" y="392" width="200" height="142"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="6QL-ue-8J3"/>
+                        <constraint firstAttribute="height" constant="150" id="ltN-CP-ITs"/>
+                    </constraints>
+                    <state key="normal" image="ophtal">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goToPerformance:" destination="-1" eventType="touchUpInside" id="E1w-gj-US3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.88235294119999996" green="0.7843137255" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Wnd-OB-Va0" firstAttribute="top" secondItem="qYn-xv-ynG" secondAttribute="bottom" constant="21" id="AqP-Mh-Jqn"/>
+                <constraint firstAttribute="centerY" secondItem="Wnd-OB-Va0" secondAttribute="centerY" id="I86-Sl-7Rg"/>
+                <constraint firstItem="JuS-90-oW3" firstAttribute="centerX" secondItem="Wnd-OB-Va0" secondAttribute="centerX" id="MUW-PH-O9u"/>
+                <constraint firstItem="JuS-90-oW3" firstAttribute="top" secondItem="Wnd-OB-Va0" secondAttribute="bottom" constant="21" id="UyH-HJ-Z5H"/>
+                <constraint firstItem="qYn-xv-ynG" firstAttribute="centerX" secondItem="Wnd-OB-Va0" secondAttribute="centerX" id="bE9-Bz-yai"/>
+                <constraint firstAttribute="centerX" secondItem="Wnd-OB-Va0" secondAttribute="centerX" id="usa-A4-CzY"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="ophtal" width="145" height="142"/>
+        <image name="physio" width="145" height="142"/>
+        <image name="speech" width="145" height="142"/>
+    </resources>
 </document>
