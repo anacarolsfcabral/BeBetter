@@ -1,0 +1,13 @@
+PODS:
+  - PBJVision (0.4.2)
+  - Player (0.0.5)
+
+DEPENDENCIES:
+  - PBJVision
+  - Player
+
+SPEC CHECKSUMS:
+  PBJVision: fe43c9a58bb1c1277d16fd802fa836d25e034a45
+  Player: b5611abde6be7b3eeeaf57537b3979cd7531daad
+
+COCOAPODS: 0.38.0
