@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDv-rL-JOn">
-                        <rect key="frame" x="8" y="14" width="100" height="20.5"/>
+                        <rect key="frame" x="8" y="14" width="100" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="hYB-2h-qTS"/>
                         </constraints>
@@ -23,8 +23,8 @@
                         <color key="textColor" red="0.37647058820000001" green="0.36862745099999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars_4" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-MI-lvI">
-                        <rect key="frame" x="367" y="10" width="251" height="29.5"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stars_4" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-MI-lvI">
+                        <rect key="frame" x="367" y="10" width="251" height="30"/>
                     </imageView>
                 </subviews>
                 <constraints>

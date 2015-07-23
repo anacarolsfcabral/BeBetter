@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate {
+class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate, PBJVisionDelegate {
 
     @IBOutlet var exerciseNameLabel: UILabel!
     @IBOutlet var videoTutorialView: UIView!
@@ -18,6 +18,8 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     }
     
     var player = PBJVideoPlayerController()
+    var previewView: UIView = UIView(frame: CGRectZero)
+    var previewLayer = PBJVision.sharedInstance().previewLayer
     var pathString : String!
     
     override func viewDidLoad() {
@@ -32,7 +34,32 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         player.playbackLoops = true
         player.volume = 1
         
+        
+        previewView.backgroundColor = UIColor.blackColor()
+        previewView.frame = recordVideoView.bounds
+        
+        previewLayer.frame = previewView.bounds
+        previewLayer.videoGravity = "AVLayerVideoGravityResizeAspect"
+        previewView.layer.addSublayer(previewLayer)
+        
+        recordVideoView.addSubview(previewView)
+        
+        setup()
         // Do any additional setup after loading the view.
+    }
+    
+    func setup(){
+        
+        var vision: PBJVision = PBJVision.sharedInstance()
+        vision.delegate = self
+        vision.cameraMode = PBJCameraMode.Video
+        vision.cameraDevice = PBJCameraDevice.Front
+        vision.cameraOrientation = PBJCameraOrientation.Portrait
+        vision.focusMode = PBJFocusMode.ContinuousAutoFocus
+        vision.outputFormat = PBJOutputFormat.Square
+        
+        vision.startPreview()
+        
     }
 
     override func didReceiveMemoryWarning() {
