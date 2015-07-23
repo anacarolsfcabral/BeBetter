@@ -59,6 +59,11 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     }
     
     @IBAction func sabeButton(sender: UIButton) {
+        
+        let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
+        nextWindow.pathString = pathString
+        self.presentViewController(nextWindow, animated: true, completion: nil)
+        
     }
     
     @IBAction func weekStepper(sender: UIStepper) {
@@ -156,6 +161,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         player.playFromBeginning()
         player.videoFillMode = "AVLayerVideoGravityResizeAspect"
         player.playbackLoops = true
+        player.volume = 1
         
 
     }

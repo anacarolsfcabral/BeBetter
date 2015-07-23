@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ActivityViewController: UIViewController {
+class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate {
 
     @IBOutlet var exerciseNameLabel: UILabel!
     @IBOutlet var videoTutorialView: UIView!
@@ -16,9 +16,22 @@ class ActivityViewController: UIViewController {
     @IBAction func backButton(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    var player = PBJVideoPlayerController()
+    var pathString : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        player.delegate = self
+        player.view.frame = videoTutorialView.bounds
+        videoTutorialView.addSubview(player.view)
+        player.videoPath = pathString
+        player.playFromBeginning()
+        player.videoFillMode = "AVLayerVideoGravityResizeAspect"
+        player.playbackLoops = true
+        player.volume = 1
+        
         // Do any additional setup after loading the view.
     }
 
@@ -28,6 +41,27 @@ class ActivityViewController: UIViewController {
     }
     
 
+    func videoPlayerBufferringStateDidChange(videoPlayer: PBJVideoPlayerController!) {
+        
+    }
+    
+    func videoPlayerPlaybackWillStartFromBeginning(videoPlayer: PBJVideoPlayerController!) {
+        
+    }
+    
+    func videoPlayerPlaybackDidEnd(videoPlayer: PBJVideoPlayerController!) {
+        
+    }
+    
+    func videoPlayerPlaybackStateDidChange(videoPlayer: PBJVideoPlayerController!) {
+        
+    }
+    
+    func videoPlayerReady(videoPlayer: PBJVideoPlayerController!) {
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
