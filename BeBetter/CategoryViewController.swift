@@ -8,22 +8,12 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CategoryViewController: UIViewController {
 
-    @IBOutlet weak var categoryCollection: UICollectionView!
-    var categoryNames = ["Fonoaudiologia","Fisioterapia","Oftalmologia"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.categoryCollection.registerClass(CategoryCell.self, forCellWithReuseIdentifier: "cell")
-        
-        self.categoryCollection.registerNib(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: "cell")
-        
-        categoryCollection.backgroundColor = UIColor.whiteColor()
-        categoryCollection.delegate = self
-        categoryCollection.dataSource =  self
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,20 +21,6 @@ class CategoryViewController: UIViewController, UICollectionViewDataSource, UICo
         // Dispose of any resources that can be recreated.
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CategoryCell
-        
-        cell.backgroundColor = UIColor.blackColor()
-        cell.categoryName.text = categoryNames[indexPath.row]
-        cell.controllerCollection = self
-
-        return cell
-    }
     
     
     

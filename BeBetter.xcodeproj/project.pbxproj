@@ -29,8 +29,6 @@
 		F01AA2611B5EB763002C2EF6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2601B5EB763002C2EF6 /* Category.swift */; };
 		F01AA2641B5EC3CA002C2EF6 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2621B5EC3CA002C2EF6 /* CategoryViewController.swift */; };
 		F01AA2651B5EC3CA002C2EF6 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */; };
-		F01AA26A1B5ECB6E002C2EF6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2681B5ECB6E002C2EF6 /* CategoryCell.swift */; };
-		F01AA26B1B5ECB6E002C2EF6 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */; };
 		F01AA26E1B5EF031002C2EF6 /* PerformanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */; };
 		F01AA26F1B5EF031002C2EF6 /* PerformanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */; };
 /* End PBXBuildFile section */
@@ -74,8 +72,6 @@
 		F01AA2601B5EB763002C2EF6 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F01AA2621B5EC3CA002C2EF6 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
-		F01AA2681B5ECB6E002C2EF6 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
-		F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceCell.swift; sourceTree = "<group>"; };
 		F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceCell.xib; sourceTree = "<group>"; };
 		FEA7346DA65B93E276568E4D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */,
-				F01AA2691B5ECB6E002C2EF6 /* CategoryCell.xib */,
 				F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */,
 				F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */,
 				BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */,
@@ -197,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				F01AA2621B5EC3CA002C2EF6 /* CategoryViewController.swift */,
-				F01AA2681B5ECB6E002C2EF6 /* CategoryCell.swift */,
 				F01AA24C1B5E907A002C2EF6 /* RegisterVideoViewController.swift */,
 				F01AA2421B5E8946002C2EF6 /* PerformanceViewController.swift */,
 				F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */,
@@ -309,7 +303,6 @@
 				F01AA2271B5E869A002C2EF6 /* Images.xcassets in Resources */,
 				F01AA24F1B5E907A002C2EF6 /* RegisterVideoView.xib in Resources */,
 				F01AA2451B5E8946002C2EF6 /* PerformanceView.xib in Resources */,
-				F01AA26B1B5ECB6E002C2EF6 /* CategoryCell.xib in Resources */,
 				F01AA2571B5E9485002C2EF6 /* ActivityView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +354,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F01AA26A1B5ECB6E002C2EF6 /* CategoryCell.swift in Sources */,
 				F01AA25D1B5EB729002C2EF6 /* DAO.swift in Sources */,
 				F01AA2611B5EB763002C2EF6 /* Category.swift in Sources */,
 				BE7C554D1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift in Sources */,
