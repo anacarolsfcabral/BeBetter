@@ -126,7 +126,6 @@
                     </state>
                     <connections>
                         <action selector="sabeButton:" destination="-1" eventType="touchUpInside" id="99d-9v-Ncc"/>
-                        <action selector="saveExercise:" destination="-1" eventType="touchUpInside" id="aZp-cq-s48"/>
                     </connections>
                 </button>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="muY-uN-5l7">
