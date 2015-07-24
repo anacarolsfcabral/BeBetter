@@ -55,6 +55,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         performanceTable.delegate = self
         performanceTable.dataSource = self
         
+        self.performanceTable.rowHeight = 105
+        
         
         performanceTable.registerNib(UINib(nibName: "PerformanceCell", bundle: nil), forCellReuseIdentifier: "PerformanceCell")
         
@@ -81,7 +83,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         let cell = performanceTable.dequeueReusableCellWithIdentifier("PerformanceCell", forIndexPath: indexPath) as! PerformanceCell
         
         //self.performanceTable.registerClass(PerformanceCell.self, forCellWithReuseIdentifier: "PerformanceCell")
-
+        
         
         // 3
         // Configure the cell...

@@ -179,10 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */,
+				F01AA24D1B5E907A002C2EF6 /* RegisterVideoView.xib */,
 				F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */,
 				F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */,
 				BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */,
-				F01AA24D1B5E907A002C2EF6 /* RegisterVideoView.xib */,
 				F01AA2551B5E9485002C2EF6 /* ActivityView.xib */,
 			);
 			name = View;

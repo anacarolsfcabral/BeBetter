@@ -12,8 +12,38 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="performanceCount" translatesAutoresizingMaskIntoConstraints="NO" id="Oxt-f0-ODx">
+                        <rect key="frame" x="14" y="0.5" width="105" height="72.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="105" id="XIt-yy-5eN"/>
+                            <constraint firstAttribute="height" constant="72.5" id="rPf-0R-4WI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHo-pd-u7w">
+                        <rect key="frame" x="118" y="26" width="274" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="274" id="dSC-vB-3dv"/>
+                            <constraint firstAttribute="height" constant="21" id="zMb-bC-c0N"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.37647058820000001" green="0.36862745099999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yHo-pd-u7w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="118" id="5ug-wA-cjN"/>
+                    <constraint firstAttribute="trailing" secondItem="yHo-pd-u7w" secondAttribute="trailing" constant="17" id="66h-Z3-39N"/>
+                    <constraint firstAttribute="bottom" secondItem="yHo-pd-u7w" secondAttribute="bottom" constant="25.5" id="DTI-e5-lVL"/>
+                    <constraint firstItem="Oxt-f0-ODx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="OYv-3v-jHb"/>
+                    <constraint firstItem="yHo-pd-u7w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="ShQ-HC-eMA"/>
+                    <constraint firstAttribute="centerY" secondItem="Oxt-f0-ODx" secondAttribute="centerY" constant="-0.5" id="a4G-bI-gID"/>
+                </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="324.5" y="337.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="performanceCount" width="295" height="294"/>
+    </resources>
 </document>
