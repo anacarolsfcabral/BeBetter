@@ -34,25 +34,74 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
    
     @IBOutlet var dayLabel: UILabel!
     @IBOutlet var dayStepper: UIStepper!
-   
-    @IBAction func mondayButton(sender: UIButton) {
+    
+    
+    @IBOutlet weak var sundayButton: UIButton!
+    @IBOutlet weak var mondayButton: UIButton!
+    @IBOutlet weak var tuesdayButton: UIButton!
+    @IBOutlet weak var wednesdayButton: UIButton!
+    @IBOutlet weak var thursdayButton: UIButton!
+    @IBOutlet weak var fridayButton: UIButton!
+    @IBOutlet weak var saturdayButton: UIButton!
+    
+    
+    @IBAction func sundayButton(sender: AnyObject)
+    {
+        var buttonImageSunday : UIImage!
+        buttonImageSunday = UIImage(named: "S")
+        sundayButton.setImage(buttonImageSunday, forState: UIControlState.Normal)
+    }
+    
+    @IBAction func mondayButton(sender: AnyObject)
+    {
+        var buttonImageMonday : UIImage!
+        buttonImageMonday = UIImage(named: "M")
+        mondayButton.setImage(buttonImageMonday, forState: UIControlState.Normal)
+    }
+
+    @IBAction func tuesdayButton(sender: AnyObject)
+    {
+        var buttonImageTuesday : UIImage!
+        buttonImageTuesday = UIImage(named: "T")
+        tuesdayButton.setImage(buttonImageTuesday, forState: UIControlState.Normal)
+    }
+    
+    @IBAction func wednesdayButton(sender: AnyObject)
+    {
+        var buttonImageWednesday : UIImage!
+        buttonImageWednesday = UIImage(named: "W")
+        wednesdayButton.setImage(buttonImageWednesday, forState: UIControlState.Normal)
+    }
+    
+    @IBAction func thursdayButton(sender: AnyObject)
+    {
+        var buttonImageThursday : UIImage!
+        buttonImageThursday = UIImage(named: "T")
+        thursdayButton.setImage(buttonImageThursday, forState: UIControlState.Normal)
+    }
+    
+    @IBAction func fridayButton(sender: AnyObject)
+    {
+        var buttonImageFriday : UIImage!
+        buttonImageFriday = UIImage(named: "F")
+        fridayButton.setImage(buttonImageFriday, forState: UIControlState.Normal)
     }
  
-    @IBAction func tuesdayButton(sender: UIButton) {
+    @IBAction func saturdayButtonPressed(sender: AnyObject)
+    {
+        var buttonImageSaturday : UIImage!
+        buttonImageSaturday = UIImage(named: "S")
+        saturdayButton.setImage(buttonImageSaturday, forState: UIControlState.Normal)
     }
     
-    @IBAction func wednesdayButton(sender: UIButton) {
+
+    @IBAction func saturdayButtonPressedAgain(sender: AnyObject)
+    {
+        var buttonImageSaturday : UIImage!
+        buttonImageSaturday = UIImage(named: "SD")
+        saturdayButton.setImage(buttonImageSaturday, forState: UIControlState.Normal)
     }
     
-    @IBAction func thursdayButton(sender: UIButton) {
-    }
-    @IBAction func fridayButton(sender: UIButton) {
-    }
-    @IBAction func saturdayButton(sender: UIButton) {
-    }
-    
-    @IBAction func sundayButton(sender: UIButton) {
-    }
     
     @IBAction func cancelButton(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: {})
