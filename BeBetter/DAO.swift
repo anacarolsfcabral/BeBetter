@@ -24,7 +24,11 @@ class DAO {
         return activities
     }
     
-    func saveActivity(activity: Activity) -> Bool{
+    func saveActivity(activity: Activity, frequency: FrequencyActivity) -> Bool
+    {
+        var activity = activity
+        
+        
     
         return false
     }

@@ -33,7 +33,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     var isWednesdayBege = true
     var isThursdayBege = true
     var isFridayBege = true
-    var isSaturday = true
+    var isSaturdayBege = true
     
     var buttonImageSunday : UIImage!
     var buttonImageMonday : UIImage!
@@ -159,16 +159,16 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
  
     @IBAction func saturdayButtonPressed(sender: AnyObject)
     {
-        if isSaturday == true {
+        if isSaturdayBege == true {
             buttonImageSaturday = UIImage(named: "S")
             saturdayButton.setImage(buttonImageSaturday, forState: UIControlState.Normal)
-            isSaturday=false
+            isSaturdayBege = false
         }
         else
         {
             buttonImageSaturday = UIImage(named: "SD")
             saturdayButton.setImage(buttonImageSaturday, forState: UIControlState.Normal)
-            isSaturday=true
+            isSaturdayBege = true
             
         }
     }
@@ -181,6 +181,94 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     }
     
     @IBAction func sabeButton(sender: UIButton) {
+        
+//        var pathVideo = pathString
+//        var daysWithAmountForDay : NSMutableDictionary = [ 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, 6 : 0, 7 : 0]
+//        var isSaved : Bool
+//        var activity : Activity
+//        var frequency : FrequencyActivity
+//        
+//        if isSundayBege == true
+//        {
+//            daysWithAmountForDay[1] = 0
+//        }
+//        else
+//        {
+//            daysWithAmountForDay[1] = dayStepper.value
+//        }
+//        
+//        if isMondayBege == true
+//        {
+//            daysWithAmountForDay[2] = 0
+//        }
+//        else
+//        {
+//            daysWithAmountForDay[2] = dayStepper.value
+//        }
+//        
+//        if isTuesdayBege == true
+//        {
+//            daysWithAmountForDay[3] = 0
+//        }
+//        else
+//        {
+//            daysWithAmountForDay[3] = dayStepper.value
+//        }
+//        
+//        if isWednesdayBege == true
+//        {
+//            daysWithAmountForDay[4] = 0
+//        }
+//        else
+//        {
+//            daysWithAmountForDay[4] = dayStepper.value
+//        }
+//
+//        if isThursdayBege == true
+//        {
+//            daysWithAmountForDay[5] = 0
+//        }
+//        else
+//        {
+//            daysWithAmountForDay[5] = dayStepper.value
+//        }
+//        
+//        if isFridayBege == true
+//        {
+//            daysWithAmountForDay[6] = 0
+//        }
+//        else
+//        {
+//            daysWithAmountForDay[6] = dayStepper.value
+//        }
+//        
+//        if isSaturdayBege == true
+//        {
+//            daysWithAmountForDay[7] = 0
+//        }
+//        else
+//        {
+//            daysWithAmountForDay[7] = dayStepper.value
+//        }
+//
+//        activity = Activity(name: nameExerciseTextField.text, videoTutorial: pathVideo, category: "PegarTelaInicial")
+//        frequency = FrequencyActivity(amountWeeks: weekStepper.value as! Int, daysWithAmountForDay: daysWithAmountForDay, id: 1)
+//
+//        
+//        isSaved = DAO.sharedInstance.saveActivity(activity, frequency: frequency)
+//        if isSaved == true
+//        {
+//            let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
+//            nextWindow.pathString = pathString
+//            self.presentViewController(nextWindow, animated: true, completion: nil)
+//        }
+//        else
+//        {
+//            var alert = UIAlertController(title: "Ops", message: "An error occurred while saving your activity", preferredStyle: UIAlertControllerStyle.Alert)
+//            alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: nil))
+//            self.presentViewController(alert, animated: true, completion: nil)
+//        }
+        
         
         let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
         nextWindow.pathString = pathString
