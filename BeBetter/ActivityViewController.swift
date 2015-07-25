@@ -89,6 +89,13 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     }
     
     
+    @IBAction func goToPerformance(sender: AnyObject)
+    {
+        let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
+        self.presentViewController(nextWindow, animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

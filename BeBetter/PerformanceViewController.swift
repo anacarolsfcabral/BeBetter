@@ -13,7 +13,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     @IBOutlet weak var performanceTable: UITableView!
     
 
-    var weeks = ["Semana 1", "Semana 2", "Semana 3", "Semana 4", "Semana 5"]
+    var weeks = ["1st week", "2nd week", "3rd week", "4th week", "5th week"]
 
     @IBAction func backButton(sender: UIButton) {
        self.dismissViewControllerAnimated(true, completion: nil)
@@ -57,7 +57,6 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         
         self.performanceTable.rowHeight = 105
         
-        
         performanceTable.registerNib(UINib(nibName: "PerformanceCell", bundle: nil), forCellReuseIdentifier: "PerformanceCell")
         
         
@@ -82,26 +81,29 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = performanceTable.dequeueReusableCellWithIdentifier("PerformanceCell", forIndexPath: indexPath) as! PerformanceCell
         
+        cell.backgroundColor = UIColor(red: 240/255, green: 231/255, blue: 227/255, alpha: 1)
+
+        
         //self.performanceTable.registerClass(PerformanceCell.self, forCellWithReuseIdentifier: "PerformanceCell")
         
         
         // 3
         // Configure the cell...
-        switch (indexPath.section) {
-        case 0:
-            cell.backgroundColor=UIColor.whiteColor()
-        case 1:
-            cell.backgroundColor=UIColor.whiteColor()
-        case 2:
-            cell.backgroundColor=UIColor.whiteColor()
-            //return sectionHeaderView
-        case 3:
-            cell.backgroundColor=UIColor.whiteColor()
-        case 4:
-            cell.backgroundColor=UIColor.whiteColor()
-        default:
-            cell.backgroundColor=UIColor.whiteColor()
-        }
+//        switch (indexPath.section) {
+//        case 0:
+//            cell.backgroundColor=UIColor.whiteColor()
+//        case 1:
+//            cell.backgroundColor=UIColor.whiteColor()
+//        case 2:
+//            cell.backgroundColor=UIColor.whiteColor()
+//            //return sectionHeaderView
+//        case 3:
+//            cell.backgroundColor=UIColor.whiteColor()
+//        case 4:
+//            cell.backgroundColor=UIColor.whiteColor()
+//        default:
+//            cell.backgroundColor=UIColor.whiteColor()
+//        }
         
         return cell
     }
