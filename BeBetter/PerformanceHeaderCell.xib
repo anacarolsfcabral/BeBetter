@@ -47,7 +47,6 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.89411764709999997" green="0.81176470590000005" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="starImage" destination="ccw-MI-lvI" id="fqS-ZP-lg3"/>
                 <outlet property="weekLabel" destination="JDv-rL-JOn" id="nDn-lc-vyh"/>
