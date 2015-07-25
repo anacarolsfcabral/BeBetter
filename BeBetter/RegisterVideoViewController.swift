@@ -27,6 +27,23 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     var videoLoop : UITapGestureRecognizer!
     var videoIsPlaying : Bool = true
     
+    var isSundayBege = true
+    var isMondayBege = true
+    var isTuesdayBege = true
+    var isWednesdayBege = true
+    var isThursdayBege = true
+    var isFridayBege = true
+    var isSaturday = true
+    
+    var buttonImageSunday : UIImage!
+    var buttonImageMonday : UIImage!
+    var buttonImageTuesday : UIImage!
+    var buttonImageWednesday : UIImage!
+    var buttonImageThursday : UIImage!
+    var buttonImageFriday : UIImage!
+    var buttonImageSaturday : UIImage!
+
+    
     @IBOutlet var videoPlayerView: UIView!
     @IBOutlet var nameExerciseTextField: UITextField!
     @IBOutlet var weekLabel: UILabel!
@@ -47,60 +64,116 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     
     @IBAction func sundayButton(sender: AnyObject)
     {
-        var buttonImageSunday : UIImage!
-        buttonImageSunday = UIImage(named: "S")
-        sundayButton.setImage(buttonImageSunday, forState: UIControlState.Normal)
+        if isSundayBege == true {
+            buttonImageSunday = UIImage(named: "S")
+            sundayButton.setImage(buttonImageSunday, forState: UIControlState.Normal)
+            isSundayBege = false
+        }
+        else
+        {
+            buttonImageSunday = UIImage(named: "SD")
+            sundayButton.setImage(buttonImageSunday, forState: UIControlState.Normal)
+            isSundayBege = true
+        }
+        
     }
     
     @IBAction func mondayButton(sender: AnyObject)
     {
-        var buttonImageMonday : UIImage!
-        buttonImageMonday = UIImage(named: "M")
-        mondayButton.setImage(buttonImageMonday, forState: UIControlState.Normal)
+        if isMondayBege == true{
+        
+            buttonImageMonday = UIImage(named: "M")
+            mondayButton.setImage(buttonImageMonday, forState: UIControlState.Normal)
+            isMondayBege = false
+        }
+        else
+        {
+            buttonImageMonday = UIImage(named: "MD")
+            mondayButton.setImage(buttonImageMonday, forState: UIControlState.Normal)
+            isMondayBege = true
+
+        }
     }
 
     @IBAction func tuesdayButton(sender: AnyObject)
     {
-        var buttonImageTuesday : UIImage!
-        buttonImageTuesday = UIImage(named: "T")
-        tuesdayButton.setImage(buttonImageTuesday, forState: UIControlState.Normal)
+        if isTuesdayBege == true{
+            buttonImageTuesday = UIImage(named: "T")
+            tuesdayButton.setImage(buttonImageTuesday, forState: UIControlState.Normal)
+            isTuesdayBege = false
+        }
+        else
+        {
+            buttonImageTuesday = UIImage(named: "TD")
+            tuesdayButton.setImage(buttonImageTuesday, forState: UIControlState.Normal)
+            isTuesdayBege = true
+        }
     }
     
     @IBAction func wednesdayButton(sender: AnyObject)
     {
-        var buttonImageWednesday : UIImage!
-        buttonImageWednesday = UIImage(named: "W")
-        wednesdayButton.setImage(buttonImageWednesday, forState: UIControlState.Normal)
+        if isWednesdayBege == true{
+            buttonImageWednesday = UIImage(named: "W")
+            wednesdayButton.setImage(buttonImageWednesday, forState: UIControlState.Normal)
+            isWednesdayBege = false
+        }
+        else
+        {
+            buttonImageWednesday = UIImage(named: "WD")
+            wednesdayButton.setImage(buttonImageWednesday, forState: UIControlState.Normal)
+            isWednesdayBege = true
+
+        }
     }
     
     @IBAction func thursdayButton(sender: AnyObject)
     {
-        var buttonImageThursday : UIImage!
-        buttonImageThursday = UIImage(named: "T")
-        thursdayButton.setImage(buttonImageThursday, forState: UIControlState.Normal)
+        if isThursdayBege == true {
+            buttonImageThursday = UIImage(named: "T")
+            thursdayButton.setImage(buttonImageThursday, forState: UIControlState.Normal)
+            isThursdayBege=false
+        }
+        else
+        {
+            buttonImageThursday = UIImage(named: "TD")
+            thursdayButton.setImage(buttonImageThursday, forState: UIControlState.Normal)
+            isThursdayBege=true
+        }
     }
     
     @IBAction func fridayButton(sender: AnyObject)
     {
-        var buttonImageFriday : UIImage!
-        buttonImageFriday = UIImage(named: "F")
-        fridayButton.setImage(buttonImageFriday, forState: UIControlState.Normal)
+        if isFridayBege == true{
+            buttonImageFriday = UIImage(named: "F")
+            fridayButton.setImage(buttonImageFriday, forState: UIControlState.Normal)
+            isFridayBege = false
+        }
+        else
+        {
+            buttonImageFriday = UIImage(named: "FD")
+            fridayButton.setImage(buttonImageFriday, forState: UIControlState.Normal)
+            isFridayBege = true
+
+        }
     }
  
     @IBAction func saturdayButtonPressed(sender: AnyObject)
     {
-        var buttonImageSaturday : UIImage!
-        buttonImageSaturday = UIImage(named: "S")
-        saturdayButton.setImage(buttonImageSaturday, forState: UIControlState.Normal)
+        if isSaturday == true {
+            buttonImageSaturday = UIImage(named: "S")
+            saturdayButton.setImage(buttonImageSaturday, forState: UIControlState.Normal)
+            isSaturday=false
+        }
+        else
+        {
+            buttonImageSaturday = UIImage(named: "SD")
+            saturdayButton.setImage(buttonImageSaturday, forState: UIControlState.Normal)
+            isSaturday=true
+            
+        }
     }
     
 
-    @IBAction func saturdayButtonPressedAgain(sender: AnyObject)
-    {
-        var buttonImageSaturday : UIImage!
-        buttonImageSaturday = UIImage(named: "SD")
-        saturdayButton.setImage(buttonImageSaturday, forState: UIControlState.Normal)
-    }
     
     
     @IBAction func cancelButton(sender: UIButton) {

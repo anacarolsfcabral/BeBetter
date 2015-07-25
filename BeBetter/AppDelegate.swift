@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        self.window?.rootViewController = CategoryViewController(nibName:"CategoryView", bundle:NSBundle.mainBundle())
+        self.window?.rootViewController = StartViewController(nibName:"StartView", bundle:NSBundle.mainBundle())
 //        self.window?.rootViewController = PerformanceViewController(nibName:"PerformanceView", bundle:NSBundle.mainBundle())
 //         self.window?.rootViewController = ActivityViewController(nibName:"ActivityView", bundle:NSBundle.mainBundle())
         self.window?.makeKeyAndVisible()
