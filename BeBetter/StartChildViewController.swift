@@ -12,11 +12,14 @@ class StartChildViewController: UIViewController {
 
     @IBOutlet weak var imageApp: UIImageView!
     @IBOutlet weak var goToBut: UIButton!
-    @IBOutlet weak var firstViewText: UITextView!
-    @IBOutlet weak var pacientImg: UIImageView!
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var patientImg: UIImageView!
     @IBOutlet weak var doctorImg: UIImageView!
-    @IBOutlet weak var pacientLabel: UILabel!
+    @IBOutlet weak var patientLabel: UILabel!
     @IBOutlet weak var doctorLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    
     
     
     override func viewDidLoad() {
@@ -26,26 +29,31 @@ class StartChildViewController: UIViewController {
         {
             screenNumber.hidden=true
             goToBut.hidden=true
-            pacientImg.hidden = true
+            patientImg.hidden = true
             doctorImg.hidden = true
-            pacientLabel.hidden = true
+            patientLabel.hidden = true
             doctorLabel.hidden = true
+            textView.hidden = true
             
-            firstViewText.alpha = 0
+            firstLabel.alpha = 0
+            secondLabel.alpha = 0
         }
         else if index == 1
         {
             imageApp.hidden=true
-            firstViewText.hidden = true
+            firstLabel.hidden = true
+            secondLabel.hidden = true
             screenNumber.hidden = true
             
-            pacientLabel.alpha = 0
+            textView.alpha = 0
+            
+            patientLabel.alpha = 0
             doctorLabel.alpha = 0
             
-            self.pacientImg.alpha = 0.5
+            self.patientImg.alpha = 0.5
             self.doctorImg.alpha = 0.5
             
-            self.view.addSubview(pacientImg)
+            self.view.addSubview(patientImg)
             self.view.addSubview(doctorImg)
             
         }
@@ -85,39 +93,61 @@ class StartChildViewController: UIViewController {
     {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(1.0, delay: 0.6, options: .CurveEaseIn, animations: {
-            self.firstViewText.alpha = 1.0
+        UIView.animateWithDuration(1.0, delay: 1.0, options: .CurveEaseIn, animations: {
+            self.firstLabel.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(2.0, delay: 2.0, options: .CurveEaseIn, animations: {
+            self.secondLabel.alpha = 1.0
             }, completion: nil)
         
         
-        UIView.animateWithDuration(2.0, delay: 0.3, options: .CurveEaseIn, animations: { () -> Void in
-            self.pacientImg.alpha = 1.0
+        UIView.animateWithDuration(1.4, delay: 0.3, options: .CurveEaseIn, animations: { () -> Void in
             
-            let toImage = UIImage(named:"pacient.png")
-            UIView.transitionWithView(self.pacientImg,
+            self.patientImg.alpha = 1.0
+            
+            let toImage = UIImage(named:"patient.png")
+            
+            UIView.transitionWithView(self.patientImg,
+                
                 duration:2,
                 options: UIViewAnimationOptions.TransitionFlipFromLeft,
-                animations: { self.pacientImg.image = toImage },
+                animations: { self.patientImg.image = toImage },
                 completion: nil)
+            
+            UIView.animateWithDuration(1.0, delay: 0.5, options: .CurveEaseIn, animations: {
+                
+                self.patientLabel.alpha = 1.0
+                
+                UIView.animateWithDuration(1.4, delay: 0.3, options: .CurveEaseIn, animations: { () -> Void in
+                    
+                    self.doctorImg.alpha = 1.0
+                    
+                    let toImage = UIImage(named:"doctor.png")
+                    
+                    UIView.transitionWithView(self.doctorImg,
+                        
+                        duration:2,
+                        options: UIViewAnimationOptions.TransitionFlipFromRight,
+                        animations: { self.doctorImg.image = toImage },
+                        completion: nil)
+                    
+                    UIView.animateWithDuration(1.0, delay: 0.5, options: .CurveEaseIn, animations: {
+                        
+                        self.doctorLabel.alpha = 1.0
+                        
+                        UIView.animateWithDuration(4.0, delay: 2.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+                            self.textView.alpha = 1.0
+                        }, completion: nil)
+                        
+                    }, completion: nil)
+                
+                }, completion: nil)
             
             }, completion: nil)
         
-        UIView.animateWithDuration(3.5, delay: 0.7, options: .CurveEaseIn, animations: {
-            self.pacientLabel.alpha = 1.0
         }, completion: nil)
-        
-        UIView.animateWithDuration(4.0, delay: 0.3, options: .CurveEaseIn, animations: { () -> Void in
-            self.doctorImg.alpha = 1.0
-            
-            let toImage = UIImage(named:"doctor.png")
-            UIView.transitionWithView(self.doctorImg,
-                duration:2,
-                options: UIViewAnimationOptions.TransitionFlipFromRight,
-                animations: { self.doctorImg.image = toImage },
-                completion: nil)
-            
-        }, completion: nil)
-        
+    
     }
 
     
