@@ -14,6 +14,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     
 
     var weeks = ["1st week", "2nd week", "3rd week", "4th week", "5th week"]
+    var exercises = ["1st exercise", "2nd exercise", "3rd exercise"]
 
     @IBAction func backButton(sender: UIButton) {
        self.dismissViewControllerAnimated(true, completion: nil)
@@ -62,6 +63,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         
         performanceTable.registerNib(UINib(nibName: "PerformanceHeaderCell", bundle: nil), forCellReuseIdentifier: "PerformanceHeaderCell")
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "addActivity:", name: "insertCell", object: nil)
+        
 
         }
 
@@ -71,11 +74,11 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 5
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return exercises.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -83,6 +86,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         
 //        cell.backgroundColor = UIColor(red: 240/255, green: 231/255, blue: 227/255, alpha: 1)
         cell.backgroundColor = UIColor.whiteColor()
+        cell.exerciseLabel.text = exercises[indexPath.row]
 
 
         
@@ -113,6 +117,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
         
         let  headerCell = performanceTable.dequeueReusableCellWithIdentifier("PerformanceHeaderCell") as! PerformanceHeaderCell
         headerCell.backgroundColor = UIColor(red: 244/255, green: 235/255, blue: 231/255, alpha: 1)
@@ -140,6 +145,16 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
 //        }
         
         return headerCell
+    }
+    
+    func addActivity(notification : NSNotification){
+        //vai fazer algo com o DAO
+        
+        self.exercises += ["4th exercise"]
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        self.performanceTable.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        
+        performanceTable.reloadData()
     }
     
 

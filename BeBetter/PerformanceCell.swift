@@ -10,6 +10,7 @@ import UIKit
 
 class PerformanceCell: UITableViewCell {
 
+    @IBOutlet weak var exerciseLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         

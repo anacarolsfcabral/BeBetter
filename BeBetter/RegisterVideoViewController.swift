@@ -22,6 +22,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     var tempImage: NSURL!
     
     var player = PBJVideoPlayerController()
+    var videoStatusImage = UIImageView()
     
     var screenTap : UITapGestureRecognizer!
     var videoLoop : UITapGestureRecognizer!
@@ -269,9 +270,11 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
 //            self.presentViewController(alert, animated: true, completion: nil)
 //        }
         
+        NSNotificationCenter.defaultCenter().postNotificationName("insertCell", object: nil)
         
-        let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
-        nextWindow.pathString = pathString
+        
+        let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
+        //nextWindow.pathString = pathString
         self.presentViewController(nextWindow, animated: true, completion: nil)
         
     }
@@ -336,8 +339,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -372,8 +374,12 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         player.videoFillMode = "AVLayerVideoGravityResizeAspect"
         player.playbackLoops = true
         player.volume = 1
-        
-
+        videoStatusImage.image = UIImage(named: "pauseRegister")
+        videoStatusImage.frame = player.view.frame
+        videoPlayerView.addSubview(videoStatusImage)
+        videoStatusImage.alpha = 0.8
+        videoStatusImage.frame.size = CGSize(width: 20, height: 20)
+        videoStatusImage.center = CGPointMake(videoPlayerView.bounds.midX/6, videoPlayerView.bounds.midY/4)
     }
     
     func playerLoopControl(tap: UITapGestureRecognizer) {
@@ -382,11 +388,13 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         {
             player.stop()
             videoIsPlaying = false
+            videoStatusImage.image = UIImage(named: "playRegister")
         }
         else if videoIsPlaying == false
         {
             player.playFromCurrentTime()
             videoIsPlaying = true
+            videoStatusImage.image = UIImage(named: "pauseRegister")
         }
         
     }
