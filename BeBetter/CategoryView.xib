@@ -17,8 +17,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYn-xv-ynG">
-                    <rect key="frame" x="200" y="62" width="200" height="142"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYn-xv-ynG">
+                    <rect key="frame" x="225" y="54" width="150" height="150"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="UzR-3c-9jw"/>
                         <constraint firstAttribute="width" constant="150" id="dwl-ra-Mgz"/>
@@ -31,8 +31,8 @@
                         <action selector="goToPerformance:" destination="-1" eventType="touchUpInside" id="prH-ci-iXh"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnd-OB-Va0">
-                    <rect key="frame" x="227" y="229" width="145" height="142"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnd-OB-Va0">
+                    <rect key="frame" x="225" y="225" width="150" height="150"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="Mzy-Jd-5j3"/>
                         <constraint firstAttribute="width" constant="150" id="sar-Pd-rGH"/>
@@ -45,13 +45,13 @@
                         <action selector="goToPerformance:" destination="-1" eventType="touchUpInside" id="Ypp-pK-eGa"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuS-90-oW3">
-                    <rect key="frame" x="200" y="392" width="200" height="142"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuS-90-oW3">
+                    <rect key="frame" x="225" y="396" width="150" height="150"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="6QL-ue-8J3"/>
                         <constraint firstAttribute="height" constant="150" id="ltN-CP-ITs"/>
                     </constraints>
-                    <state key="normal" image="ophtal">
+                    <state key="normal" image="ophthal">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -72,8 +72,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ophtal" width="145" height="142"/>
-        <image name="physio" width="145" height="142"/>
-        <image name="speech" width="145" height="142"/>
+        <image name="ophthal" width="139" height="139"/>
+        <image name="physio" width="139" height="139"/>
+        <image name="speech" width="139" height="139"/>
     </resources>
 </document>
