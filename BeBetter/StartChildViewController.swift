@@ -12,22 +12,36 @@ class StartChildViewController: UIViewController {
 
     @IBOutlet weak var imageApp: UIImageView!
     @IBOutlet weak var goToBut: UIButton!
+    @IBOutlet weak var firstViewText: UITextView!
+    @IBOutlet weak var pacientImg: UIImageView!
+    @IBOutlet weak var doctorImg: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if index == 0 {
-        
+        if index == 0
+        {
             screenNumber.hidden=true
             goToBut.hidden=true
+            pacientImg.hidden = true
+            doctorImg.hidden = true
         }
-        else if index == 1 {
+        else if index == 1
+        {
             imageApp.hidden=true
+            firstViewText.hidden = true
+            screenNumber.hidden = true
         }
       
        screenNumber.text = ("Screen #\(index)")
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }
+    
     @IBOutlet weak var screenNumber: UILabel!
     var index: Int!
 
@@ -50,6 +64,10 @@ class StartChildViewController: UIViewController {
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
+    
+    
+
+    
     /*
     // MARK: - Navigation
 
