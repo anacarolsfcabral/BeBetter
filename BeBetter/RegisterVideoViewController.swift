@@ -253,7 +253,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
 //        }
 //
 //        activity = Activity(name: nameExerciseTextField.text, videoTutorial: pathVideo, category: "PegarTelaInicial")
-//        frequency = FrequencyActivity(amountWeeks: weekStepper.value as! Int, daysWithAmountForDay: daysWithAmountForDay, id: 1)
+//        frequency = FrequencyActivity(amountWeeks: weekStepper.value, daysWithAmountForDay: daysWithAmountForDay, id: 1)
 //
 //        
 //        isSaved = DAO.sharedInstance.saveActivity(activity, frequency: frequency)
