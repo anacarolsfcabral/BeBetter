@@ -8,16 +8,83 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+class StartViewController: UIViewController, UIPageViewControllerDataSource {
 
-    @IBAction func startButton(sender: UIButton) {
+    var pageController = UIPageViewController(transitionStyle: .Scroll ,navigationOrientation: .Horizontal, options: nil)
+    var pageControl = UIPageControl.appearance()
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        let nextWindow = CategoryViewController(nibName:"CategoryView", bundle: nil)
-        self.presentViewController(nextWindow, animated: true, completion: nil)
+        var vc = viewController as! StartChildViewController
+        
+        var index = vc.index as Int
+
+        index++
+        
+        if (index == 3) {
+            return nil;
+        }
+    
+        println("tela\(index)")
+
+        return self.viewcontrollerAtIndex(index)
+     
     }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?{
+        
+        var vc = viewController as! StartChildViewController
+        
+        var index = vc.index as Int
+    
+        
+        if index == 0  {
+            return nil
+        }
+        
+        index--
+        
+        
+        return self.viewcontrollerAtIndex(index)
+
+    }
+    
+    func viewcontrollerAtIndex(index: Int) -> StartChildViewController{
+        let child = StartChildViewController(nibName: "StartChildView", bundle: nil)
+        child.index=index
+        
+        return child
+    }
+    
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 2
+    }
+    
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        pageController.dataSource=self
+        pageController.view.frame = self.view.bounds
+        let initial :  StartChildViewController = self.viewcontrollerAtIndex(0)
+        
+        var viewControllers = [initial]
+        self.pageController.setViewControllers(viewControllers, direction:.Forward, animated: false, completion: nil)
+        self.addChildViewController(self.pageController)
+        self.view.addSubview(self.pageController.view)
+        self.pageController.didMoveToParentViewController(self)
+        
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.whiteColor()
+        pageControl.backgroundColor = UIColor(red: 241/255, green: 230/255, blue: 225/255, alpha: 1)
+
+      
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -25,6 +92,9 @@ class StartViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+  
+
     
 
     /*
