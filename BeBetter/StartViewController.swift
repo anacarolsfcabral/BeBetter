@@ -21,7 +21,7 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
 
         index++
         
-        if (index == 3) {
+        if (index == 2) {
             return nil;
         }
     
