@@ -17,7 +17,11 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     var exercises = ["1st exercise", "2nd exercise", "3rd exercise"]
 
     @IBAction func backButton(sender: UIButton) {
-       self.dismissViewControllerAnimated(true, completion: nil)
+       //self.dismissViewControllerAnimated(true, completion: nil)
+        let nextWindow = CategoryViewController(nibName:"CategoryVideoView", bundle: nil)
+        self.presentViewController(nextWindow, animated: true, completion: nil)
+
+        
     }
     @IBAction func addExercise(sender: UIButton) {
         

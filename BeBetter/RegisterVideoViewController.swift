@@ -43,6 +43,9 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     var buttonImageThursday : UIImage!
     var buttonImageFriday : UIImage!
     var buttonImageSaturday : UIImage!
+    
+    var somaDias = 0
+    var daysWithAmountForDay : NSMutableDictionary = [ 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, 6 : 0, 7 : 0]
 
     
     @IBOutlet var videoPlayerView: UIView!
@@ -184,7 +187,6 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     @IBAction func sabeButton(sender: UIButton) {
         
 //        var pathVideo = pathString
-//        var daysWithAmountForDay : NSMutableDictionary = [ 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, 6 : 0, 7 : 0]
 //        var isSaved : Bool
 //        var activity : Activity
 //        var frequency : FrequencyActivity
@@ -270,12 +272,29 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
 //            self.presentViewController(alert, animated: true, completion: nil)
 //        }
         
-        NSNotificationCenter.defaultCenter().postNotificationName("insertCell", object: nil)
+//        for var i=0; i<7; i++
+//        {
+//            let temp = daysWithAmountForDay[i] as! Int
+//            somaDias = somaDias + temp
+//        }
+
         
-        
-        let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
-        nextWindow.pathString = pathString
-        self.presentViewController(nextWindow, animated: true, completion: nil)
+        if ((nameExerciseTextField == "") || ( weekStepper.value == 0 ) || ( dayStepper.value == 0 ) || (isSaturdayBege==true && isSundayBege == true && isMondayBege==true && isTuesdayBege==true && isWednesdayBege==true && isThursdayBege==true && isFridayBege==true )){
+            
+            var alert = UIAlertController(title: "Alert", message: "You must complete all the informations before continuing ", preferredStyle:UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+            
+        else
+        {
+            NSNotificationCenter.defaultCenter().postNotificationName("insertCell", object: nil)
+            
+            
+            let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
+            nextWindow.pathString = pathString
+            self.presentViewController(nextWindow, animated: true, completion: nil)
+        }
         
     }
     
@@ -319,6 +338,8 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         }
         
         else {
+            
+            
             println("ola")
             self.screenTap = UITapGestureRecognizer(target: self, action: "keyboardTap:")
             self.view.addGestureRecognizer(screenTap)
