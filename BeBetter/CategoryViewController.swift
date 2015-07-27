@@ -31,15 +31,30 @@ class CategoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func setSpeechtherapy(sender: AnyObject) {
+        
+        DAO.sharedInstance.setChoosenCategory("speechtherapy")
+        goToPerformance()
+    }
+    
+    @IBAction func setPhysiotherapy(sender: AnyObject) {
+        
+        DAO.sharedInstance.setChoosenCategory("physiotherapy")
+        goToPerformance()
+    }
+    
+    @IBAction func setOphthalmology(sender: AnyObject) {
+        
+        DAO.sharedInstance.setChoosenCategory("ophthalmology")
+        goToPerformance()
+    }
     
     
-    @IBAction func goToPerformance(sender: AnyObject)
-    {
+    func goToPerformance(){
         
         let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
         self.presentViewController(nextWindow, animated: true, completion: nil)
     }
-    
 
     func goToStartView(gesture: UIScreenEdgePanGestureRecognizer)
     {
