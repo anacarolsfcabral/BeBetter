@@ -35,6 +35,7 @@
 		F01AA2651B5EC3CA002C2EF6 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */; };
 		F01AA26E1B5EF031002C2EF6 /* PerformanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */; };
 		F01AA26F1B5EF031002C2EF6 /* PerformanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */; };
+		F61689C31B667203007F1828 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = F61689C21B667203007F1828 /* Data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
 		F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceCell.swift; sourceTree = "<group>"; };
 		F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceCell.xib; sourceTree = "<group>"; };
+		F61689C21B667203007F1828 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		FEA7346DA65B93E276568E4D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 		F01AA2411B5E87EE002C2EF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F61689C21B667203007F1828 /* Data.plist */,
 				F01AA25C1B5EB729002C2EF6 /* DAO.swift */,
 				F01AA25E1B5EB74E002C2EF6 /* Activity.swift */,
 				F01AA2601B5EB763002C2EF6 /* Category.swift */,
@@ -313,6 +316,7 @@
 				F01AA2251B5E869A002C2EF6 /* Main.storyboard in Resources */,
 				F01AA22A1B5E869A002C2EF6 /* LaunchScreen.xib in Resources */,
 				F01AA2271B5E869A002C2EF6 /* Images.xcassets in Resources */,
+				F61689C31B667203007F1828 /* Data.plist in Resources */,
 				6FE4E1F11B64175700B237D8 /* StartChildView.xib in Resources */,
 				F01AA24F1B5E907A002C2EF6 /* RegisterVideoView.xib in Resources */,
 				F01AA2451B5E8946002C2EF6 /* PerformanceView.xib in Resources */,

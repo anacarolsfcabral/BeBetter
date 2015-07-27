@@ -24,89 +24,100 @@ class DAO {
         return activities
     }
     
-    func saveActivity(activity: Activity, frequency: FrequencyActivity) -> Bool
+//    func setChoosenCategory
+    
+    func saveActivity(activity: Activity) -> Bool
     {
-        var pathAux = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-        var path = pathAux.stringByAppendingPathComponent("Data.plist")
-        var fileManager = NSFileManager.defaultManager()
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as   NSArray
+        let documentsDirectory = paths[0] as! String
+        let path = documentsDirectory.stringByAppendingPathComponent("Data.plist")
+        let fileManager = NSFileManager.defaultManager()
         
-        if (!fileManager.fileExistsAtPath(path))
+        //check if file exists
+        if(!fileManager.fileExistsAtPath(path))
         {
-            var bundle : NSString = NSBundle.mainBundle().pathForResource("Data", ofType: "plist")!
-            fileManager.copyItemAtPath(bundle as String, toPath: path, error:nil)
-            println("copy")
+            // If it doesn't, copy it from the default file in the Bundle
+            if let bundlePath = NSBundle.mainBundle().pathForResource("Data", ofType: "plist")
+            {
+                let resultDictionary = NSMutableDictionary(contentsOfFile: bundlePath)
+                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
+            }
+            else
+            {
+                println("Data.plist not found. Please, make sure it is part of the bundle.")
+            }
+            
+        }
+        else
+        {
+            println("Data.plist already exits at path.")
+            // use this to delete file from documents directory
+            //fileManager.removeItemAtPath(path, error: nil)
         }
         
-        var data : NSMutableDictionary! = NSMutableDictionary(contentsOfFile: path)
+        
+        var dataActivity : NSMutableDictionary! = NSMutableDictionary(contentsOfFile: path)
 
-        data.setObject(activity.name, forKey: "name")
-        data.setObject(activity.videoTutorial, forKey: "videoTutorial")
-        data.setObject(activity.category, forKey: "category")
+        
+        dataActivity.setObject(activity.name, forKey: "name")
+        dataActivity.setObject(activity.videoTutorial, forKey: "videoTutorial")
+        dataActivity.setObject(activity.category, forKey: "category")
 
-        data.setObject(frequency.amountWeeks, forKey: "amountWeeks")
-        data.setObject(frequency.id, forKey: "id")
-        data.setObject(frequency.daysWithAmountForDay, forKey: "daysWithAmountForDay")
+        dataActivity.writeToFile(path, atomically: true)
 
-        data.writeToFile(path, atomically: true)
         println(path)
-        println(data)
+        println(dataActivity)
+        
+        return true
+
+    }
+    
+    
+    func saveFrequency(frequency: FrequencyActivity) -> Bool
+    {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as   NSArray
+        let documentsDirectory = paths[0] as! String
+        let path = documentsDirectory.stringByAppendingPathComponent("Data.plist")
+        let fileManager = NSFileManager.defaultManager()
+        
+        //check if file exists
+        if(!fileManager.fileExistsAtPath(path))
+        {
+            // If it doesn't, copy it from the default file in the Bundle
+            if let bundlePath = NSBundle.mainBundle().pathForResource("Data", ofType: "plist")
+            {
+                let resultDictionary = NSMutableDictionary(contentsOfFile: bundlePath)
+                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
+            }
+            else
+            {
+                println("Data.plist not found. Please, make sure it is part of the bundle.")
+            }
+            
+        }
+        else
+        {
+            println("Data.plist already exits at path.")
+            // use this to delete file from documents directory
+            //fileManager.removeItemAtPath(path, error: nil)
+        }
+        
+        
+        var dataFrequency : NSMutableDictionary! = NSMutableDictionary(contentsOfFile: path)
+        
+        dataFrequency.setObject(frequency.amountWeeks, forKey: "amountWeeks")
+        dataFrequency.setObject(frequency.id, forKey: "id")
+        dataFrequency.setObject(frequency.daysWithAmountForDay, forKey: "daysWithAmountForDay")
+        
+        dataFrequency.writeToFile(path, atomically: true)
+        
+        println(path)
+        println(dataFrequency)
         
         return true
         
-//        if (!fileManager.fileExistsAtPath(path))
-//        {
-//            let created = fileManager.createFileAtPath(path, contents: nil, attributes: nil)
-//            var bundle : NSString! = NSBundle.mainBundle().pathForResource("Data", ofType: "plist")
-//
-//            if(created)
-//            {
-//                fileManager.copyItemAtPath(bundle as String, toPath: path, error:nil)
-//                println("copy")
-//                
-//                var data : NSMutableDictionary! = NSMutableDictionary(contentsOfFile: path)
-//                
-//                data.setObject(activity.name, forKey: "name")
-//                data.setObject(activity.videoTutorial, forKey: "videoTutorial")
-//                data.setObject(activity.category, forKey: "category")
-//                
-//                data.setObject(frequency.amountWeeks, forKey: "amountWeeks")
-//                data.setObject(frequency.id, forKey: "id")
-//                data.setObject(frequency.daysWithAmountForDay, forKey: "daysWithAmountForDay")
-//                
-//                data.writeToFile(path, atomically: true)
-//                println(path)
-//                println(data)
-//                
-//                return true
-//            }
-//            else
-//            {
-//                println("Data.plist not created")
-//            }
-//        }
-//        else
-//        {
-//            println("Data.plist already exits at path.")
-//            
-//            var data : NSMutableDictionary! = NSMutableDictionary(contentsOfFile: path)
-//            
-//            data.setObject(activity.name, forKey: "name")
-//            data.setObject(activity.videoTutorial, forKey: "videoTutorial")
-//            data.setObject(activity.category, forKey: "category")
-//            
-//            data.setObject(frequency.amountWeeks, forKey: "amountWeeks")
-//            data.setObject(frequency.id, forKey: "id")
-//            data.setObject(frequency.daysWithAmountForDay, forKey: "daysWithAmountForDay")
-//            
-//            data.writeToFile(path, atomically: true)
-//            
-//            println(path)
-//            println(data)
-//            
-//            return true
-//        }
-
     }
+
     
     func deleteActivity(activity: Activity) -> Bool{
      
