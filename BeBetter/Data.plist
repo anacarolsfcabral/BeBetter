@@ -2,38 +2,49 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ActivityAmount</key>
+	<integer>0</integer>
 	<key>Activity</key>
 	<dict>
-		<key>name</key>
-		<string></string>
-		<key>videoTutorial</key>
-		<string></string>
-		<key>note</key>
-		<string></string>
-		<key>lastVideo</key>
-		<string></string>
-		<key>id</key>
-		<string></string>
-		<key>category</key>
-		<string></string>
+		<key>idActivity</key>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>videoTutorial</key>
+			<string></string>
+			<key>note</key>
+			<string></string>
+			<key>lastVideo</key>
+			<string></string>
+			<key>id</key>
+			<string></string>
+			<key>category</key>
+			<string></string>
+		</dict>
 	</dict>
 	<key>FrequencyActivity</key>
 	<dict>
-		<key>amountWeeks</key>
-		<string></string>
-		<key>daysWithAmountForDay</key>
-		<string></string>
-		<key>id</key>
-		<string></string>
+		<key>idFrequencyActivity</key>
+		<dict>
+			<key>amountWeeks</key>
+			<string></string>
+			<key>daysWithAmountForDay</key>
+			<string></string>
+			<key>id</key>
+			<string></string>
+		</dict>
 	</dict>
 	<key>PerformanceForWeek</key>
 	<dict>
-		<key>numberWeek</key>
-		<string></string>
-		<key>daysWithAmountForDay</key>
-		<string></string>
-		<key>id</key>
-		<string></string>
+		<key>idPerformanceForWeek</key>
+		<dict>
+			<key>numberWeek</key>
+			<string></string>
+			<key>daysWithAmountForDay</key>
+			<string></string>
+			<key>id</key>
+			<string></string>
+		</dict>
 	</dict>
 	<key>Category</key>
 	<dict>

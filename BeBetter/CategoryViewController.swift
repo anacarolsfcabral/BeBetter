@@ -19,6 +19,8 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //DAO.sharedInstance.saveActivity()
+        
         var gesture = UIScreenEdgePanGestureRecognizer(target: self, action: "goToStartView:")
         gesture.edges = UIRectEdge.Left
         self.view.addGestureRecognizer(gesture)

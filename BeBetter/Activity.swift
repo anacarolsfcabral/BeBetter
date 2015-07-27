@@ -17,7 +17,7 @@ class Activity {
     var id: Int
     var category: String!
     
-    init (name: String, videoTutorial: String, category: String){
+    init (name: String, videoTutorial: String, category: String, note: String){
     
         self.name = name
         self.videoTutorial = videoTutorial
