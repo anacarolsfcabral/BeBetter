@@ -17,25 +17,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTd-ep-g2O" userLabel="ViewTutorial">
-                    <rect key="frame" x="200" y="59" width="200" height="251"/>
-                    <color key="backgroundColor" red="0.13333334029999999" green="0.74117648599999997" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
-                    <gestureRecognizers/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="0lU-4d-akU"/>
-                        <constraint firstAttribute="height" constant="251" id="N0M-Tl-2ek"/>
-                        <constraint firstAttribute="width" constant="560" id="bKt-TS-fBb"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="bKt-TS-fBb"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="586-UE-ONb" appends="YES" id="8F5-xS-Qn3"/>
-                        <outletCollection property="gestureRecognizers" destination="mAY-Te-GFx" appends="YES" id="Ufh-Ql-rNy"/>
-                    </connections>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s05-Zi-bot" userLabel="ViewVideo">
                     <rect key="frame" x="200" y="320" width="200" height="200"/>
                     <color key="backgroundColor" red="0.51372551919999998" green="0.2470588386" blue="0.90980398650000005" alpha="1" colorSpace="deviceRGB"/>
@@ -53,6 +34,25 @@
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="WBy-7W-MzS" appends="YES" id="Fhc-4w-YSp"/>
                         <outletCollection property="gestureRecognizers" destination="MCM-4c-ac4" appends="YES" id="0R4-6l-Kp6"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTd-ep-g2O" userLabel="ViewTutorial">
+                    <rect key="frame" x="200" y="59" width="200" height="251"/>
+                    <color key="backgroundColor" red="0.13333334029999999" green="0.74117648599999997" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="0lU-4d-akU"/>
+                        <constraint firstAttribute="height" constant="251" id="N0M-Tl-2ek"/>
+                        <constraint firstAttribute="width" constant="560" id="bKt-TS-fBb"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="bKt-TS-fBb"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="586-UE-ONb" appends="YES" id="8F5-xS-Qn3"/>
+                        <outletCollection property="gestureRecognizers" destination="mAY-Te-GFx" appends="YES" id="Ufh-Ql-rNy"/>
                     </connections>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTZ-22-0wU">

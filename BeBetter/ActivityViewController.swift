@@ -55,6 +55,8 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         videoStatusImage.alpha = 0.8
         videoStatusImage.frame.size = CGSize(width: 20, height: 20)
         videoTutorialView.center = CGPointMake(videoTutorialView.bounds.midX/2, videoTutorialView.bounds.midY/2)
+        
+        view.backgroundColor = UIColor.blackColor()
 
         
         setup()
