@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController" customModule="BeBetter" customModuleProvider="target">
             <connections>
+                <outlet property="edgeGesture" destination="rHL-tx-uGU" id="hsk-hX-oV5"/>
                 <outlet property="firstButton" destination="qYn-xv-ynG" id="tLs-F7-NSJ"/>
                 <outlet property="secondButton" destination="Wnd-OB-Va0" id="dI1-bZ-0Dg"/>
                 <outlet property="thirdButton" destination="JuS-90-oW3" id="Eo2-QT-MOS"/>
@@ -59,19 +60,35 @@
                         <action selector="goToPerformance:" destination="-1" eventType="touchUpInside" id="E1w-gj-US3"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="Idc-hX-UR3">
+                    <rect key="frame" x="-11" y="255" width="50" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="61z-kM-uRe"/>
+                        <constraint firstAttribute="width" constant="50" id="ah6-W1-BbI"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.94509803921568625" green="0.90196078431372551" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="Wnd-OB-Va0" firstAttribute="top" secondItem="qYn-xv-ynG" secondAttribute="bottom" constant="21" id="AqP-Mh-Jqn"/>
                 <constraint firstAttribute="centerY" secondItem="Wnd-OB-Va0" secondAttribute="centerY" id="I86-Sl-7Rg"/>
                 <constraint firstItem="JuS-90-oW3" firstAttribute="centerX" secondItem="Wnd-OB-Va0" secondAttribute="centerX" id="MUW-PH-O9u"/>
                 <constraint firstItem="JuS-90-oW3" firstAttribute="top" secondItem="Wnd-OB-Va0" secondAttribute="bottom" constant="21" id="UyH-HJ-Z5H"/>
+                <constraint firstItem="Idc-hX-UR3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-5" id="YuP-Eb-hiK"/>
                 <constraint firstItem="qYn-xv-ynG" firstAttribute="centerX" secondItem="Wnd-OB-Va0" secondAttribute="centerX" id="bE9-Bz-yai"/>
                 <constraint firstAttribute="centerX" secondItem="Wnd-OB-Va0" secondAttribute="centerX" id="usa-A4-CzY"/>
+                <constraint firstItem="Idc-hX-UR3" firstAttribute="centerY" secondItem="Wnd-OB-Va0" secondAttribute="centerY" id="xvl-f8-4TR"/>
             </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="rHL-tx-uGU" appends="YES" id="NfM-r2-trU"/>
+            </connections>
+            <point key="canvasLocation" x="147" y="265"/>
         </view>
+        <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="rHL-tx-uGU"/>
     </objects>
     <resources>
+        <image name="backButton" width="133" height="250"/>
         <image name="ophthal" width="139" height="139"/>
         <image name="physio" width="139" height="139"/>
         <image name="speech" width="139" height="139"/>

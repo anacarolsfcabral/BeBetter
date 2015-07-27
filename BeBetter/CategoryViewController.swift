@@ -14,11 +14,14 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var firstButton: UIButton!
     @IBOutlet weak var secondButton: UIButton!
     @IBOutlet weak var thirdButton: UIButton!
-    
+    @IBOutlet var edgeGesture: UIScreenEdgePanGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var gesture = UIScreenEdgePanGestureRecognizer(target: self, action: "goToStartView:")
+        gesture.edges = UIRectEdge.Left
+        self.view.addGestureRecognizer(gesture)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,13 +31,21 @@ class CategoryViewController: UIViewController {
     
     
     
-    @IBAction func goToPerformance(sender: AnyObject) {
+    @IBAction func goToPerformance(sender: AnyObject)
+    {
         
         let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
         self.presentViewController(nextWindow, animated: true, completion: nil)
     }
     
+
+    func goToStartView(gesture: UIScreenEdgePanGestureRecognizer)
+    {
+        let nextWindow = StartViewController(nibName:"StartView", bundle: nil)
+        self.presentViewController(nextWindow, animated: true, completion: nil)
+    }
     
+
     
 
     /*
