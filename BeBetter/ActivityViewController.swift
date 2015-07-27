@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate, PBJVisionDelegate {
+class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate, PBJVisionDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet var exerciseNameLabel: UILabel!
     @IBOutlet var videoTutorialView: UIView!
@@ -21,6 +21,11 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     var previewView: UIView = UIView(frame: CGRectZero)
     var previewLayer = PBJVision.sharedInstance().previewLayer
     var pathString : String!
+    var videoStatusImage = UIImageView()
+    
+    var screenTap : UITapGestureRecognizer!
+    var videoLoop : UITapGestureRecognizer!
+    var videoIsPlaying : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +49,33 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         
         recordVideoView.addSubview(previewView)
         
+        videoStatusImage.image = UIImage(named: "pauseRegister")
+        videoStatusImage.frame = player.view.frame
+        videoTutorialView.addSubview(videoStatusImage)
+        videoStatusImage.alpha = 0.8
+        videoStatusImage.frame.size = CGSize(width: 20, height: 20)
+        videoTutorialView.center = CGPointMake(videoTutorialView.bounds.midX/2, videoTutorialView.bounds.midY/2)
+
+        
         setup()
         // Do any additional setup after loading the view.
+    }
+    
+    func playerLoopControl(tap: UITapGestureRecognizer) {
+        
+        if videoIsPlaying == true
+        {
+            player.stop()
+            videoIsPlaying = false
+            videoStatusImage.image = UIImage(named: "playRegister")
+        }
+        else if videoIsPlaying == false
+        {
+            player.playFromCurrentTime()
+            videoIsPlaying = true
+            videoStatusImage.image = UIImage(named: "pauseRegister")
+        }
+        
     }
     
     func setup(){
@@ -94,6 +124,27 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
         self.presentViewController(nextWindow, animated: true, completion: nil)
     }
+    
+    @IBAction func moveVideos(sender: UIPanGestureRecognizer) {
+        
+        let translation = sender.translationInView(self.view)
+        if let view = sender.view {
+            view.center = CGPoint(x:view.center.x + translation.x,
+                y:view.center.y + translation.y)
+        }
+        sender.setTranslation(CGPointZero, inView: self.view)
+    }
+    
+    @IBAction func changeSize(sender: UIPinchGestureRecognizer) {
+        
+        if let view = sender.view {
+            view.transform = CGAffineTransformScale(view.transform,
+                sender.scale, sender.scale)
+            sender.scale = 1
+        }
+    }
+    
+
     
     
     /*

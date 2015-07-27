@@ -273,8 +273,8 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         NSNotificationCenter.defaultCenter().postNotificationName("insertCell", object: nil)
         
         
-        let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
-        //nextWindow.pathString = pathString
+        let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
+        nextWindow.pathString = pathString
         self.presentViewController(nextWindow, animated: true, completion: nil)
         
     }

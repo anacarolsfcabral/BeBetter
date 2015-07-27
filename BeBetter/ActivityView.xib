@@ -17,9 +17,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTd-ep-g2O">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTd-ep-g2O" userLabel="ViewTutorial">
                     <rect key="frame" x="200" y="59" width="200" height="251"/>
                     <color key="backgroundColor" red="0.13333334029999999" green="0.74117648599999997" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="0lU-4d-akU"/>
                         <constraint firstAttribute="height" constant="251" id="N0M-Tl-2ek"/>
@@ -30,10 +31,15 @@
                             <exclude reference="bKt-TS-fBb"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="586-UE-ONb" appends="YES" id="8F5-xS-Qn3"/>
+                        <outletCollection property="gestureRecognizers" destination="mAY-Te-GFx" appends="YES" id="Ufh-Ql-rNy"/>
+                    </connections>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s05-Zi-bot">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s05-Zi-bot" userLabel="ViewVideo">
                     <rect key="frame" x="200" y="320" width="200" height="200"/>
                     <color key="backgroundColor" red="0.51372551919999998" green="0.2470588386" blue="0.90980398650000005" alpha="1" colorSpace="deviceRGB"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="width" constant="560" id="5Ch-uO-Lya"/>
                         <constraint firstAttribute="height" constant="200" id="8Gx-0s-aPL"/>
@@ -44,9 +50,13 @@
                             <exclude reference="5Ch-uO-Lya"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="WBy-7W-MzS" appends="YES" id="Fhc-4w-YSp"/>
+                        <outletCollection property="gestureRecognizers" destination="MCM-4c-ac4" appends="YES" id="0R4-6l-Kp6"/>
+                    </connections>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTZ-22-0wU">
-                    <rect key="frame" x="68" y="19" width="457" height="20.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTZ-22-0wU">
+                    <rect key="frame" x="71.5" y="19" width="457" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20.5" id="Bcw-Zn-pNS"/>
                         <constraint firstAttribute="width" constant="457" id="RN5-oY-zbZ"/>
@@ -145,6 +155,7 @@
                 <constraint firstItem="Xbp-5M-lp9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="A9N-Um-5jL"/>
                 <constraint firstAttribute="trailing" secondItem="uBn-AA-hFK" secondAttribute="trailing" constant="16" id="PsS-PM-Pjz"/>
                 <constraint firstItem="LDr-tY-sLj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="Qwk-k6-O9i"/>
+                <constraint firstItem="s05-Zi-bot" firstAttribute="bottom" secondItem="uBn-AA-hFK" secondAttribute="bottom" id="WMJ-Hk-Ni5"/>
                 <constraint firstAttribute="centerX" secondItem="YVF-3L-0zs" secondAttribute="centerX" id="Zk5-Q6-KNV"/>
                 <constraint firstItem="NTZ-22-0wU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="eAF-Z6-HAS"/>
                 <constraint firstAttribute="bottom" secondItem="uBn-AA-hFK" secondAttribute="bottom" constant="80" id="edE-rQ-VAZ"/>
@@ -159,6 +170,26 @@
                 <constraint firstAttribute="bottom" secondItem="gb5-hU-nUp" secondAttribute="bottom" constant="19" id="yNg-AU-5Lu"/>
             </constraints>
         </view>
+        <pinchGestureRecognizer id="586-UE-ONb" userLabel="Pinch Tutorial">
+            <connections>
+                <action selector="changeSize:" destination="-1" id="Grm-HH-kgz"/>
+            </connections>
+        </pinchGestureRecognizer>
+        <pinchGestureRecognizer id="WBy-7W-MzS" userLabel="Pinch Video">
+            <connections>
+                <action selector="changeSize:" destination="-1" id="SMk-dF-9NR"/>
+            </connections>
+        </pinchGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="mAY-Te-GFx" userLabel="Pan Tutorial">
+            <connections>
+                <action selector="moveVideos:" destination="-1" id="sAk-Sp-Iuq"/>
+            </connections>
+        </panGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="MCM-4c-ac4" userLabel="Pan Video">
+            <connections>
+                <action selector="moveVideos:" destination="-1" id="kuf-Yj-TP3"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="notes" width="150" height="150"/>

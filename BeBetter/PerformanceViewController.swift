@@ -65,6 +65,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "addActivity:", name: "insertCell", object: nil)
         
+        
+        
 
         }
 
