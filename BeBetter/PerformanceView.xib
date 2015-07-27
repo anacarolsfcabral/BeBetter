@@ -16,20 +16,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="60" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ak3-aO-R1M">
-                    <rect key="frame" x="0.0" y="63" width="600" height="537"/>
+                    <rect key="frame" x="0.0" y="73" width="600" height="527"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="537" id="dhb-XX-w2R"/>
+                        <constraint firstAttribute="height" constant="527" id="dhb-XX-w2R"/>
                     </constraints>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APt-k4-IS0">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWe-3Z-gEl">
-                            <rect key="frame" x="285" y="27" width="30" height="30"/>
+                            <rect key="frame" x="285" y="20" width="44" height="44"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="S0z-yj-qCB"/>
-                                <constraint firstAttribute="width" constant="30" id="WrY-5N-e9w"/>
+                                <constraint firstAttribute="height" constant="44" id="S0z-yj-qCB"/>
+                                <constraint firstAttribute="width" constant="44" id="WrY-5N-e9w"/>
                             </constraints>
                             <state key="normal" backgroundImage="addButton">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,8 +38,8 @@
                                 <action selector="addExercise:" destination="-1" eventType="touchUpInside" id="8Yy-sQ-bUz"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9p-7W-ISS">
-                            <rect key="frame" x="13" y="27" width="35" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9p-7W-ISS">
+                            <rect key="frame" x="13" y="27" width="34" height="33"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                             <state key="normal" title="Back">
                                 <color key="titleColor" red="0.16078431369999999" green="0.5450980392" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,7 +54,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="9S5-fq-VBT"/>
                         <constraint firstAttribute="centerY" secondItem="HWe-3Z-gEl" secondAttribute="centerY" constant="-9.5" id="BI9-5U-Tzb"/>
-                        <constraint firstAttribute="centerX" secondItem="HWe-3Z-gEl" secondAttribute="centerX" id="Yzf-Yw-zTm"/>
+                        <constraint firstAttribute="centerX" secondItem="HWe-3Z-gEl" secondAttribute="centerX" constant="-7" id="Yzf-Yw-zTm"/>
                         <constraint firstItem="K9p-7W-ISS" firstAttribute="top" secondItem="APt-k4-IS0" secondAttribute="top" constant="27" id="dY7-R7-OFD"/>
                         <constraint firstItem="K9p-7W-ISS" firstAttribute="leading" secondItem="APt-k4-IS0" secondAttribute="leading" constant="13" id="sdU-Uy-Rl6"/>
                     </constraints>
@@ -67,7 +67,7 @@
                 <constraint firstItem="APt-k4-IS0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FY4-hI-gOH"/>
                 <constraint firstItem="APt-k4-IS0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MZ7-C2-40U"/>
                 <constraint firstAttribute="trailing" secondItem="APt-k4-IS0" secondAttribute="trailing" id="Odi-M5-vnQ"/>
-                <constraint firstItem="Ak3-aO-R1M" firstAttribute="top" secondItem="APt-k4-IS0" secondAttribute="bottom" constant="-2" id="RI6-zH-veF"/>
+                <constraint firstItem="Ak3-aO-R1M" firstAttribute="top" secondItem="APt-k4-IS0" secondAttribute="bottom" constant="8" id="RI6-zH-veF"/>
                 <constraint firstAttribute="bottom" secondItem="Ak3-aO-R1M" secondAttribute="bottom" id="Y1W-7H-QOX"/>
             </constraints>
             <point key="canvasLocation" x="254" y="184"/>

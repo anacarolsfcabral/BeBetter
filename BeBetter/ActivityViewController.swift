@@ -17,19 +17,148 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+
+    @IBOutlet var playVideoBut: UIButton!
+    @IBOutlet var pauseVideoBut: UIButton!
+    @IBOutlet var restartVideoBut: UIButton!
+    @IBOutlet var changeBut: UIButton!
+    
+    var buttonImagePlay: UIImage!
+    var buttonImagepause: UIImage!
+    var buttonImageChange:UIImage!
+    var videoPath: String!
+    
+    
     var player = PBJVideoPlayerController()
+    var playNew = PBJVideoPlayerController()
     var previewView: UIView = UIView(frame: CGRectZero)
     var previewLayer = PBJVision.sharedInstance().previewLayer
     var pathString : String!
     var videoStatusImage = UIImageView()
     
+    var vision: PBJVision = PBJVision.sharedInstance()
+    
     var screenTap : UITapGestureRecognizer!
     var videoLoop : UITapGestureRecognizer!
+    
     var videoIsPlaying : Bool = true
+    var isRecordingNewVideo = true
+    var gonnaStartRecording = true
+    var isPractsingExercise = true
+    var isPlaying = true
+    
+    @IBAction func playVideo(sender: UIButton) {
+        
+        if isPlaying==true{
+            
+            playNew.stop()
+            isPlaying = false
+            buttonImagePlay = UIImage(named: "play")
+            playVideoBut.setImage(buttonImagePlay, forState: UIControlState.Normal)
+
+            
+        }
+        else
+        {
+            playNew.playFromCurrentTime()
+            isPlaying = true
+            buttonImagePlay = UIImage(named: "pause")
+            playVideoBut.setImage(buttonImagePlay, forState: UIControlState.Normal)
+            
+        }
+    }
+    @IBAction func pauseVideo(sender: UIButton) {
+        
+            
+            if gonnaStartRecording == true{
+                vision.startVideoCapture()
+                gonnaStartRecording = false
+                buttonImagepause = UIImage(named: "isRecording")
+                pauseVideoBut.setImage(buttonImagepause, forState: UIControlState.Normal)
+            }
+            
+            else if isRecordingNewVideo == true && gonnaStartRecording == false{
+            
+                vision.pauseVideoCapture()
+                isRecordingNewVideo = false
+                buttonImagepause = UIImage(named: "notRecording")
+                pauseVideoBut.setImage(buttonImagepause, forState: UIControlState.Normal)
+                
+            }
+            else if isRecordingNewVideo == false && gonnaStartRecording==false
+            {
+                vision.resumeVideoCapture()
+                isRecordingNewVideo = true
+                buttonImagepause = UIImage(named: "isRecording")
+                pauseVideoBut.setImage(buttonImagepause, forState: UIControlState.Normal)
+            }
+    }
+    
+    
+    @IBAction func restartVideo(sender: UIButton) {
+        
+        vision.endVideoCapture()
+        gonnaStartRecording = true
+        buttonImagepause = UIImage(named: "notRecording")
+        pauseVideoBut.setImage(buttonImagepause, forState: UIControlState.Normal)
+    }
+    @IBAction func changeMode(sender: UIButton) {
+        if isPractsingExercise == true {
+        
+            //previewView.hidden=true
+            //playNew.view.hidden = false
+        
+            playNew.view.frame = recordVideoView.bounds
+            recordVideoView.addSubview(playNew.view)
+            playNew.videoPath = videoPath
+            playNew.playFromBeginning()
+            playNew.videoFillMode = "AVLayerVideoGravityResizeAspect"
+            playNew.playbackLoops = true
+            playNew.volume = 1
+            
+            playVideoBut.enabled = true
+            playVideoBut.alpha = 1.0
+            pauseVideoBut.enabled = false
+            pauseVideoBut.alpha = 0.6
+            restartVideoBut.enabled = false
+            restartVideoBut.alpha = 0.6
+
+            buttonImageChange = UIImage(named: "recordActivity")
+            changeBut.setImage(buttonImageChange, forState: UIControlState.Normal)
+            isPractsingExercise = false
+        }
+        else
+        {
+            playNew.view.removeFromSuperview()
+            isPractsingExercise = true
+            playVideoBut.alpha = 0.6
+            playVideoBut.enabled = false
+            pauseVideoBut.enabled = true
+            pauseVideoBut.alpha = 1.0
+            restartVideoBut.enabled = true
+            restartVideoBut.alpha = 1.0
+            changeBut.enabled = false
+            
+            buttonImageChange = UIImage(named: "seeActivity")
+            changeBut.setImage(buttonImageChange, forState: UIControlState.Normal)
+
+            
+        }
+
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if isPractsingExercise == true {
+            
+            playVideoBut.alpha = 0.6
+            playVideoBut.enabled = false
+            changeBut.enabled = false
+        }
+        
+        playNew.delegate = self
         player.delegate = self
         player.view.frame = videoTutorialView.bounds
         videoTutorialView.addSubview(player.view)
@@ -54,7 +183,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         videoTutorialView.addSubview(videoStatusImage)
         videoStatusImage.alpha = 0.8
         videoStatusImage.frame.size = CGSize(width: 20, height: 20)
-        videoTutorialView.center = CGPointMake(videoTutorialView.bounds.midX/2, videoTutorialView.bounds.midY/2)
+        videoStatusImage.center = CGPointMake(videoTutorialView.bounds.midX/4, videoTutorialView.bounds.midY/6)
         
         view.backgroundColor = UIColor.blackColor()
 
@@ -82,7 +211,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     
     func setup(){
         
-        var vision: PBJVision = PBJVision.sharedInstance()
+       
         vision.delegate = self
         vision.cameraMode = PBJCameraMode.Video
         vision.cameraDevice = PBJCameraDevice.Front
@@ -146,7 +275,47 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         }
     }
     
+    func visionDidEndVideoCapture(vision: PBJVision) {
+        
+//        println("ended")
+//        
+//        NSString *videoPath = [_currentVideo  objectForKey:PBJVisionVideoPathKey];
+//        
+//        
+        
+//        [_assetLibrary writeVideoAtPathToSavedPhotosAlbum:[NSURL URLWithString:videoPath] completionBlock:^(NSURL *assetURL, NSError *error1) {
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Saved!" message: @"Saved to the camera roll."
+//            delegate:self
+//            cancelButtonTitle:nil
+//            otherButtonTitles:@"OK", nil];
+//            [alert show];
+//            }];
+    }
+    
+    func vision(vision: PBJVision, capturedVideo videoDict: [NSObject : AnyObject]?, error: NSError?) {
+        
+        videoPath = videoDict!["PBJVisionVideoPathKey"] as! String
+        
+        println(videoPath)
+        
+        if (videoPath != "") {
+            changeBut.enabled = true
+        }
 
+//        println(videoDict?.keys)
+//        println(videoDict?.values)
+
+
+        
+//        for (key, value) in videoDict! {
+//            
+////            println(key)
+//            if value is String {
+//                println(value)
+//
+//            }
+//        }
+    }
     
     
     /*
