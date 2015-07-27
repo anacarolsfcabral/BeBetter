@@ -27,7 +27,6 @@ class StartChildViewController: UIViewController {
         
         if index == 0
         {
-            screenNumber.hidden=true
             goToBut.hidden=true
             patientImg.hidden = true
             doctorImg.hidden = true
@@ -43,7 +42,6 @@ class StartChildViewController: UIViewController {
             imageApp.hidden=true
             firstLabel.hidden = true
             secondLabel.hidden = true
-            screenNumber.hidden = true
             
             textView.alpha = 0
             
@@ -57,16 +55,12 @@ class StartChildViewController: UIViewController {
             self.view.addSubview(doctorImg)
             
         }
-      
-       screenNumber.text = ("Screen #\(index)")
-        
         
         
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBOutlet weak var screenNumber: UILabel!
+
     var index: Int!
 
     @IBAction func goToButton(sender: UIButton) {
