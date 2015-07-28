@@ -45,7 +45,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     var buttonImageSaturday : UIImage!
     
     var somaDias = 0
-    var daysWithAmountForDay : NSMutableDictionary = [ 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, 6 : 0, 7 : 0]
+    var daysWithAmountForDay : NSMutableDictionary = [ "Sunday" : 0, "Monday" : 0, "Tuesday" : 0, "Wednesday" : 0, "Thursday" : 0, "Friday" : 0, "Saturday" : 0]
 
     
     @IBOutlet var videoPlayerView: UIView!
@@ -193,60 +193,63 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         
         if isSundayBege == true
         {
-            daysWithAmountForDay[1] = 0
+            
+            daysWithAmountForDay.setValue(0, forKey: "Sunday")
         }
         else
         {
-            daysWithAmountForDay[1] = dayStepper.value
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Sunday")
+            
         }
         
         if isMondayBege == true
         {
-            daysWithAmountForDay[2] = 0
+            daysWithAmountForDay.setValue(0, forKey: "Monday")
+
         }
         else
         {
-            daysWithAmountForDay[2] = dayStepper.value
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Monday")
         }
         
         if isTuesdayBege == true
         {
-            daysWithAmountForDay[3] = 0
+            daysWithAmountForDay.setValue(0, forKey: "Tuesday")
         }
         else
         {
-            daysWithAmountForDay[3] = dayStepper.value
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Tuesday")
         }
         
         if isWednesdayBege == true
         {
-            daysWithAmountForDay[4] = 0
+            daysWithAmountForDay.setValue(0, forKey: "Wednesday")
         }
         else
         {
-            daysWithAmountForDay[4] = dayStepper.value
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Wednesday")
         }
 
         if isThursdayBege == true
         {
-            daysWithAmountForDay[5] = 0
+            daysWithAmountForDay.setValue(0, forKey: "Thursday")
         }
         else
         {
-            daysWithAmountForDay[5] = dayStepper.value
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Thursday")
         }
         
         if isFridayBege == true {
-            daysWithAmountForDay[6] = 0
+            daysWithAmountForDay.setValue(0, forKey: "Friday")
         }
         else {
-            daysWithAmountForDay[6] = dayStepper.value
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Friday")
         }
         if isSaturdayBege == true {
-            daysWithAmountForDay[7] = 0
+            daysWithAmountForDay.setValue(0, forKey: "Saturday")
         }
         else {
-            daysWithAmountForDay[7] = dayStepper.value
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Saturday")
         }
         
         var amounts = Int(weekStepper.value)
