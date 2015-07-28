@@ -186,7 +186,6 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     
     @IBAction func sabeButton(sender: UIButton) {
         
-        var pathVideo = pathString
         var isSaved : Bool
         var activity : Activity
         var frequency : FrequencyActivity
@@ -253,7 +252,19 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         }
         
         var amounts = Int(weekStepper.value)
-        activity = Activity(name: nameExerciseTextField.text, videoTutorial: pathVideo, category: DAO.sharedInstance.currentCategory,note: "")
+        
+        var videoData: NSData = NSData(contentsOfURL: tempImage)!
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths[0] as! String
+        
+        var numActivities = DAO.sharedInstance.savedInformation.integerForKey("ActivityAmount")
+        
+        var videoPath = documentsDirectory.stringByAppendingFormat("/video_\(numActivities).mov")
+        
+        videoData.writeToFile(videoPath, atomically: false)
+        
+        
+        activity = Activity(name: nameExerciseTextField.text, videoTutorial: videoPath, category: DAO.sharedInstance.currentCategory,note: "")
         frequency = FrequencyActivity(amountWeeks: amounts , daysWithAmountForDay: daysWithAmountForDay)
         
         
@@ -360,13 +371,8 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         tempImage = info[UIImagePickerControllerMediaURL] as! NSURL!
         pathString = tempImage.relativePath
         
-        
-        
         // Salvar no rolo da camera
         //UISaveVideoAtPathToSavedPhotosAlbum(pathString, self, nil, nil)
-        
-        // SALVAR NO PLIST PORRA AQUIIIII
-    
         
         alreadyRecorded = true
         self.dismissViewControllerAnimated(true, completion: {})

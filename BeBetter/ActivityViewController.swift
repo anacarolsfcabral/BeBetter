@@ -152,7 +152,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         super.viewDidLoad()
 
         var currentActivity:Activity = DAO.sharedInstance.getCurrentAcivity()
-        println("PEIDEI")
+        
         println(currentActivity.videoTutorial)
         
         videoPath = currentActivity.videoTutorial
