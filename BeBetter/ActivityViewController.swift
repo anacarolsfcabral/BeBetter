@@ -229,25 +229,6 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
 
     func videoPlayerBufferringStateDidChange(videoPlayer: PBJVideoPlayerController!) {
         
-        if videoStatusImage.image == UIImage(named: "playRegister")
-        {
-            videoStatusImage.image = UIImage(named: "pauseRegister")
-        }
-        else
-        {
-            videoStatusImage.image = UIImage(named: "playRegister")
-        }
-        
-        if videoJustRecordedStatusImage.image == UIImage(named: "playRegister")
-        {
-            videoJustRecordedStatusImage.image = UIImage(named: "pauseRegister")
-        }
-        else
-        {
-            videoJustRecordedStatusImage.image = UIImage(named: "playRegister")
-        }
-
-        
     }
     
     func videoPlayerPlaybackWillStartFromBeginning(videoPlayer: PBJVideoPlayerController!) {
@@ -260,22 +241,30 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     
     func videoPlayerPlaybackStateDidChange(videoPlayer: PBJVideoPlayerController!) {
         
-        if videoStatusImage.image == UIImage(named: "playRegister")
-        {
-            videoStatusImage.image = UIImage(named: "pauseRegister")
-        }
-        else
-        {
+        if player.playbackState == PBJVideoPlayerPlaybackState.Paused {
+            
+            println("ta pausado")
             videoStatusImage.image = UIImage(named: "playRegister")
-        }
-        
-        if videoJustRecordedStatusImage.image == UIImage(named: "playRegister")
-        {
-            videoJustRecordedStatusImage.image = UIImage(named: "pauseRegister")
+            //PBJVideoPlayerPlaybackStatePlaying
         }
         else
         {
+            println("ta rodando")
+            videoStatusImage.image = UIImage(named: "pauseRegister")
+            
+        }
+
+        if playNew.playbackState == PBJVideoPlayerPlaybackState.Paused {
+            
+            println("ta pausado")
             videoJustRecordedStatusImage.image = UIImage(named: "playRegister")
+            //PBJVideoPlayerPlaybackStatePlaying
+        }
+        else
+        {
+            println("ta rodando")
+            videoJustRecordedStatusImage.image = UIImage(named: "pauseRegister")
+            
         }
 
     }
