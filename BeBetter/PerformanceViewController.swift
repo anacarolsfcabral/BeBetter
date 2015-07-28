@@ -21,7 +21,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     
     @IBAction func backButton(sender: UIButton) {
        //self.dismissViewControllerAnimated(true, completion: nil)
-        let nextWindow = CategoryViewController(nibName:"CategoryVideoView", bundle: nil)
+        let nextWindow = CategoryViewController(nibName:"CategoryView", bundle: nil)
         self.presentViewController(nextWindow, animated: true, completion: nil)
 
         
@@ -63,13 +63,20 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         return arrayActivity.count
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        DAO.sharedInstance.setcurrentActivity(arrayActivity[indexPath.row])
+        let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
+        self.presentViewController(nextWindow, animated: true, completion: nil)
+    }
+
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = performanceTable.dequeueReusableCellWithIdentifier("PerformanceCell", forIndexPath: indexPath) as! PerformanceCell
         
 //        cell.backgroundColor = UIColor(red: 240/255, green: 231/255, blue: 227/255, alpha: 1)
         cell.backgroundColor = UIColor.whiteColor()
         cell.exerciseLabel.text = arrayActivity[indexPath.row].name
-
+        
         //self.performanceTable.registerClass(PerformanceCell.self, forCellWithReuseIdentifier: "PerformanceCell")
         // 3
         // Configure the cell...
@@ -95,12 +102,12 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
         
         let  headerCell = performanceTable.dequeueReusableCellWithIdentifier("PerformanceHeaderCell") as! PerformanceHeaderCell
         headerCell.backgroundColor = UIColor(red: 244/255, green: 235/255, blue: 231/255, alpha: 1)
     
         headerCell.weekLabel.text = weeks[section]
+
         
 //        switch (section) {
 //        case 0:
@@ -135,7 +142,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         performanceTable.reloadData()
     }
     
-
+    
+    
     /*
     // MARK: - Navigation
 

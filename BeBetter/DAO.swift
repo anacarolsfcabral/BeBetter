@@ -23,6 +23,28 @@ class DAO {
     
     var currentCategory = String()
     let savedInformation = NSUserDefaults.standardUserDefaults()
+    var currentActivityId = String()
+    
+    func setcurrentActivity(activity: Activity){
+        currentActivityId = activity.id
+    }
+    
+    func getCurrentAcivity()-> Activity{
+        var activityDict = savedInformation.objectForKey("ACTIVITY_\(currentActivityId)") as! NSMutableDictionary
+        
+        var name = activityDict.objectForKey("name") as! String
+        var videoTutorial = activityDict.objectForKey("videoTutorial") as! String
+        var note = activityDict.objectForKey("note") as! String
+        var lastVideo = activityDict.objectForKey("lastVideo") as! String
+        var id = activityDict.objectForKey("id") as! String
+        var category = activityDict.objectForKey("category") as! String
+        
+        var newActivity  = Activity(name: name, videoTutorial: videoTutorial, category: category, note: note)
+        
+        newActivity.id = currentActivityId
+
+        return newActivity
+    }
     
     func getActivitiesForCategory() -> [Activity]{
         

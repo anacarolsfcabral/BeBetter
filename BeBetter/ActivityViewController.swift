@@ -151,6 +151,12 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var currentActivity:Activity = DAO.sharedInstance.getCurrentAcivity()
+        println("PEIDEI")
+        println(currentActivity.videoTutorial)
+        
+        videoPath = currentActivity.videoTutorial
+        
         if isPractsingExercise == true {
             
             playVideoBut.alpha = 0.6
@@ -162,7 +168,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         player.delegate = self
         player.view.frame = videoTutorialView.bounds
         videoTutorialView.addSubview(player.view)
-        player.videoPath = pathString
+        player.videoPath = videoPath
         player.playFromBeginning()
         player.videoFillMode = "AVLayerVideoGravityResizeAspect"
         player.playbackLoops = true
