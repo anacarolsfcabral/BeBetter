@@ -186,98 +186,73 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     
     @IBAction func sabeButton(sender: UIButton) {
         
-//        var pathVideo = pathString
-//        var isSaved : Bool
-//        var activity : Activity
-//        var frequency : FrequencyActivity
-//        
-//        if isSundayBege == true
-//        {
-//            daysWithAmountForDay[1] = 0
-//        }
-//        else
-//        {
-//            daysWithAmountForDay[1] = dayStepper.value
-//        }
-//        
-//        if isMondayBege == true
-//        {
-//            daysWithAmountForDay[2] = 0
-//        }
-//        else
-//        {
-//            daysWithAmountForDay[2] = dayStepper.value
-//        }
-//        
-//        if isTuesdayBege == true
-//        {
-//            daysWithAmountForDay[3] = 0
-//        }
-//        else
-//        {
-//            daysWithAmountForDay[3] = dayStepper.value
-//        }
-//        
-//        if isWednesdayBege == true
-//        {
-//            daysWithAmountForDay[4] = 0
-//        }
-//        else
-//        {
-//            daysWithAmountForDay[4] = dayStepper.value
-//        }
-//
-//        if isThursdayBege == true
-//        {
-//            daysWithAmountForDay[5] = 0
-//        }
-//        else
-//        {
-//            daysWithAmountForDay[5] = dayStepper.value
-//        }
-//        
-//        if isFridayBege == true
-//        {
-//            daysWithAmountForDay[6] = 0
-//        }
-//        else
-//        {
-//            daysWithAmountForDay[6] = dayStepper.value
-//        }
-//        
-//        if isSaturdayBege == true
-//        {
-//            daysWithAmountForDay[7] = 0
-//        }
-//        else
-//        {
-//            daysWithAmountForDay[7] = dayStepper.value
-//        }
-//
-//        activity = Activity(name: nameExerciseTextField.text, videoTutorial: pathVideo, category: "PegarTelaInicial")
-//        frequency = FrequencyActivity(amountWeeks: weekStepper.value, daysWithAmountForDay: daysWithAmountForDay, id: 1)
-//
-//        
-//        isSaved = DAO.sharedInstance.saveActivity(activity, frequency: frequency)
-//        if isSaved == true
-//        {
-//            let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
-//            nextWindow.pathString = pathString
-//            self.presentViewController(nextWindow, animated: true, completion: nil)
-//        }
-//        else
-//        {
-//            var alert = UIAlertController(title: "Ops", message: "An error occurred while saving your activity", preferredStyle: UIAlertControllerStyle.Alert)
-//            alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: nil))
-//            self.presentViewController(alert, animated: true, completion: nil)
-//        }
+        var pathVideo = pathString
+        var isSaved : Bool
+        var activity : Activity
+        var frequency : FrequencyActivity
         
-//        for var i=0; i<7; i++
-//        {
-//            let temp = daysWithAmountForDay[i] as! Int
-//            somaDias = somaDias + temp
-//        }
+        if isSundayBege == true
+        {
+            daysWithAmountForDay[1] = 0
+        }
+        else
+        {
+            daysWithAmountForDay[1] = dayStepper.value
+        }
+        
+        if isMondayBege == true
+        {
+            daysWithAmountForDay[2] = 0
+        }
+        else
+        {
+            daysWithAmountForDay[2] = dayStepper.value
+        }
+        
+        if isTuesdayBege == true
+        {
+            daysWithAmountForDay[3] = 0
+        }
+        else
+        {
+            daysWithAmountForDay[3] = dayStepper.value
+        }
+        
+        if isWednesdayBege == true
+        {
+            daysWithAmountForDay[4] = 0
+        }
+        else
+        {
+            daysWithAmountForDay[4] = dayStepper.value
+        }
 
+        if isThursdayBege == true
+        {
+            daysWithAmountForDay[5] = 0
+        }
+        else
+        {
+            daysWithAmountForDay[5] = dayStepper.value
+        }
+        
+        if isFridayBege == true {
+            daysWithAmountForDay[6] = 0
+        }
+        else {
+            daysWithAmountForDay[6] = dayStepper.value
+        }
+        if isSaturdayBege == true {
+            daysWithAmountForDay[7] = 0
+        }
+        else {
+            daysWithAmountForDay[7] = dayStepper.value
+        }
+        
+        var amounts = Int(weekStepper.value)
+        activity = Activity(name: nameExerciseTextField.text, videoTutorial: pathVideo, category: DAO.sharedInstance.currentCategory,note: "")
+        frequency = FrequencyActivity(amountWeeks: amounts , daysWithAmountForDay: daysWithAmountForDay)
+        
         
         if ((nameExerciseTextField == "") || ( weekStepper.value == 0 ) || ( dayStepper.value == 0 ) || (isSaturdayBege==true && isSundayBege == true && isMondayBege==true && isTuesdayBege==true && isWednesdayBege==true && isThursdayBege==true && isFridayBege==true )){
             
@@ -288,14 +263,19 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
             
         else
         {
-            NSNotificationCenter.defaultCenter().postNotificationName("insertCell", object: nil)
+             isSaved = DAO.sharedInstance.saveActivity(activity, newFrequency: frequency)
             
-            
-            let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
-            nextWindow.pathString = pathString
-            self.presentViewController(nextWindow, animated: true, completion: nil)
+            if isSaved == true {
+                let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
+                self.presentViewController(nextWindow, animated: true, completion: nil)
+//                NSNotificationCenter.defaultCenter().postNotificationName("insertCell", object: nil)
+            }
+            else{
+                var alert = UIAlertController(title: "Ops", message: "An error occurred while saving your activity", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         }
-        
     }
     
     @IBAction func weekStepper(sender: UIStepper) {

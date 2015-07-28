@@ -17,7 +17,7 @@
 			<key>lastVideo</key>
 			<string></string>
 			<key>id</key>
-			<string></string>
+			<string>0</string>
 			<key>category</key>
 			<string></string>
 		</dict>
@@ -29,7 +29,7 @@
 			<key>amountWeeks</key>
 			<string></string>
 			<key>daysWithAmountForDay</key>
-			<string></string>
+			<dict/>
 			<key>id</key>
 			<string></string>
 		</dict>

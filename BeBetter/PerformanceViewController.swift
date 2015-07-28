@@ -16,6 +16,9 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     var weeks = ["1st week", "2nd week", "3rd week", "4th week", "5th week"]
     var exercises = ["1st exercise", "2nd exercise", "3rd exercise"]
 
+    var arrayActivity = [Activity]()
+    var arrayFrequency = [FrequencyActivity]()
+    
     @IBAction func backButton(sender: UIButton) {
        //self.dismissViewControllerAnimated(true, completion: nil)
         let nextWindow = CategoryViewController(nibName:"CategoryVideoView", bundle: nil)
@@ -29,49 +32,22 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         self.presentViewController(nextWindow, animated: true, completion: nil)
     }
     
-//    var semanas: Int
-//    
-//    var bolinhas: Int
-//    
-//    init(semanas: Int, bolinhas: Int)
-//    {
-//        
-//        self.semanas = semanas
-//        self.bolinhas = bolinhas
-//        
-//        super.init(nibName: "", bundle: nil)
-//
-//    }
-//
-//    required init(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //aqui verifica quantas semanas o cara tem, sei la, nao sei direito
-//        if(semanas == 1)
-//        {
-//            
-//        }
-
+        arrayActivity = DAO.sharedInstance.getActivitiesForCategory()
+        arrayFrequency = DAO.sharedInstance.getFrequency(arrayActivity)
+        
         performanceTable.delegate = self
         performanceTable.dataSource = self
         
         self.performanceTable.rowHeight = 105
         
         performanceTable.registerNib(UINib(nibName: "PerformanceCell", bundle: nil), forCellReuseIdentifier: "PerformanceCell")
-        
-        
         performanceTable.registerNib(UINib(nibName: "PerformanceHeaderCell", bundle: nil), forCellReuseIdentifier: "PerformanceHeaderCell")
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "addActivity:", name: "insertCell", object: nil)
         
-        
-        
-
         }
 
     override func didReceiveMemoryWarning() {
@@ -84,7 +60,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exercises.count
+        return arrayActivity.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -92,13 +68,9 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         
 //        cell.backgroundColor = UIColor(red: 240/255, green: 231/255, blue: 227/255, alpha: 1)
         cell.backgroundColor = UIColor.whiteColor()
-        cell.exerciseLabel.text = exercises[indexPath.row]
+        cell.exerciseLabel.text = arrayActivity[indexPath.row].name
 
-
-        
         //self.performanceTable.registerClass(PerformanceCell.self, forCellWithReuseIdentifier: "PerformanceCell")
-        
-        
         // 3
         // Configure the cell...
 //        switch (indexPath.section) {

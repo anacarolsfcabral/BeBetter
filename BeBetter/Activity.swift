@@ -14,7 +14,7 @@ class Activity {
     var videoTutorial: String!
     var note: String
     var lastVideo: String
-    var id: Int
+    var id: String
     var category: String!
     
     init (name: String, videoTutorial: String, category: String, note: String){
@@ -24,7 +24,7 @@ class Activity {
         self.category = category
         self.note = ""
         self.lastVideo = ""
-        self.id = 0
+        self.id = ""
     }
 
 }

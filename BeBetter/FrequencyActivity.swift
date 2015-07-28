@@ -12,12 +12,12 @@ class FrequencyActivity {
     
     var amountWeeks: Int
     var daysWithAmountForDay: NSDictionary
-    var id: Int
+    var id: String
     
-    init (amountWeeks: Int, daysWithAmountForDay: NSDictionary, id: Int){
+    init (amountWeeks: Int, daysWithAmountForDay: NSDictionary){
         self.amountWeeks = amountWeeks
         self.daysWithAmountForDay = daysWithAmountForDay
-        self.id = id
+        self.id = ""
         
     }
     
