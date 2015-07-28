@@ -11,13 +11,15 @@ import Foundation
 class PerformanceForWeek {
     
     var numberWeek: Int
-    var daysWithAmountForDay: NSDictionary
-    var id: Int
+    var daysWithAmountForDay: NSMutableDictionary
+    var id: String
+    var completed : Int
     
-    init(numberWeek: Int, daysWithAmountForDay: NSDictionary, id: Int){
+    init(numberWeek: Int, daysWithAmountForDay: NSMutableDictionary, completed : Int){
         self.numberWeek = numberWeek
         self.daysWithAmountForDay = daysWithAmountForDay
-        self.id = id
+        self.id = ""
+        self.completed = completed
     }
     
 }

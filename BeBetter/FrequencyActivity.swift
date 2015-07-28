@@ -11,14 +11,17 @@ import Foundation
 class FrequencyActivity {
     
     var amountWeeks: Int
-    var daysWithAmountForDay: NSDictionary
+    var daysWithAmountForDay: NSMutableDictionary
     var id: String
+    var selectedDaysCount: Int
+
     
-    init (amountWeeks: Int, daysWithAmountForDay: NSDictionary){
+    init (amountWeeks: Int, daysWithAmountForDay: NSMutableDictionary,selectedDaysCount: Int)
+{
         self.amountWeeks = amountWeeks
         self.daysWithAmountForDay = daysWithAmountForDay
         self.id = ""
-        
+        self.selectedDaysCount = selectedDaysCount
     }
     
 }

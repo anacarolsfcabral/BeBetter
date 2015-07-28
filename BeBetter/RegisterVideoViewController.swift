@@ -45,8 +45,9 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     var buttonImageSaturday : UIImage!
     
     var somaDias = 0
-    var daysWithAmountForDay : NSMutableDictionary = [ "Sunday" : 0, "Monday" : 0, "Tuesday" : 0, "Wednesday" : 0, "Thursday" : 0, "Friday" : 0, "Saturday" : 0]
+    var daysWithAmountForDay : NSMutableDictionary = [ "1" : 0, "2" : 0, "3" : 0, "4" : 0, "5" : 0, "6" : 0, "7" : 0]
 
+    var selectedDaysCount : Int = 0
     
     @IBOutlet var videoPlayerView: UIView!
     @IBOutlet var nameExerciseTextField: UITextField!
@@ -193,62 +194,75 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         if isSundayBege == true
         {
             
-            daysWithAmountForDay.setValue(0, forKey: "Sunday")
+            daysWithAmountForDay.setValue(0, forKey: "1")
         }
         else
         {
-            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Sunday")
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "1")
+            selectedDaysCount++
             
         }
         
         if isMondayBege == true
         {
-            daysWithAmountForDay.setValue(0, forKey: "Monday")
+            daysWithAmountForDay.setValue(0, forKey: "2")
 
         }
         else
         {
-            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Monday")
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "2")
+            selectedDaysCount++
+
         }
         
         if isTuesdayBege == true
         {
-            daysWithAmountForDay.setValue(0, forKey: "Tuesday")
+            daysWithAmountForDay.setValue(0, forKey: "3")
         }
         else
         {
-            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Tuesday")
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "3")
+            selectedDaysCount++
+
         }
         
         if isWednesdayBege == true
         {
-            daysWithAmountForDay.setValue(0, forKey: "Wednesday")
+            daysWithAmountForDay.setValue(0, forKey: "4")
         }
         else
         {
-            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Wednesday")
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "4")
+            selectedDaysCount++
+
         }
 
         if isThursdayBege == true
         {
-            daysWithAmountForDay.setValue(0, forKey: "Thursday")
+            daysWithAmountForDay.setValue(0, forKey: "5")
         }
         else
         {
-            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Thursday")
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "5")
+            selectedDaysCount++
+
         }
         
         if isFridayBege == true {
-            daysWithAmountForDay.setValue(0, forKey: "Friday")
+            daysWithAmountForDay.setValue(0, forKey: "6")
         }
         else {
-            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Friday")
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "6")
+            selectedDaysCount++
+
         }
         if isSaturdayBege == true {
-            daysWithAmountForDay.setValue(0, forKey: "Saturday")
+            daysWithAmountForDay.setValue(0, forKey: "7")
         }
         else {
-            daysWithAmountForDay.setValue(dayStepper.value, forKey: "Saturday")
+            daysWithAmountForDay.setValue(dayStepper.value, forKey: "7")
+            selectedDaysCount++
+
         }
         
         var amounts = Int(weekStepper.value)
@@ -265,7 +279,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         
         
         activity = Activity(name: nameExerciseTextField.text, videoTutorial: videoPath, category: DAO.sharedInstance.currentCategory,note: "")
-        frequency = FrequencyActivity(amountWeeks: amounts , daysWithAmountForDay: daysWithAmountForDay)
+        frequency = FrequencyActivity(amountWeeks: amounts , daysWithAmountForDay: daysWithAmountForDay, selectedDaysCount: selectedDaysCount)
         
         
         if ((nameExerciseTextField == "") || ( weekStepper.value == 0 ) || ( dayStepper.value == 0 ) || (isSaturdayBege==true && isSundayBege == true && isMondayBege==true && isTuesdayBege==true && isWednesdayBege==true && isThursdayBege==true && isFridayBege==true )){

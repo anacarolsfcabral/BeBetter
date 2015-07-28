@@ -185,7 +185,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="goToPerformance:" destination="-1" eventType="touchUpInside" id="8zb-Ln-TYj"/>
+                        <action selector="finished:" destination="-1" eventType="touchUpInside" id="jDV-9z-AbR"/>
                     </connections>
                 </button>
             </subviews>

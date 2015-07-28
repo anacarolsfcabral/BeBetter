@@ -18,6 +18,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
 
     var arrayActivity = [Activity]()
     var arrayFrequency = [FrequencyActivity]()
+    var arrayPerformance = [PerformanceForWeek]()
     
     @IBAction func backButton(sender: UIButton) {
        //self.dismissViewControllerAnimated(true, completion: nil)
@@ -37,6 +38,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         
         arrayActivity = DAO.sharedInstance.getActivitiesForCategory()
         arrayFrequency = DAO.sharedInstance.getFrequency(arrayActivity)
+        arrayPerformance = DAO.sharedInstance.getPerformance(arrayActivity)
         
         performanceTable.delegate = self
         performanceTable.dataSource = self
@@ -76,6 +78,24 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
 //        cell.backgroundColor = UIColor(red: 240/255, green: 231/255, blue: 227/255, alpha: 1)
         cell.backgroundColor = UIColor.whiteColor()
         cell.exerciseLabel.text = arrayActivity[indexPath.row].name
+        
+        if arrayPerformance[indexPath.row].completed == 0
+        {
+            cell.evolutionImage.image = UIImage(named: "ad0")
+        }
+        else if arrayPerformance[indexPath.row].completed == arrayFrequency[indexPath.row].selectedDaysCount
+        {
+            cell.evolutionImage.image = UIImage(named: "ad1")
+        }
+        else if ((arrayFrequency[indexPath.row].selectedDaysCount - arrayPerformance[indexPath.row].completed) == arrayFrequency[indexPath.row].selectedDaysCount / 2)
+        {
+            cell.evolutionImage.image = UIImage(named: "a2d1")
+        }
+        else
+        {
+            cell.evolutionImage.image = UIImage(named: "a\(arrayFrequency[indexPath.row].selectedDaysCount)d\(arrayPerformance[indexPath.row].completed)")
+        }
+        
         
         //self.performanceTable.registerClass(PerformanceCell.self, forCellWithReuseIdentifier: "PerformanceCell")
         // 3
