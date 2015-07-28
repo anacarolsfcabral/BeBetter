@@ -18,7 +18,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     }
     
 
-    @IBOutlet var playVideoBut: UIButton!
+    //@IBOutlet var playVideoBut: UIButton!
     @IBOutlet var pauseVideoBut: UIButton!
     @IBOutlet var restartVideoBut: UIButton!
     @IBOutlet var changeBut: UIButton!
@@ -35,11 +35,9 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     var previewLayer = PBJVision.sharedInstance().previewLayer
     var pathString : String!
     var videoStatusImage = UIImageView()
+    var videoJustRecordedStatusImage = UIImageView()
     
     var vision: PBJVision = PBJVision.sharedInstance()
-    
-    var screenTap : UITapGestureRecognizer!
-    var videoLoop : UITapGestureRecognizer!
     
     var videoIsPlaying : Bool = true
     var isRecordingNewVideo = true
@@ -47,26 +45,26 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     var isPractsingExercise = true
     var isPlaying = true
     
-    @IBAction func playVideo(sender: UIButton) {
-        
-        if isPlaying==true{
-            
-            playNew.stop()
-            isPlaying = false
-            buttonImagePlay = UIImage(named: "play")
-            playVideoBut.setImage(buttonImagePlay, forState: UIControlState.Normal)
-
-            
-        }
-        else
-        {
-            playNew.playFromCurrentTime()
-            isPlaying = true
-            buttonImagePlay = UIImage(named: "pause")
-            playVideoBut.setImage(buttonImagePlay, forState: UIControlState.Normal)
-            
-        }
-    }
+//    @IBAction func playVideo(sender: UIButton) {
+//        
+//        if isPlaying==true{
+//            
+//            playNew.stop()
+//            isPlaying = false
+//            buttonImagePlay = UIImage(named: "play")
+//            playVideoBut.setImage(buttonImagePlay, forState: UIControlState.Normal)
+//
+//            
+//        }
+//        else
+//        {
+//            playNew.playFromCurrentTime()
+//            isPlaying = true
+//            buttonImagePlay = UIImage(named: "pause")
+//            playVideoBut.setImage(buttonImagePlay, forState: UIControlState.Normal)
+//            
+//        }
+//    }
     @IBAction func pauseVideo(sender: UIButton) {
         
             
@@ -116,8 +114,8 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
             playNew.playbackLoops = true
             playNew.volume = 1
             
-            playVideoBut.enabled = true
-            playVideoBut.alpha = 1.0
+//            playVideoBut.enabled = true
+//            playVideoBut.alpha = 1.0
             pauseVideoBut.enabled = false
             pauseVideoBut.alpha = 0.6
             restartVideoBut.enabled = false
@@ -126,13 +124,14 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
             buttonImageChange = UIImage(named: "recordActivity")
             changeBut.setImage(buttonImageChange, forState: UIControlState.Normal)
             isPractsingExercise = false
+            
         }
         else
         {
             playNew.view.removeFromSuperview()
             isPractsingExercise = true
-            playVideoBut.alpha = 0.6
-            playVideoBut.enabled = false
+//            playVideoBut.alpha = 0.6
+//            playVideoBut.enabled = false
             pauseVideoBut.enabled = true
             pauseVideoBut.alpha = 1.0
             restartVideoBut.enabled = true
@@ -141,7 +140,6 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
             
             buttonImageChange = UIImage(named: "seeActivity")
             changeBut.setImage(buttonImageChange, forState: UIControlState.Normal)
-
             
         }
 
@@ -160,8 +158,8 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         
         if isPractsingExercise == true {
             
-            playVideoBut.alpha = 0.6
-            playVideoBut.enabled = false
+//            playVideoBut.alpha = 0.6
+//            playVideoBut.enabled = false
             changeBut.enabled = false
         }
         
@@ -185,6 +183,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         
         recordVideoView.addSubview(previewView)
         
+        
         videoStatusImage.image = UIImage(named: "pauseRegister")
         videoStatusImage.frame = player.view.frame
         videoTutorialView.addSubview(videoStatusImage)
@@ -192,28 +191,19 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         videoStatusImage.frame.size = CGSize(width: 20, height: 20)
         videoStatusImage.center = CGPointMake(videoTutorialView.bounds.midX/4, videoTutorialView.bounds.midY/6)
         
+        
+        videoJustRecordedStatusImage.image = UIImage(named: "pauseRegister")
+        videoJustRecordedStatusImage.frame = player.view.frame
+        playNew.view.addSubview(videoJustRecordedStatusImage)
+        videoJustRecordedStatusImage.alpha = 0.8
+        videoJustRecordedStatusImage.frame.size = CGSize(width: 20, height: 20)
+        videoJustRecordedStatusImage.center = CGPointMake(recordVideoView.bounds.midX/4, recordVideoView.bounds.midY/6)
+
         view.backgroundColor = UIColor.blackColor()
 
         
         setup()
         // Do any additional setup after loading the view.
-    }
-    
-    func playerLoopControl(tap: UITapGestureRecognizer) {
-        
-        if videoIsPlaying == true
-        {
-            player.stop()
-            videoIsPlaying = false
-            videoStatusImage.image = UIImage(named: "playRegister")
-        }
-        else if videoIsPlaying == false
-        {
-            player.playFromCurrentTime()
-            videoIsPlaying = true
-            videoStatusImage.image = UIImage(named: "pauseRegister")
-        }
-        
     }
     
     func setup(){
@@ -229,6 +219,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         vision.startPreview()
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -238,18 +229,55 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
 
     func videoPlayerBufferringStateDidChange(videoPlayer: PBJVideoPlayerController!) {
         
+        if videoStatusImage.image == UIImage(named: "playRegister")
+        {
+            videoStatusImage.image = UIImage(named: "pauseRegister")
+        }
+        else
+        {
+            videoStatusImage.image = UIImage(named: "playRegister")
+        }
+        
+        if videoJustRecordedStatusImage.image == UIImage(named: "playRegister")
+        {
+            videoJustRecordedStatusImage.image = UIImage(named: "pauseRegister")
+        }
+        else
+        {
+            videoJustRecordedStatusImage.image = UIImage(named: "playRegister")
+        }
+
+        
     }
     
     func videoPlayerPlaybackWillStartFromBeginning(videoPlayer: PBJVideoPlayerController!) {
-        
+    
     }
     
     func videoPlayerPlaybackDidEnd(videoPlayer: PBJVideoPlayerController!) {
-        
+    
     }
     
     func videoPlayerPlaybackStateDidChange(videoPlayer: PBJVideoPlayerController!) {
         
+        if videoStatusImage.image == UIImage(named: "playRegister")
+        {
+            videoStatusImage.image = UIImage(named: "pauseRegister")
+        }
+        else
+        {
+            videoStatusImage.image = UIImage(named: "playRegister")
+        }
+        
+        if videoJustRecordedStatusImage.image == UIImage(named: "playRegister")
+        {
+            videoJustRecordedStatusImage.image = UIImage(named: "pauseRegister")
+        }
+        else
+        {
+            videoJustRecordedStatusImage.image = UIImage(named: "playRegister")
+        }
+
     }
     
     func videoPlayerReady(videoPlayer: PBJVideoPlayerController!) {
@@ -308,7 +336,8 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         if (videoPath != "") {
             changeBut.enabled = true
         }
-
+        
+    
 //        println(videoDict?.keys)
 //        println(videoDict?.values)
 
