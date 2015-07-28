@@ -7,183 +7,272 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15869A0A7DFE88C48F18A705E89D8D1A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8947A36609AB31B68399D1EE0E718050 /* CoreGraphics.framework */; };
-		2621B028532B08A2D39E9B94B5199FCC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B7DCE5210420A06B9AB9AA5936841D /* OpenGLES.framework */; };
-		2B7D40980965B68A7FAE186556C5CC39 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821D54BA2C91A5A5765B5DC1FDEE116C /* ImageIO.framework */; };
-		2F161874D2C66268CF460FC4DD725CB5 /* PBJGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFCEE3BA40984AE5691091B832032F3 /* PBJGLProgram.m */; };
-		381F56851E82F33A13CF0ABD3D137779 /* PBJMediaWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A7470B6F01A55807F7260948515433 /* PBJMediaWriter.m */; };
-		4209444698187A578EE106396C84D1FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451BE799CEA6991C2930B29F17E1E86E /* QuartzCore.framework */; };
-		45E2E6885A402BE4AC563AAF95375129 /* PBJVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAAC9005EB1BD1489155F12DD87015D /* PBJVideoPlayerController.m */; };
-		5A83B624C2E7B27E342A55A03DB53819 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8947A36609AB31B68399D1EE0E718050 /* CoreGraphics.framework */; };
-		609F96D60C3EA3F1E471775261F35B0D /* PBJVideoPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D5543BC6C033E86FC5C47132C14EC5 /* PBJVideoPlayer-dummy.m */; };
-		6D81A646EF3CBA0464F4CA31861BF216 /* PBJVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = ED89B7E2F18DEBAD497FEC2242580784 /* PBJVideoView.h */; };
-		7FE8892D15221930684E35C9DBCA6938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F71249FF2199C3DD55B088EDFE6DE7D /* Foundation.framework */; };
-		8612FFA71A028DAC114BE38698D4C367 /* PBJVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B97AD91771EDB48EF156665BBC5F68 /* PBJVideoView.m */; };
-		8DF660ADF056549731EE155C2E3AA40B /* PBJVision.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1AEB61610F7F752E66A1080B2E94F3 /* PBJVision.m */; };
-		8F2F5B60ECDCD76C32150F1FE9BF2954 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110D32FA01523F29794D2861855721D0 /* MobileCoreServices.framework */; };
-		A5047EB40DCBCED8D67F9DCC3CA56ACB /* PBJVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = C8255DBC5ECF717133136D4EA67521E3 /* PBJVideoPlayerController.h */; };
-		A9F3ACF7B2D13B14B62365EF4A59AB63 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01C22F25FC202677E8976683060F47E /* AVFoundation.framework */; };
-		BA071B3B3A42E5C8D3900456CED6AAAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD65A9E8BFDFBE0A9896D43DA053197 /* UIKit.framework */; };
-		C88DA1E726C63E81DDE1BA91432B7F7A /* PBJVision.h in Headers */ = {isa = PBXBuildFile; fileRef = 745FB08A7970EC8B73E59882EBD83EC7 /* PBJVision.h */; };
-		CB17544E4979BBAA32D8A02DC7DBDAC7 /* PBJVisionUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 58C7F487E03682360227D3B51B683529 /* PBJVisionUtilities.h */; };
-		CE793DEBBC163EAB974E957D6A25800D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381BC60B4E34929C41D9BA9B70C4D8B3 /* CoreImage.framework */; };
-		D425541FE243DC2C4EF457275E02D750 /* PBJVision-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C35D9FBD060756B0AFDC952F4182FE2A /* PBJVision-dummy.m */; };
-		D667811D6B4C00F570BF130E8C6DAFD9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451BE799CEA6991C2930B29F17E1E86E /* QuartzCore.framework */; };
-		D7CB67CD7A38DA24EDA08A72AE92FADE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F71249FF2199C3DD55B088EDFE6DE7D /* Foundation.framework */; };
-		DA351A186BE14466C0111DA58F3F58F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD65A9E8BFDFBE0A9896D43DA053197 /* UIKit.framework */; };
-		DA41BA832D07D758AD15FFBA7E0B3072 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11C368DBEE2873727799D3883EF6F33 /* CoreVideo.framework */; };
-		E0D1309902C8C08A884AE26BAF040518 /* PBJMediaWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E378B9A6312F2C00C2073DF6E3DE08 /* PBJMediaWriter.h */; };
-		E5F7BE0B6DAF5053B0E0FE2A88314CB5 /* PBJVisionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 193043E9CE40C2621659B4B86388538D /* PBJVisionUtilities.m */; };
-		F1F454164F04C05EAC37FA5D2C90DBC5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01C22F25FC202677E8976683060F47E /* AVFoundation.framework */; };
-		F242DA4E60FD57FC807320EB0F1423F4 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C39B9DDD6F254278B62813604D2D2F74 /* Pods-dummy.m */; };
-		F6EE6C187199EE946DCB116D94F5F04F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8594FBA7313C412B7185405EDBB0292 /* CoreMedia.framework */; };
-		F7FBD1E157A6FE6FA5E3F92FBF4B2AD7 /* PBJGLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB260D3C7C367DDD02D87E923AAB8FF /* PBJGLProgram.h */; };
-		FEF572AD29330B3430BC74A873A9D56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F71249FF2199C3DD55B088EDFE6DE7D /* Foundation.framework */; };
+		00969F3F440B6E64838D11F612BA58E5 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2019CF446AF3B1E0A4B9BE1A95F0BE84 /* Pods-dummy.m */; };
+		08F6288A17AB210A4D08C2CE882E6976 /* IQUIView+IQKeyboardToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 049B3069F51D5729C5DB1F77D08ADCA2 /* IQUIView+IQKeyboardToolbar.h */; };
+		093926C10B4B7C16103326D9F18315A8 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 984719FB054FD6DEBDABF02F41268F39 /* IQKeyboardManager.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0E1A93C9DECDD85970A454B7C3939BA9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F682CB122354B7B0468F26B64DB0D7 /* CoreVideo.framework */; };
+		10B505E8F68308240FE383BB7AE5C75F /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 07975B0BEEAFE90BFAE8DDA11A9A3F66 /* IQToolbar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		13F64A3FB3D896DAE3622269CAD5EFC9 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C08F16C7DD8B959159846D7DAE7C2D9 /* IQUIView+IQKeyboardToolbar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		16F77BC4256B5A1E30C65D60CBBF64CD /* IQToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 57B3CC6A633F041CAFE9D6BAD7857FE0 /* IQToolbar.h */; };
+		170641E40F037CF1279A28470D0A4EC7 /* IQKeyboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 35845C3D156EA81B649289C25976662B /* IQKeyboardManager.h */; };
+		1DC07CED18EF7D3A13E275B9AA49E89F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46988DCAF78EABCAF36DC5A4DD55C23 /* Foundation.framework */; };
+		205A98D755FC4B790DCEF346A35C7DA9 /* IQBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E7B57DCABE8AD4372DE00A0D97E9C0D6 /* IQBarButtonItem.h */; };
+		2C884CEBED611519B90A1B03B431967D /* IQKeyboardManagerConstantsInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = F89301D4BB662D4804A113D949D42E79 /* IQKeyboardManagerConstantsInternal.h */; };
+		316EA733F38F3AC10595701F0DCDE994 /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BA68705748010C69F44F5070BD0CB6BB /* IQKeyboardReturnKeyHandler.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		348213E35ED4FB692212229AFAD6567C /* PBJVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F73DCD5E40E16564EC508C3B7F1B0C /* PBJVideoView.h */; };
+		363AD89605F9A91C477A601CE26F835D /* IQKeyboardManagerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C262E6C4C7954EE1A9CCE4FB5AC14B /* IQKeyboardManagerConstants.h */; };
+		3B27D72C1EF2FCC39CDB5EC5EF55767D /* IQTitleBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 920E94ABBD51AAE87656DBA9089F8209 /* IQTitleBarButtonItem.h */; };
+		3C95F2318AFFA3E6E2293DCD98461310 /* PBJMediaWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D59E5366751741B0CEC6F5F24F64570 /* PBJMediaWriter.m */; };
+		4160080DAF804BA931892292C9542E81 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B8C1315BA3B70C91D6F37916510F23 /* IQNSArray+Sort.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		43696EE6623E9EB8C6E17CC3C0958820 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F851DDC885D0AA0A9EE790790B487104 /* CoreImage.framework */; };
+		4376A25A8C3C0A7FA1683279B938E740 /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2392344E31E6CCEC474E890D383DC1D6 /* IQUITextFieldView+Additions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		44F57AAEC5476AE34B6E13F4274E46CB /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C5EED64D8AE3D0D8BD3B5BB032703 /* IQUIView+Hierarchy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		48B00C0FC82D91B8C7086864411DCE9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46988DCAF78EABCAF36DC5A4DD55C23 /* Foundation.framework */; };
+		4A115B2E4E0442E8B656E978A336ABDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46988DCAF78EABCAF36DC5A4DD55C23 /* Foundation.framework */; };
+		4A69494F3AF890C4BBB7C5C17B85BC36 /* IQNSArray+Sort.h in Headers */ = {isa = PBXBuildFile; fileRef = 883B0F5A1A2CDDE4D5777A4919040562 /* IQNSArray+Sort.h */; };
+		4B95A8297A0A9453764BFF8D69296FC1 /* KeyboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 39BA2E1AE998F79F058EA9418B3B9C7A /* KeyboardManager.h */; };
+		585023128991CDF9EBBEAFD61D3DCF2D /* PBJVision.m in Sources */ = {isa = PBXBuildFile; fileRef = 296E39E42C933FA6C3AF3BDBD85FBE3A /* PBJVision.m */; };
+		5867F6B3E752466D255503EDF9ACAFE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAD1C1B419AF5E84768719313E0A44 /* CoreGraphics.framework */; };
+		5DF0DB8299EA5A25BC747B79CE3BA747 /* PBJVisionUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 65277F19F2109684A9C9EBB5B33D7192 /* PBJVisionUtilities.h */; };
+		62C7AB6CB3EE85A5512C85302B5AFB53 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95A3EEC71B7B33975095E0F3F3C7D38 /* AVFoundation.framework */; };
+		6883B2F50AFDC8E28467DA75CFF9798C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAD1C1B419AF5E84768719313E0A44 /* CoreGraphics.framework */; };
+		6C82A950BCB64B28811F24AF871D57C5 /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF8D82CA5C9BA2123D44607F874B722 /* IQUIViewController+Additions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		72EA3BBFC7489B3A5E55C3A3C85553C3 /* IQUIView+Hierarchy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A730EB8046E9219E0B6E9B550F72140 /* IQUIView+Hierarchy.h */; };
+		73A6165974DDD71EE58B6D90E0F1A199 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD8096CACA36E854E862CB88328BCDD /* OpenGLES.framework */; };
+		78B0079F6E031FA5788110A8DEA8E26B /* PBJVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A24B1A3431490A5383D211448F6998BE /* PBJVideoPlayerController.m */; };
+		7B77649ABFC3216CA359A2AF0B9C57BA /* IQKeyboardReturnKeyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8704C184FE51633271A9B82BA1F8FD94 /* IQKeyboardReturnKeyHandler.h */; };
+		802BA910E215280D56DDF226B5D2A8A6 /* IQKeyboardManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F0D100C10BB657D5DE1B81B79BA38 /* IQKeyboardManager-dummy.m */; };
+		816E8433F5543FDF3954B9524B1DBF46 /* PBJVisionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A759DA8AEBDC5BA07A8B230ECB912E9A /* PBJVisionUtilities.m */; };
+		879935755E92D1C577400FD49DBF164F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB17272E7A03C5860D58B0AA300BB14 /* CoreMedia.framework */; };
+		8A1DB686859E01145F336509C147009A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD2A25F3C2986F80DFDF9715CA49EC5 /* UIKit.framework */; };
+		8AF518B57F199E6EC6458EAF198A7178 /* IQSegmentedNextPrevious.h in Headers */ = {isa = PBXBuildFile; fileRef = 9165B21AF78F796B80494D48D1136EF8 /* IQSegmentedNextPrevious.h */; };
+		8C253F8C4647964E24F56DFBF5CB13B8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4FDA4AC816CE547137F24C78BD5767 /* ImageIO.framework */; };
+		92498D108974BF32DBA5C43A1428F75D /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2024A91ACD2E969207164C3BA9B26 /* IQTextView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		95064335D60B1C42C3435F4198155030 /* IQSegmentedNextPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5F91758FB1FCFAE01BC110ECE86263 /* IQSegmentedNextPrevious.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A0CE670E3316814449D4CBA1B7D3F1C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46988DCAF78EABCAF36DC5A4DD55C23 /* Foundation.framework */; };
+		A0EA5CA90D173B30995D7C17DFD682C7 /* IQUIWindow+Hierarchy.h in Headers */ = {isa = PBXBuildFile; fileRef = B5DACE3012486F6EA2B59CB6F3F83462 /* IQUIWindow+Hierarchy.h */; };
+		A4F0125F0C21F963A1387A5FB8CFD6B6 /* IQUIViewController+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F575173EB041928F977E5A4BEBA374 /* IQUIViewController+Additions.h */; };
+		A9A117C1C68F3D9445425AB0426CF25D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86FEF33E9E196E76A448CCFDE071470 /* MobileCoreServices.framework */; };
+		B1F46E8A69BC1AFC77E3FE5578733588 /* PBJVision.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4CA71A33ACD17FED49A019C6E459C4 /* PBJVision.h */; };
+		B60429B830E98295010DE2B85DE41416 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD2A25F3C2986F80DFDF9715CA49EC5 /* UIKit.framework */; };
+		B7361E73403E034E57EBC35A4D4DC7BD /* PBJVision-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF860E28D71B2347428431E0C358203B /* PBJVision-dummy.m */; };
+		B944EC6FEB8335BBFA93CDE16647B06A /* PBJMediaWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B7A5AD17ADD9BEC4EE6989F061C1666 /* PBJMediaWriter.h */; };
+		B969B1E83F5D8587D3AEBC29474AABB0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773EAEBAC3E6331BC4495B8560EF5569 /* QuartzCore.framework */; };
+		BD331252E432E98EB4BA4794DE393CDF /* PBJGLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = A55B32E2D665CD17DF504A9E2D58C5CA /* PBJGLProgram.h */; };
+		C0AE02DF3A928F96D8BD218F97DDFAA5 /* IQUITextFieldView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F18602E92C3B2FBD29C686453FBEFB9 /* IQUITextFieldView+Additions.h */; };
+		CB404A998B6E0F66FDE9DEE024BC8305 /* PBJVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A79F04D9F3E755E1BC39F8FB015958 /* PBJVideoView.m */; };
+		D26C026B400C0C4C9BB60376A43F8B06 /* PBJVideoPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B47DDB624C588ED03C0178E735C31383 /* PBJVideoPlayer-dummy.m */; };
+		D29FBCCF633FB11489334C12B2537C36 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95A3EEC71B7B33975095E0F3F3C7D38 /* AVFoundation.framework */; };
+		DA37EE8C9038F5509C8A39A970FF941D /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FAB28E6480C5F138B1FBE99AF11AD /* IQTitleBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E5B0B2AFDC821767832BA41AFA11A5CF /* IQBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF01338A1C47BF6B8CA353AE06E4696C /* IQBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E8B82CEB6756746B9CBB601D38B7C6B5 /* IQTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = BBE4979B33A7AFEF168AF247AFA52174 /* IQTextView.h */; };
+		E8E0747810E2A98E9D2D5A7F12B74A4F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773EAEBAC3E6331BC4495B8560EF5569 /* QuartzCore.framework */; };
+		E9CBB7F13AE200D7DD373D099E48C6BA /* IQUIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 670BF67C3171839E2ED381B22EA1C8BA /* IQUIWindow+Hierarchy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F264E2486BBF4116247F85BC5029E279 /* PBJVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C6C16B1E6DEF7AD2911049F2E8D42BE /* PBJVideoPlayerController.h */; };
+		FC25DF8D0DBFF441C72E0F2CCDC7F88B /* PBJGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D46B065C564C7DA134F14AE631E8E22 /* PBJGLProgram.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6CD3912163B6F909CBD6D4EED8F26E01 /* PBXContainerItemProxy */ = {
+		4EB08C5CEE57ED2182A7C3BA3B20E171 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 44333D7FA329710CCCA97A0D3B5A4624;
+			remoteGlobalIDString = 8EA234CB23C9D43AF72B99883BF6AD08;
+			remoteInfo = PBJVideoPlayer;
+		};
+		9FFB458DA8FFD54AD401629FD23139E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29B7F935E20F070836EC430D70F5B509;
 			remoteInfo = PBJVision;
 		};
-		80358795F4324481783A6EE98AF51913 /* PBXContainerItemProxy */ = {
+		EC252AE917C2D23896A1D9046BF1D811 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0992E8F86E68D096DF7020D18C5A845F;
-			remoteInfo = PBJVideoPlayer;
+			remoteGlobalIDString = 70127F4B027731F7B5446BDAFE00F5F1;
+			remoteInfo = IQKeyboardManager;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02B7DCE5210420A06B9AB9AA5936841D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
-		110D32FA01523F29794D2861855721D0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		193043E9CE40C2621659B4B86388538D /* PBJVisionUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVisionUtilities.m; path = Source/PBJVisionUtilities.m; sourceTree = "<group>"; };
+		049B3069F51D5729C5DB1F77D08ADCA2 /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIView+IQKeyboardToolbar.h"; path = "IQKeyBoardManager/IQToolbar/IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
+		07975B0BEEAFE90BFAE8DDA11A9A3F66 /* IQToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQToolbar.m; path = IQKeyBoardManager/IQToolbar/IQToolbar.m; sourceTree = "<group>"; };
+		0A5F0D100C10BB657D5DE1B81B79BA38 /* IQKeyboardManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManager-dummy.m"; sourceTree = "<group>"; };
+		0E4CA71A33ACD17FED49A019C6E459C4 /* PBJVision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVision.h; path = Source/PBJVision.h; sourceTree = "<group>"; };
+		17A79F04D9F3E755E1BC39F8FB015958 /* PBJVideoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVideoView.m; path = Source/PBJVideoView.m; sourceTree = "<group>"; };
 		19F830CABFD7C5AB3A939E4B18915F47 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		316B8C3B6FBB2DFFC3DB925F81CD89F2 /* libPBJVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPBJVision.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		381BC60B4E34929C41D9BA9B70C4D8B3 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
-		3EFCEE3BA40984AE5691091B832032F3 /* PBJGLProgram.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJGLProgram.m; path = Source/PBJGLProgram.m; sourceTree = "<group>"; };
-		451BE799CEA6991C2930B29F17E1E86E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		47794F06950683C061D4A2AA77D89F08 /* Shader.vsh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Source/Shaders/Shader.vsh; sourceTree = "<group>"; };
-		4BD9783A80DE3F6E246492669D77A627 /* PBJVision-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVision-prefix.pch"; sourceTree = "<group>"; };
-		57D5543BC6C033E86FC5C47132C14EC5 /* PBJVideoPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PBJVideoPlayer-dummy.m"; sourceTree = "<group>"; };
-		58C7F487E03682360227D3B51B683529 /* PBJVisionUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVisionUtilities.h; path = Source/PBJVisionUtilities.h; sourceTree = "<group>"; };
-		647B574265977B6379ABDDD7CF24573B /* PBJVideoPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PBJVideoPlayer.xcconfig; sourceTree = "<group>"; };
-		6AD65A9E8BFDFBE0A9896D43DA053197 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		745FB08A7970EC8B73E59882EBD83EC7 /* PBJVision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVision.h; path = Source/PBJVision.h; sourceTree = "<group>"; };
-		806556A023A6D4BF9CB069E36763852A /* PBJVision-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PBJVision-Private.xcconfig"; sourceTree = "<group>"; };
-		821D54BA2C91A5A5765B5DC1FDEE116C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
-		8947A36609AB31B68399D1EE0E718050 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		8FB260D3C7C367DDD02D87E923AAB8FF /* PBJGLProgram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJGLProgram.h; path = Source/PBJGLProgram.h; sourceTree = "<group>"; };
-		90B0023A4502AF89D3747B6F6A9BABDB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		92428D6104F5ECEBC8C2AF5C8C7A1B41 /* PBJVision.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PBJVision.xcconfig; sourceTree = "<group>"; };
-		95587D5E8F71D6C175D40A11545B0AD5 /* PBJVideoPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVideoPlayer-prefix.pch"; sourceTree = "<group>"; };
-		9F71249FF2199C3DD55B088EDFE6DE7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A5B97AD91771EDB48EF156665BBC5F68 /* PBJVideoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVideoView.m; path = Source/PBJVideoView.m; sourceTree = "<group>"; };
+		1ABD6F2FAD3D9B80F6760FB5C8F0F07D /* IQKeyboardManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManager.xcconfig; sourceTree = "<group>"; };
+		2019CF446AF3B1E0A4B9BE1A95F0BE84 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		215AE3742DAE925E01C270486B4C86DD /* Shader.fsh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Source/Shaders/Shader.fsh; sourceTree = "<group>"; };
+		22EBA75DF8841A22F69A0A69BE365893 /* libPBJVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPBJVision.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2392344E31E6CCEC474E890D383DC1D6 /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUITextFieldView+Additions.m"; path = "IQKeyBoardManager/Categories/IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
+		2515D66A72E6B067A7741600E71354DA /* PBJVision.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PBJVision.xcconfig; sourceTree = "<group>"; };
+		25E39E4AA6544B62D73C1752841AED5F /* PBJVision-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PBJVision-Private.xcconfig"; sourceTree = "<group>"; };
+		26F682CB122354B7B0468F26B64DB0D7 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		296E39E42C933FA6C3AF3BDBD85FBE3A /* PBJVision.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVision.m; path = Source/PBJVision.m; sourceTree = "<group>"; };
+		2F4FDA4AC816CE547137F24C78BD5767 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		32F73DCD5E40E16564EC508C3B7F1B0C /* PBJVideoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoView.h; path = Source/PBJVideoView.h; sourceTree = "<group>"; };
+		35845C3D156EA81B649289C25976662B /* IQKeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManager.h; path = IQKeyBoardManager/IQKeyboardManager.h; sourceTree = "<group>"; };
+		39BA2E1AE998F79F058EA9418B3B9C7A /* KeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KeyboardManager.h; path = IQKeyBoardManager/KeyboardManager.h; sourceTree = "<group>"; };
+		3A730EB8046E9219E0B6E9B550F72140 /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIView+Hierarchy.h"; path = "IQKeyBoardManager/Categories/IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
+		3AB17272E7A03C5860D58B0AA300BB14 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		46C262E6C4C7954EE1A9CCE4FB5AC14B /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManagerConstants.h; path = IQKeyBoardManager/Constants/IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		4D59E5366751741B0CEC6F5F24F64570 /* PBJMediaWriter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJMediaWriter.m; path = Source/PBJMediaWriter.m; sourceTree = "<group>"; };
+		53B8C1315BA3B70C91D6F37916510F23 /* IQNSArray+Sort.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQNSArray+Sort.m"; path = "IQKeyBoardManager/Categories/IQNSArray+Sort.m"; sourceTree = "<group>"; };
+		57B3CC6A633F041CAFE9D6BAD7857FE0 /* IQToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQToolbar.h; path = IQKeyBoardManager/IQToolbar/IQToolbar.h; sourceTree = "<group>"; };
+		5869CC38E46E25F1E7F3C4CE8BF16EB2 /* PBJVideoPlayer-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PBJVideoPlayer-Private.xcconfig"; sourceTree = "<group>"; };
+		5BE2024A91ACD2E969207164C3BA9B26 /* IQTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQTextView.m; path = IQKeyBoardManager/IQTextView/IQTextView.m; sourceTree = "<group>"; };
+		5D46B065C564C7DA134F14AE631E8E22 /* PBJGLProgram.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJGLProgram.m; path = Source/PBJGLProgram.m; sourceTree = "<group>"; };
+		5DD3A6F9FDD2E8D184BE8D753B111AB4 /* libPBJVideoPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPBJVideoPlayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		65277F19F2109684A9C9EBB5B33D7192 /* PBJVisionUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVisionUtilities.h; path = Source/PBJVisionUtilities.h; sourceTree = "<group>"; };
+		670BF67C3171839E2ED381B22EA1C8BA /* IQUIWindow+Hierarchy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIWindow+Hierarchy.m"; path = "IQKeyBoardManager/Categories/IQUIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		6D5C5EED64D8AE3D0D8BD3B5BB032703 /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIView+Hierarchy.m"; path = "IQKeyBoardManager/Categories/IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
+		6FD2A25F3C2986F80DFDF9715CA49EC5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		706F61B93E67EC6FB0E6270C3019F78F /* PBJVideoPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PBJVideoPlayer.xcconfig; sourceTree = "<group>"; };
+		773EAEBAC3E6331BC4495B8560EF5569 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		8704C184FE51633271A9B82BA1F8FD94 /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardReturnKeyHandler.h; path = IQKeyBoardManager/IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
+		87B377EA1692670EB2DA9A974215466B /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyBoardManager/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		883B0F5A1A2CDDE4D5777A4919040562 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQNSArray+Sort.h"; path = "IQKeyBoardManager/Categories/IQNSArray+Sort.h"; sourceTree = "<group>"; };
+		8B7A5AD17ADD9BEC4EE6989F061C1666 /* PBJMediaWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJMediaWriter.h; path = Source/PBJMediaWriter.h; sourceTree = "<group>"; };
+		8C08F16C7DD8B959159846D7DAE7C2D9 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIView+IQKeyboardToolbar.m"; path = "IQKeyBoardManager/IQToolbar/IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		8DD8096CACA36E854E862CB88328BCDD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		9165B21AF78F796B80494D48D1136EF8 /* IQSegmentedNextPrevious.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQSegmentedNextPrevious.h; path = IQKeyBoardManager/IQSegmentedNextPrevious/IQSegmentedNextPrevious.h; sourceTree = "<group>"; };
+		920E94ABBD51AAE87656DBA9089F8209 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQTitleBarButtonItem.h; path = IQKeyBoardManager/IQToolbar/IQTitleBarButtonItem.h; sourceTree = "<group>"; };
+		979DAE7DDBE48E425E24A7F7C994F0A7 /* PBJVideoPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVideoPlayer-prefix.pch"; sourceTree = "<group>"; };
+		984719FB054FD6DEBDABF02F41268F39 /* IQKeyboardManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQKeyboardManager.m; path = IQKeyBoardManager/IQKeyboardManager.m; sourceTree = "<group>"; };
+		9C6C16B1E6DEF7AD2911049F2E8D42BE /* PBJVideoPlayerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoPlayerController.h; path = Source/PBJVideoPlayerController.h; sourceTree = "<group>"; };
+		9F18602E92C3B2FBD29C686453FBEFB9 /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUITextFieldView+Additions.h"; path = "IQKeyBoardManager/Categories/IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
+		A24B1A3431490A5383D211448F6998BE /* PBJVideoPlayerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVideoPlayerController.m; path = Source/PBJVideoPlayerController.m; sourceTree = "<group>"; };
+		A55B32E2D665CD17DF504A9E2D58C5CA /* PBJGLProgram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJGLProgram.h; path = Source/PBJGLProgram.h; sourceTree = "<group>"; };
 		A5F822E59C48343778A7A0893BEB2933 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		AC1AEB61610F7F752E66A1080B2E94F3 /* PBJVision.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVision.m; path = Source/PBJVision.m; sourceTree = "<group>"; };
-		B01C22F25FC202677E8976683060F47E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		A759DA8AEBDC5BA07A8B230ECB912E9A /* PBJVisionUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVisionUtilities.m; path = Source/PBJVisionUtilities.m; sourceTree = "<group>"; };
+		A7BAD1C1B419AF5E84768719313E0A44 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		A86FEF33E9E196E76A448CCFDE071470 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		A8DC330F6448C144AE140781F396C6C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
 		B3BB5840B4BDD2DDB6F5AB1247265D75 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		C08A55404B201660BE96EF34BE3BEDD6 /* Shader.fsh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Source/Shaders/Shader.fsh; sourceTree = "<group>"; };
-		C35D9FBD060756B0AFDC952F4182FE2A /* PBJVision-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PBJVision-dummy.m"; sourceTree = "<group>"; };
-		C39B9DDD6F254278B62813604D2D2F74 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		C4E378B9A6312F2C00C2073DF6E3DE08 /* PBJMediaWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJMediaWriter.h; path = Source/PBJMediaWriter.h; sourceTree = "<group>"; };
-		C8255DBC5ECF717133136D4EA67521E3 /* PBJVideoPlayerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoPlayerController.h; path = Source/PBJVideoPlayerController.h; sourceTree = "<group>"; };
-		C8594FBA7313C412B7185405EDBB0292 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		B46988DCAF78EABCAF36DC5A4DD55C23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B47DDB624C588ED03C0178E735C31383 /* PBJVideoPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PBJVideoPlayer-dummy.m"; sourceTree = "<group>"; };
+		B5DACE3012486F6EA2B59CB6F3F83462 /* IQUIWindow+Hierarchy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIWindow+Hierarchy.h"; path = "IQKeyBoardManager/Categories/IQUIWindow+Hierarchy.h"; sourceTree = "<group>"; };
+		BA5F91758FB1FCFAE01BC110ECE86263 /* IQSegmentedNextPrevious.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQSegmentedNextPrevious.m; path = IQKeyBoardManager/IQSegmentedNextPrevious/IQSegmentedNextPrevious.m; sourceTree = "<group>"; };
+		BA68705748010C69F44F5070BD0CB6BB /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQKeyboardReturnKeyHandler.m; path = IQKeyBoardManager/IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
+		BBE4979B33A7AFEF168AF247AFA52174 /* IQTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQTextView.h; path = IQKeyBoardManager/IQTextView/IQTextView.h; sourceTree = "<group>"; };
+		BF860E28D71B2347428431E0C358203B /* PBJVision-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PBJVision-dummy.m"; sourceTree = "<group>"; };
+		C1D55337D7F09272D9156AA218A70E55 /* PBJVision-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVision-prefix.pch"; sourceTree = "<group>"; };
+		C5C49BB15BFFA564755366B075C0273A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
 		C88113A79685B4EFEE7BAD12896829F7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CC9572FA5DFE175571B65D394F66E7A2 /* PBJVideoPlayer-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PBJVideoPlayer-Private.xcconfig"; sourceTree = "<group>"; };
-		D5436658469C21632B0AFEB646CA364B /* libPBJVideoPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPBJVideoPlayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E11C368DBEE2873727799D3883EF6F33 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
-		E45A3D671548D223FE2E637B30BA87B3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		E9A7470B6F01A55807F7260948515433 /* PBJMediaWriter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJMediaWriter.m; path = Source/PBJMediaWriter.m; sourceTree = "<group>"; };
-		ED784B8409F1344DD53426A30B69619D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED89B7E2F18DEBAD497FEC2242580784 /* PBJVideoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoView.h; path = Source/PBJVideoView.h; sourceTree = "<group>"; };
-		FEAAC9005EB1BD1489155F12DD87015D /* PBJVideoPlayerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVideoPlayerController.m; path = Source/PBJVideoPlayerController.m; sourceTree = "<group>"; };
+		C95A3EEC71B7B33975095E0F3F3C7D38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		DB6E8949F69499C2DBE28950A63378E5 /* IQKeyboardManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManager-prefix.pch"; sourceTree = "<group>"; };
+		DEF8D82CA5C9BA2123D44607F874B722 /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIViewController+Additions.m"; path = "IQKeyBoardManager/Categories/IQUIViewController+Additions.m"; sourceTree = "<group>"; };
+		E7B57DCABE8AD4372DE00A0D97E9C0D6 /* IQBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQBarButtonItem.h; path = IQKeyBoardManager/IQToolbar/IQBarButtonItem.h; sourceTree = "<group>"; };
+		E7EAC7B897BF15F9D77A71D8061ECC3B /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F575173EB041928F977E5A4BEBA374 /* IQUIViewController+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIViewController+Additions.h"; path = "IQKeyBoardManager/Categories/IQUIViewController+Additions.h"; sourceTree = "<group>"; };
+		EA11738CCA7CF61699D11E7AEAE4FB02 /* Shader.vsh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Source/Shaders/Shader.vsh; sourceTree = "<group>"; };
+		EF01338A1C47BF6B8CA353AE06E4696C /* IQBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQBarButtonItem.m; path = IQKeyBoardManager/IQToolbar/IQBarButtonItem.m; sourceTree = "<group>"; };
+		F54FAB28E6480C5F138B1FBE99AF11AD /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQTitleBarButtonItem.m; path = IQKeyBoardManager/IQToolbar/IQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		F5B8F3B2BB81C105921C3468AD223493 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F851DDC885D0AA0A9EE790790B487104 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		F89301D4BB662D4804A113D949D42E79 /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManagerConstantsInternal.h; path = IQKeyBoardManager/Constants/IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		FBAF3A202B1996E125071F387B46A1BA /* IQKeyboardManager-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "IQKeyboardManager-Private.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		203BCD941D9EADC22D2DC2BCD6DBFC63 /* Frameworks */ = {
+		4F0A489585595D066B37887045849E45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9F3ACF7B2D13B14B62365EF4A59AB63 /* AVFoundation.framework in Frameworks */,
-				15869A0A7DFE88C48F18A705E89D8D1A /* CoreGraphics.framework in Frameworks */,
-				7FE8892D15221930684E35C9DBCA6938 /* Foundation.framework in Frameworks */,
-				4209444698187A578EE106396C84D1FE /* QuartzCore.framework in Frameworks */,
-				DA351A186BE14466C0111DA58F3F58F4 /* UIKit.framework in Frameworks */,
+				1DC07CED18EF7D3A13E275B9AA49E89F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		422369E6153C70115ED0293F89B166FD /* Frameworks */ = {
+		61CC333C74D6D4ECB24CDD3683BEAC58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F454164F04C05EAC37FA5D2C90DBC5 /* AVFoundation.framework in Frameworks */,
-				5A83B624C2E7B27E342A55A03DB53819 /* CoreGraphics.framework in Frameworks */,
-				CE793DEBBC163EAB974E957D6A25800D /* CoreImage.framework in Frameworks */,
-				F6EE6C187199EE946DCB116D94F5F04F /* CoreMedia.framework in Frameworks */,
-				DA41BA832D07D758AD15FFBA7E0B3072 /* CoreVideo.framework in Frameworks */,
-				D7CB67CD7A38DA24EDA08A72AE92FADE /* Foundation.framework in Frameworks */,
-				2B7D40980965B68A7FAE186556C5CC39 /* ImageIO.framework in Frameworks */,
-				8F2F5B60ECDCD76C32150F1FE9BF2954 /* MobileCoreServices.framework in Frameworks */,
-				2621B028532B08A2D39E9B94B5199FCC /* OpenGLES.framework in Frameworks */,
-				D667811D6B4C00F570BF130E8C6DAFD9 /* QuartzCore.framework in Frameworks */,
-				BA071B3B3A42E5C8D3900456CED6AAAC /* UIKit.framework in Frameworks */,
+				62C7AB6CB3EE85A5512C85302B5AFB53 /* AVFoundation.framework in Frameworks */,
+				6883B2F50AFDC8E28467DA75CFF9798C /* CoreGraphics.framework in Frameworks */,
+				48B00C0FC82D91B8C7086864411DCE9C /* Foundation.framework in Frameworks */,
+				E8E0747810E2A98E9D2D5A7F12B74A4F /* QuartzCore.framework in Frameworks */,
+				8A1DB686859E01145F336509C147009A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E314BEAF3772E1FF449241D866D08CE9 /* Frameworks */ = {
+		7C13C0DDA92F4345FADD780BB4435554 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEF572AD29330B3430BC74A873A9D56F /* Foundation.framework in Frameworks */,
+				D29FBCCF633FB11489334C12B2537C36 /* AVFoundation.framework in Frameworks */,
+				5867F6B3E752466D255503EDF9ACAFE4 /* CoreGraphics.framework in Frameworks */,
+				43696EE6623E9EB8C6E17CC3C0958820 /* CoreImage.framework in Frameworks */,
+				879935755E92D1C577400FD49DBF164F /* CoreMedia.framework in Frameworks */,
+				0E1A93C9DECDD85970A454B7C3939BA9 /* CoreVideo.framework in Frameworks */,
+				4A115B2E4E0442E8B656E978A336ABDC /* Foundation.framework in Frameworks */,
+				8C253F8C4647964E24F56DFBF5CB13B8 /* ImageIO.framework in Frameworks */,
+				A9A117C1C68F3D9445425AB0426CF25D /* MobileCoreServices.framework in Frameworks */,
+				73A6165974DDD71EE58B6D90E0F1A199 /* OpenGLES.framework in Frameworks */,
+				B969B1E83F5D8587D3AEBC29474AABB0 /* QuartzCore.framework in Frameworks */,
+				B60429B830E98295010DE2B85DE41416 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAEF80885A29EAC4778E96AB0EE03538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0CE670E3316814449D4CBA1B7D3F1C6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16A67545122A8B738E50AFB6D9249DED /* PBJVideoPlayer */ = {
+		04C4D8D016B7371D849726598F832130 /* PBJVision */ = {
 			isa = PBXGroup;
 			children = (
-				C8255DBC5ECF717133136D4EA67521E3 /* PBJVideoPlayerController.h */,
-				FEAAC9005EB1BD1489155F12DD87015D /* PBJVideoPlayerController.m */,
-				ED89B7E2F18DEBAD497FEC2242580784 /* PBJVideoView.h */,
-				A5B97AD91771EDB48EF156665BBC5F68 /* PBJVideoView.m */,
-				2DAC7F99F7F9EB10751044E82ABDC3A7 /* Support Files */,
+				A55B32E2D665CD17DF504A9E2D58C5CA /* PBJGLProgram.h */,
+				5D46B065C564C7DA134F14AE631E8E22 /* PBJGLProgram.m */,
+				8B7A5AD17ADD9BEC4EE6989F061C1666 /* PBJMediaWriter.h */,
+				4D59E5366751741B0CEC6F5F24F64570 /* PBJMediaWriter.m */,
+				0E4CA71A33ACD17FED49A019C6E459C4 /* PBJVision.h */,
+				296E39E42C933FA6C3AF3BDBD85FBE3A /* PBJVision.m */,
+				65277F19F2109684A9C9EBB5B33D7192 /* PBJVisionUtilities.h */,
+				A759DA8AEBDC5BA07A8B230ECB912E9A /* PBJVisionUtilities.m */,
+				5611386EF1DE5F8F3201E5B866823F52 /* Resources */,
+				1CE3F43A110D866E694090ED2DA92847 /* Support Files */,
+			);
+			path = PBJVision;
+			sourceTree = "<group>";
+		};
+		0BD25C6A3917E31ACD46AEC05270AA31 /* PBJVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				9C6C16B1E6DEF7AD2911049F2E8D42BE /* PBJVideoPlayerController.h */,
+				A24B1A3431490A5383D211448F6998BE /* PBJVideoPlayerController.m */,
+				32F73DCD5E40E16564EC508C3B7F1B0C /* PBJVideoView.h */,
+				17A79F04D9F3E755E1BC39F8FB015958 /* PBJVideoView.m */,
+				645198E18D389F47A4EA37C20AFA64C2 /* Support Files */,
 			);
 			path = PBJVideoPlayer;
 			sourceTree = "<group>";
 		};
-		2DAC7F99F7F9EB10751044E82ABDC3A7 /* Support Files */ = {
+		1CE3F43A110D866E694090ED2DA92847 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				647B574265977B6379ABDDD7CF24573B /* PBJVideoPlayer.xcconfig */,
-				CC9572FA5DFE175571B65D394F66E7A2 /* PBJVideoPlayer-Private.xcconfig */,
-				57D5543BC6C033E86FC5C47132C14EC5 /* PBJVideoPlayer-dummy.m */,
-				95587D5E8F71D6C175D40A11545B0AD5 /* PBJVideoPlayer-prefix.pch */,
+				2515D66A72E6B067A7741600E71354DA /* PBJVision.xcconfig */,
+				25E39E4AA6544B62D73C1752841AED5F /* PBJVision-Private.xcconfig */,
+				BF860E28D71B2347428431E0C358203B /* PBJVision-dummy.m */,
+				C1D55337D7F09272D9156AA218A70E55 /* PBJVision-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PBJVideoPlayer";
+			path = "../Target Support Files/PBJVision";
 			sourceTree = "<group>";
 		};
-		2F414954F87ED957BE121A1660094A49 /* Pods */ = {
+		5611386EF1DE5F8F3201E5B866823F52 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				16A67545122A8B738E50AFB6D9249DED /* PBJVideoPlayer */,
-				970C15E29364DA301716F668B17D3ACF /* PBJVision */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5BB143E587EB35E35BDDACE565D8C661 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C08A55404B201660BE96EF34BE3BEDD6 /* Shader.fsh */,
-				47794F06950683C061D4A2AA77D89F08 /* Shader.vsh */,
+				215AE3742DAE925E01C270486B4C86DD /* Shader.fsh */,
+				EA11738CCA7CF61699D11E7AEAE4FB02 /* Shader.vsh */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -196,20 +285,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		645198E18D389F47A4EA37C20AFA64C2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				706F61B93E67EC6FB0E6270C3019F78F /* PBJVideoPlayer.xcconfig */,
+				5869CC38E46E25F1E7F3C4CE8BF16EB2 /* PBJVideoPlayer-Private.xcconfig */,
+				B47DDB624C588ED03C0178E735C31383 /* PBJVideoPlayer-dummy.m */,
+				979DAE7DDBE48E425E24A7F7C994F0A7 /* PBJVideoPlayer-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PBJVideoPlayer";
+			sourceTree = "<group>";
+		};
 		676CCFE7CBE7CFA47E6AE472BB9F0752 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B01C22F25FC202677E8976683060F47E /* AVFoundation.framework */,
-				8947A36609AB31B68399D1EE0E718050 /* CoreGraphics.framework */,
-				381BC60B4E34929C41D9BA9B70C4D8B3 /* CoreImage.framework */,
-				C8594FBA7313C412B7185405EDBB0292 /* CoreMedia.framework */,
-				E11C368DBEE2873727799D3883EF6F33 /* CoreVideo.framework */,
-				9F71249FF2199C3DD55B088EDFE6DE7D /* Foundation.framework */,
-				821D54BA2C91A5A5765B5DC1FDEE116C /* ImageIO.framework */,
-				110D32FA01523F29794D2861855721D0 /* MobileCoreServices.framework */,
-				02B7DCE5210420A06B9AB9AA5936841D /* OpenGLES.framework */,
-				451BE799CEA6991C2930B29F17E1E86E /* QuartzCore.framework */,
-				6AD65A9E8BFDFBE0A9896D43DA053197 /* UIKit.framework */,
+				C95A3EEC71B7B33975095E0F3F3C7D38 /* AVFoundation.framework */,
+				A7BAD1C1B419AF5E84768719313E0A44 /* CoreGraphics.framework */,
+				F851DDC885D0AA0A9EE790790B487104 /* CoreImage.framework */,
+				3AB17272E7A03C5860D58B0AA300BB14 /* CoreMedia.framework */,
+				26F682CB122354B7B0468F26B64DB0D7 /* CoreVideo.framework */,
+				B46988DCAF78EABCAF36DC5A4DD55C23 /* Foundation.framework */,
+				2F4FDA4AC816CE547137F24C78BD5767 /* ImageIO.framework */,
+				A86FEF33E9E196E76A448CCFDE071470 /* MobileCoreServices.framework */,
+				8DD8096CACA36E854E862CB88328BCDD /* OpenGLES.framework */,
+				773EAEBAC3E6331BC4495B8560EF5569 /* QuartzCore.framework */,
+				6FD2A25F3C2986F80DFDF9715CA49EC5 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -219,10 +320,10 @@
 			children = (
 				19F830CABFD7C5AB3A939E4B18915F47 /* Pods-acknowledgements.markdown */,
 				A5F822E59C48343778A7A0893BEB2933 /* Pods-acknowledgements.plist */,
-				C39B9DDD6F254278B62813604D2D2F74 /* Pods-dummy.m */,
+				2019CF446AF3B1E0A4B9BE1A95F0BE84 /* Pods-dummy.m */,
 				B3BB5840B4BDD2DDB6F5AB1247265D75 /* Pods-resources.sh */,
-				90B0023A4502AF89D3747B6F6A9BABDB /* Pods.debug.xcconfig */,
-				E45A3D671548D223FE2E637B30BA87B3 /* Pods.release.xcconfig */,
+				A8DC330F6448C144AE140781F396C6C0 /* Pods.debug.xcconfig */,
+				C5C49BB15BFFA564755366B075C0273A /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
@@ -233,7 +334,7 @@
 			children = (
 				C88113A79685B4EFEE7BAD12896829F7 /* Podfile */,
 				5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */,
-				2F414954F87ED957BE121A1660094A49 /* Pods */,
+				B72A7892EECA4A44771AFFC274D6CFA9 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				848A6CE8DA3504A266A17F635DC3683A /* Targets Support Files */,
 			);
@@ -247,113 +348,141 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		970C15E29364DA301716F668B17D3ACF /* PBJVision */ = {
+		868A278253FB11E7093EF4977D9DC9A7 /* IQKeyboardManager */ = {
 			isa = PBXGroup;
 			children = (
-				8FB260D3C7C367DDD02D87E923AAB8FF /* PBJGLProgram.h */,
-				3EFCEE3BA40984AE5691091B832032F3 /* PBJGLProgram.m */,
-				C4E378B9A6312F2C00C2073DF6E3DE08 /* PBJMediaWriter.h */,
-				E9A7470B6F01A55807F7260948515433 /* PBJMediaWriter.m */,
-				745FB08A7970EC8B73E59882EBD83EC7 /* PBJVision.h */,
-				AC1AEB61610F7F752E66A1080B2E94F3 /* PBJVision.m */,
-				58C7F487E03682360227D3B51B683529 /* PBJVisionUtilities.h */,
-				193043E9CE40C2621659B4B86388538D /* PBJVisionUtilities.m */,
-				5BB143E587EB35E35BDDACE565D8C661 /* Resources */,
-				B3C5FB07015336A6AA760B46550E215B /* Support Files */,
+				E7B57DCABE8AD4372DE00A0D97E9C0D6 /* IQBarButtonItem.h */,
+				EF01338A1C47BF6B8CA353AE06E4696C /* IQBarButtonItem.m */,
+				35845C3D156EA81B649289C25976662B /* IQKeyboardManager.h */,
+				984719FB054FD6DEBDABF02F41268F39 /* IQKeyboardManager.m */,
+				46C262E6C4C7954EE1A9CCE4FB5AC14B /* IQKeyboardManagerConstants.h */,
+				F89301D4BB662D4804A113D949D42E79 /* IQKeyboardManagerConstantsInternal.h */,
+				8704C184FE51633271A9B82BA1F8FD94 /* IQKeyboardReturnKeyHandler.h */,
+				BA68705748010C69F44F5070BD0CB6BB /* IQKeyboardReturnKeyHandler.m */,
+				883B0F5A1A2CDDE4D5777A4919040562 /* IQNSArray+Sort.h */,
+				53B8C1315BA3B70C91D6F37916510F23 /* IQNSArray+Sort.m */,
+				9165B21AF78F796B80494D48D1136EF8 /* IQSegmentedNextPrevious.h */,
+				BA5F91758FB1FCFAE01BC110ECE86263 /* IQSegmentedNextPrevious.m */,
+				BBE4979B33A7AFEF168AF247AFA52174 /* IQTextView.h */,
+				5BE2024A91ACD2E969207164C3BA9B26 /* IQTextView.m */,
+				920E94ABBD51AAE87656DBA9089F8209 /* IQTitleBarButtonItem.h */,
+				F54FAB28E6480C5F138B1FBE99AF11AD /* IQTitleBarButtonItem.m */,
+				57B3CC6A633F041CAFE9D6BAD7857FE0 /* IQToolbar.h */,
+				07975B0BEEAFE90BFAE8DDA11A9A3F66 /* IQToolbar.m */,
+				9F18602E92C3B2FBD29C686453FBEFB9 /* IQUITextFieldView+Additions.h */,
+				2392344E31E6CCEC474E890D383DC1D6 /* IQUITextFieldView+Additions.m */,
+				3A730EB8046E9219E0B6E9B550F72140 /* IQUIView+Hierarchy.h */,
+				6D5C5EED64D8AE3D0D8BD3B5BB032703 /* IQUIView+Hierarchy.m */,
+				049B3069F51D5729C5DB1F77D08ADCA2 /* IQUIView+IQKeyboardToolbar.h */,
+				8C08F16C7DD8B959159846D7DAE7C2D9 /* IQUIView+IQKeyboardToolbar.m */,
+				E8F575173EB041928F977E5A4BEBA374 /* IQUIViewController+Additions.h */,
+				DEF8D82CA5C9BA2123D44607F874B722 /* IQUIViewController+Additions.m */,
+				B5DACE3012486F6EA2B59CB6F3F83462 /* IQUIWindow+Hierarchy.h */,
+				670BF67C3171839E2ED381B22EA1C8BA /* IQUIWindow+Hierarchy.m */,
+				39BA2E1AE998F79F058EA9418B3B9C7A /* KeyboardManager.h */,
+				CEBF802968D639B69383DAB612A2C05B /* Resources */,
+				8FEF994C999C05E1906D596FBA9E015E /* Support Files */,
 			);
-			path = PBJVision;
+			path = IQKeyboardManager;
 			sourceTree = "<group>";
 		};
-		B3C5FB07015336A6AA760B46550E215B /* Support Files */ = {
+		8FEF994C999C05E1906D596FBA9E015E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				92428D6104F5ECEBC8C2AF5C8C7A1B41 /* PBJVision.xcconfig */,
-				806556A023A6D4BF9CB069E36763852A /* PBJVision-Private.xcconfig */,
-				C35D9FBD060756B0AFDC952F4182FE2A /* PBJVision-dummy.m */,
-				4BD9783A80DE3F6E246492669D77A627 /* PBJVision-prefix.pch */,
+				1ABD6F2FAD3D9B80F6760FB5C8F0F07D /* IQKeyboardManager.xcconfig */,
+				FBAF3A202B1996E125071F387B46A1BA /* IQKeyboardManager-Private.xcconfig */,
+				0A5F0D100C10BB657D5DE1B81B79BA38 /* IQKeyboardManager-dummy.m */,
+				DB6E8949F69499C2DBE28950A63378E5 /* IQKeyboardManager-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PBJVision";
+			path = "../Target Support Files/IQKeyboardManager";
+			sourceTree = "<group>";
+		};
+		B72A7892EECA4A44771AFFC274D6CFA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				868A278253FB11E7093EF4977D9DC9A7 /* IQKeyboardManager */,
+				0BD25C6A3917E31ACD46AEC05270AA31 /* PBJVideoPlayer */,
+				04C4D8D016B7371D849726598F832130 /* PBJVision */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5436658469C21632B0AFEB646CA364B /* libPBJVideoPlayer.a */,
-				316B8C3B6FBB2DFFC3DB925F81CD89F2 /* libPBJVision.a */,
-				ED784B8409F1344DD53426A30B69619D /* libPods.a */,
+				E7EAC7B897BF15F9D77A71D8061ECC3B /* libIQKeyboardManager.a */,
+				5DD3A6F9FDD2E8D184BE8D753B111AB4 /* libPBJVideoPlayer.a */,
+				22EBA75DF8841A22F69A0A69BE365893 /* libPBJVision.a */,
+				F5B8F3B2BB81C105921C3468AD223493 /* libPods.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CEBF802968D639B69383DAB612A2C05B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87B377EA1692670EB2DA9A974215466B /* IQKeyboardManager.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3402934517CF3D3CA8FE7F141DE6A5C9 /* Headers */ = {
+		1374E967164E14DE185FB3695223F6EA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5047EB40DCBCED8D67F9DCC3CA56ACB /* PBJVideoPlayerController.h in Headers */,
-				6D81A646EF3CBA0464F4CA31861BF216 /* PBJVideoView.h in Headers */,
+				BD331252E432E98EB4BA4794DE393CDF /* PBJGLProgram.h in Headers */,
+				B944EC6FEB8335BBFA93CDE16647B06A /* PBJMediaWriter.h in Headers */,
+				B1F46E8A69BC1AFC77E3FE5578733588 /* PBJVision.h in Headers */,
+				5DF0DB8299EA5A25BC747B79CE3BA747 /* PBJVisionUtilities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9210C4C0FDD01B0B39F9173BACE680AA /* Headers */ = {
+		75359EFC34B34C86EA5575DD4FC9D3B9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7FBD1E157A6FE6FA5E3F92FBF4B2AD7 /* PBJGLProgram.h in Headers */,
-				E0D1309902C8C08A884AE26BAF040518 /* PBJMediaWriter.h in Headers */,
-				C88DA1E726C63E81DDE1BA91432B7F7A /* PBJVision.h in Headers */,
-				CB17544E4979BBAA32D8A02DC7DBDAC7 /* PBJVisionUtilities.h in Headers */,
+				F264E2486BBF4116247F85BC5029E279 /* PBJVideoPlayerController.h in Headers */,
+				348213E35ED4FB692212229AFAD6567C /* PBJVideoView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4C440CE78D2ECA5FCB8A714FA9888D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205A98D755FC4B790DCEF346A35C7DA9 /* IQBarButtonItem.h in Headers */,
+				170641E40F037CF1279A28470D0A4EC7 /* IQKeyboardManager.h in Headers */,
+				363AD89605F9A91C477A601CE26F835D /* IQKeyboardManagerConstants.h in Headers */,
+				2C884CEBED611519B90A1B03B431967D /* IQKeyboardManagerConstantsInternal.h in Headers */,
+				7B77649ABFC3216CA359A2AF0B9C57BA /* IQKeyboardReturnKeyHandler.h in Headers */,
+				4A69494F3AF890C4BBB7C5C17B85BC36 /* IQNSArray+Sort.h in Headers */,
+				8AF518B57F199E6EC6458EAF198A7178 /* IQSegmentedNextPrevious.h in Headers */,
+				E8B82CEB6756746B9CBB601D38B7C6B5 /* IQTextView.h in Headers */,
+				3B27D72C1EF2FCC39CDB5EC5EF55767D /* IQTitleBarButtonItem.h in Headers */,
+				16F77BC4256B5A1E30C65D60CBBF64CD /* IQToolbar.h in Headers */,
+				C0AE02DF3A928F96D8BD218F97DDFAA5 /* IQUITextFieldView+Additions.h in Headers */,
+				72EA3BBFC7489B3A5E55C3A3C85553C3 /* IQUIView+Hierarchy.h in Headers */,
+				08F6288A17AB210A4D08C2CE882E6976 /* IQUIView+IQKeyboardToolbar.h in Headers */,
+				A4F0125F0C21F963A1387A5FB8CFD6B6 /* IQUIViewController+Additions.h in Headers */,
+				A0EA5CA90D173B30995D7C17DFD682C7 /* IQUIWindow+Hierarchy.h in Headers */,
+				4B95A8297A0A9453764BFF8D69296FC1 /* KeyboardManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0992E8F86E68D096DF7020D18C5A845F /* PBJVideoPlayer */ = {
+		29B7F935E20F070836EC430D70F5B509 /* PBJVision */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 423FC1BFD586E81B7477F05343191858 /* Build configuration list for PBXNativeTarget "PBJVideoPlayer" */;
+			buildConfigurationList = DB5F1DF37D9A229B70F676FA975DFF0E /* Build configuration list for PBXNativeTarget "PBJVision" */;
 			buildPhases = (
-				72196AAF9942F79F4D76984AC3B5EB13 /* Sources */,
-				203BCD941D9EADC22D2DC2BCD6DBFC63 /* Frameworks */,
-				3402934517CF3D3CA8FE7F141DE6A5C9 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PBJVideoPlayer;
-			productName = PBJVideoPlayer;
-			productReference = D5436658469C21632B0AFEB646CA364B /* libPBJVideoPlayer.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		277B0C4BF83B4D8D1DEC8548033D7128 /* Pods */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 53B44C7CFF0E028838E5ABA692A63598 /* Build configuration list for PBXNativeTarget "Pods" */;
-			buildPhases = (
-				5830286D6C84B727E502C3D7579F8FA8 /* Sources */,
-				E314BEAF3772E1FF449241D866D08CE9 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E92664D397216F5626CCFA7C0ABC9BF8 /* PBXTargetDependency */,
-				FABCDCB2C7C75CA72BE11014E4440333 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = ED784B8409F1344DD53426A30B69619D /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		44333D7FA329710CCCA97A0D3B5A4624 /* PBJVision */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4380D951E6CF3A90FF561ED2BE8CE7F5 /* Build configuration list for PBXNativeTarget "PBJVision" */;
-			buildPhases = (
-				F4EF212B24B9F1ABA8211D986B75F14A /* Sources */,
-				422369E6153C70115ED0293F89B166FD /* Frameworks */,
-				9210C4C0FDD01B0B39F9173BACE680AA /* Headers */,
+				FF20056AF5E914C1015675B7D33E520F /* Sources */,
+				7C13C0DDA92F4345FADD780BB4435554 /* Frameworks */,
+				1374E967164E14DE185FB3695223F6EA /* Headers */,
 			);
 			buildRules = (
 			);
@@ -361,7 +490,60 @@
 			);
 			name = PBJVision;
 			productName = PBJVision;
-			productReference = 316B8C3B6FBB2DFFC3DB925F81CD89F2 /* libPBJVision.a */;
+			productReference = 22EBA75DF8841A22F69A0A69BE365893 /* libPBJVision.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		70127F4B027731F7B5446BDAFE00F5F1 /* IQKeyboardManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF0564C8733A441F635A6F6F4809C4B0 /* Build configuration list for PBXNativeTarget "IQKeyboardManager" */;
+			buildPhases = (
+				EA7EF5A4AB66117E83CCDFB1EDF6450E /* Sources */,
+				EAEF80885A29EAC4778E96AB0EE03538 /* Frameworks */,
+				C4C440CE78D2ECA5FCB8A714FA9888D9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IQKeyboardManager;
+			productName = IQKeyboardManager;
+			productReference = E7EAC7B897BF15F9D77A71D8061ECC3B /* libIQKeyboardManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		816DCC803EC52048CC139F10235A974E /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 359AF0C21BBB86548CE2272084D4C2AA /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				5441E52722DF41FC8000961F73FDE70A /* Sources */,
+				4F0A489585595D066B37887045849E45 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE3FB95C3707070020160D8FF8BF25B7 /* PBXTargetDependency */,
+				3230DB78EDBCFE0AEF79A596E07391F1 /* PBXTargetDependency */,
+				C844B11DBBB5ABA8A6DDF3632CB8C908 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = F5B8F3B2BB81C105921C3468AD223493 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8EA234CB23C9D43AF72B99883BF6AD08 /* PBJVideoPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C546C9C8511594C4E833979A35814345 /* Build configuration list for PBXNativeTarget "PBJVideoPlayer" */;
+			buildPhases = (
+				BD8E1B49FCBB69917D2C87CA4E43D9E9 /* Sources */,
+				61CC333C74D6D4ECB24CDD3683BEAC58 /* Frameworks */,
+				75359EFC34B34C86EA5575DD4FC9D3B9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PBJVideoPlayer;
+			productName = PBJVideoPlayer;
+			productReference = 5DD3A6F9FDD2E8D184BE8D753B111AB4 /* libPBJVideoPlayer.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -385,58 +567,86 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0992E8F86E68D096DF7020D18C5A845F /* PBJVideoPlayer */,
-				44333D7FA329710CCCA97A0D3B5A4624 /* PBJVision */,
-				277B0C4BF83B4D8D1DEC8548033D7128 /* Pods */,
+				70127F4B027731F7B5446BDAFE00F5F1 /* IQKeyboardManager */,
+				8EA234CB23C9D43AF72B99883BF6AD08 /* PBJVideoPlayer */,
+				29B7F935E20F070836EC430D70F5B509 /* PBJVision */,
+				816DCC803EC52048CC139F10235A974E /* Pods */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5830286D6C84B727E502C3D7579F8FA8 /* Sources */ = {
+		5441E52722DF41FC8000961F73FDE70A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F242DA4E60FD57FC807320EB0F1423F4 /* Pods-dummy.m in Sources */,
+				00969F3F440B6E64838D11F612BA58E5 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72196AAF9942F79F4D76984AC3B5EB13 /* Sources */ = {
+		BD8E1B49FCBB69917D2C87CA4E43D9E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				609F96D60C3EA3F1E471775261F35B0D /* PBJVideoPlayer-dummy.m in Sources */,
-				45E2E6885A402BE4AC563AAF95375129 /* PBJVideoPlayerController.m in Sources */,
-				8612FFA71A028DAC114BE38698D4C367 /* PBJVideoView.m in Sources */,
+				D26C026B400C0C4C9BB60376A43F8B06 /* PBJVideoPlayer-dummy.m in Sources */,
+				78B0079F6E031FA5788110A8DEA8E26B /* PBJVideoPlayerController.m in Sources */,
+				CB404A998B6E0F66FDE9DEE024BC8305 /* PBJVideoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4EF212B24B9F1ABA8211D986B75F14A /* Sources */ = {
+		EA7EF5A4AB66117E83CCDFB1EDF6450E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F161874D2C66268CF460FC4DD725CB5 /* PBJGLProgram.m in Sources */,
-				381F56851E82F33A13CF0ABD3D137779 /* PBJMediaWriter.m in Sources */,
-				D425541FE243DC2C4EF457275E02D750 /* PBJVision-dummy.m in Sources */,
-				8DF660ADF056549731EE155C2E3AA40B /* PBJVision.m in Sources */,
-				E5F7BE0B6DAF5053B0E0FE2A88314CB5 /* PBJVisionUtilities.m in Sources */,
+				E5B0B2AFDC821767832BA41AFA11A5CF /* IQBarButtonItem.m in Sources */,
+				802BA910E215280D56DDF226B5D2A8A6 /* IQKeyboardManager-dummy.m in Sources */,
+				093926C10B4B7C16103326D9F18315A8 /* IQKeyboardManager.m in Sources */,
+				316EA733F38F3AC10595701F0DCDE994 /* IQKeyboardReturnKeyHandler.m in Sources */,
+				4160080DAF804BA931892292C9542E81 /* IQNSArray+Sort.m in Sources */,
+				95064335D60B1C42C3435F4198155030 /* IQSegmentedNextPrevious.m in Sources */,
+				92498D108974BF32DBA5C43A1428F75D /* IQTextView.m in Sources */,
+				DA37EE8C9038F5509C8A39A970FF941D /* IQTitleBarButtonItem.m in Sources */,
+				10B505E8F68308240FE383BB7AE5C75F /* IQToolbar.m in Sources */,
+				4376A25A8C3C0A7FA1683279B938E740 /* IQUITextFieldView+Additions.m in Sources */,
+				44F57AAEC5476AE34B6E13F4274E46CB /* IQUIView+Hierarchy.m in Sources */,
+				13F64A3FB3D896DAE3622269CAD5EFC9 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				6C82A950BCB64B28811F24AF871D57C5 /* IQUIViewController+Additions.m in Sources */,
+				E9CBB7F13AE200D7DD373D099E48C6BA /* IQUIWindow+Hierarchy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF20056AF5E914C1015675B7D33E520F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC25DF8D0DBFF441C72E0F2CCDC7F88B /* PBJGLProgram.m in Sources */,
+				3C95F2318AFFA3E6E2293DCD98461310 /* PBJMediaWriter.m in Sources */,
+				B7361E73403E034E57EBC35A4D4DC7BD /* PBJVision-dummy.m in Sources */,
+				585023128991CDF9EBBEAFD61D3DCF2D /* PBJVision.m in Sources */,
+				816E8433F5543FDF3954B9524B1DBF46 /* PBJVisionUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E92664D397216F5626CCFA7C0ABC9BF8 /* PBXTargetDependency */ = {
+		3230DB78EDBCFE0AEF79A596E07391F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PBJVideoPlayer;
-			target = 0992E8F86E68D096DF7020D18C5A845F /* PBJVideoPlayer */;
-			targetProxy = 80358795F4324481783A6EE98AF51913 /* PBXContainerItemProxy */;
+			target = 8EA234CB23C9D43AF72B99883BF6AD08 /* PBJVideoPlayer */;
+			targetProxy = 4EB08C5CEE57ED2182A7C3BA3B20E171 /* PBXContainerItemProxy */;
 		};
-		FABCDCB2C7C75CA72BE11014E4440333 /* PBXTargetDependency */ = {
+		AE3FB95C3707070020160D8FF8BF25B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IQKeyboardManager;
+			target = 70127F4B027731F7B5446BDAFE00F5F1 /* IQKeyboardManager */;
+			targetProxy = EC252AE917C2D23896A1D9046BF1D811 /* PBXContainerItemProxy */;
+		};
+		C844B11DBBB5ABA8A6DDF3632CB8C908 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PBJVision;
-			target = 44333D7FA329710CCCA97A0D3B5A4624 /* PBJVision */;
-			targetProxy = 6CD3912163B6F909CBD6D4EED8F26E01 /* PBXContainerItemProxy */;
+			target = 29B7F935E20F070836EC430D70F5B509 /* PBJVision */;
+			targetProxy = 9FFB458DA8FFD54AD401629FD23139E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -480,9 +690,25 @@
 			};
 			name = Debug;
 		};
-		210C6BB3C1FCA88730FD7568915867D6 /* Release */ = {
+		2F0B84F716A9B68D3B9F0A2DE7CD94EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 806556A023A6D4BF9CB069E36763852A /* PBJVision-Private.xcconfig */;
+			baseConfigurationReference = FBAF3A202B1996E125071F387B46A1BA /* IQKeyboardManager-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4CF7CDF199858461D4D27019628A12CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25E39E4AA6544B62D73C1752841AED5F /* PBJVision-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PBJVision/PBJVision-prefix.pch";
@@ -496,32 +722,32 @@
 			};
 			name = Release;
 		};
-		2F05FDFC81E7D48DEF396CBBDA706D9C /* Release */ = {
+		4DB57E6E38A24862A099F3414892C486 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E45A3D671548D223FE2E637B30BA87B3 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 25E39E4AA6544B62D73C1752841AED5F /* PBJVision-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		7A92520BAC984B35CC99255F0E8F7D58 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90B0023A4502AF89D3747B6F6A9BABDB /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PBJVision/PBJVision-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7581C602498A207628175E08E0AA4330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5869CC38E46E25F1E7F3C4CE8BF16EB2 /* PBJVideoPlayer-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PBJVideoPlayer/PBJVideoPlayer-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -562,25 +788,57 @@
 			};
 			name = Release;
 		};
-		A6A16F0A6B61DBEEB375DF2175CED305 /* Debug */ = {
+		80EC26C535F94A6F9F9C76564EE580D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC9572FA5DFE175571B65D394F66E7A2 /* PBJVideoPlayer-Private.xcconfig */;
+			baseConfigurationReference = FBAF3A202B1996E125071F387B46A1BA /* IQKeyboardManager-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PBJVideoPlayer/PBJVideoPlayer-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
+			name = Release;
+		};
+		8D6D3F47F2E386BE3E8BB5E51D3AD05B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8DC330F6448C144AE140781F396C6C0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
 			name = Debug;
 		};
-		B2ED04973F0CE5424904FA457BEE6972 /* Release */ = {
+		E048569DDCEFA17DABF81CD5D4D1E185 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC9572FA5DFE175571B65D394F66E7A2 /* PBJVideoPlayer-Private.xcconfig */;
+			baseConfigurationReference = C5C49BB15BFFA564755366B075C0273A /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EBAC464CCD49B2A4988CE6067A520DC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5869CC38E46E25F1E7F3C4CE8BF16EB2 /* PBJVideoPlayer-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PBJVideoPlayer/PBJVideoPlayer-prefix.pch";
@@ -594,22 +852,6 @@
 			};
 			name = Release;
 		};
-		C54CF9AA0164D0742865C8BE3AAD4E01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 806556A023A6D4BF9CB069E36763852A /* PBJVision-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PBJVision/PBJVision-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -622,29 +864,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		423FC1BFD586E81B7477F05343191858 /* Build configuration list for PBXNativeTarget "PBJVideoPlayer" */ = {
+		359AF0C21BBB86548CE2272084D4C2AA /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A6A16F0A6B61DBEEB375DF2175CED305 /* Debug */,
-				B2ED04973F0CE5424904FA457BEE6972 /* Release */,
+				8D6D3F47F2E386BE3E8BB5E51D3AD05B /* Debug */,
+				E048569DDCEFA17DABF81CD5D4D1E185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4380D951E6CF3A90FF561ED2BE8CE7F5 /* Build configuration list for PBXNativeTarget "PBJVision" */ = {
+		C546C9C8511594C4E833979A35814345 /* Build configuration list for PBXNativeTarget "PBJVideoPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C54CF9AA0164D0742865C8BE3AAD4E01 /* Debug */,
-				210C6BB3C1FCA88730FD7568915867D6 /* Release */,
+				7581C602498A207628175E08E0AA4330 /* Debug */,
+				EBAC464CCD49B2A4988CE6067A520DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53B44C7CFF0E028838E5ABA692A63598 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		CF0564C8733A441F635A6F6F4809C4B0 /* Build configuration list for PBXNativeTarget "IQKeyboardManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A92520BAC984B35CC99255F0E8F7D58 /* Debug */,
-				2F05FDFC81E7D48DEF396CBBDA706D9C /* Release */,
+				2F0B84F716A9B68D3B9F0A2DE7CD94EB /* Debug */,
+				80EC26C535F94A6F9F9C76564EE580D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB5F1DF37D9A229B70F676FA975DFF0E /* Build configuration list for PBXNativeTarget "PBJVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB57E6E38A24862A099F3414892C486 /* Debug */,
+				4CF7CDF199858461D4D27019628A12CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

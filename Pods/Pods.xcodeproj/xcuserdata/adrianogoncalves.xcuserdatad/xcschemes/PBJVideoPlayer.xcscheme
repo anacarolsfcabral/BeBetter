@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "05FA975946C63AB2F556B1CE"
+               BlueprintIdentifier = "1733340DCEFF5EDCBBBC94B2"
                BuildableName = "libPBJVideoPlayer.a"
                BlueprintName = "PBJVideoPlayer"
                ReferencedContainer = "container:Pods.xcodeproj">

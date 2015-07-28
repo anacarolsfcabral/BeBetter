@@ -59,6 +59,8 @@ class CategoryViewController: UIViewController {
     func goToStartView(gesture: UIScreenEdgePanGestureRecognizer)
     {
         let nextWindow = StartViewController(nibName:"StartView", bundle: nil)
+        
+        
         self.presentViewController(nextWindow, animated: true, completion: nil)
     }
     

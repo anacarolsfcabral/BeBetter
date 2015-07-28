@@ -1,12 +1,15 @@
 PODS:
+  - IQKeyboardManager (3.2.4)
   - PBJVideoPlayer (0.2.1)
   - PBJVision (0.4.2)
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - PBJVideoPlayer
   - PBJVision
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
   PBJVideoPlayer: 98ea94400c3f16c60477b62527e273e4fd2f7e55
   PBJVision: fe43c9a58bb1c1277d16fd802fa836d25e034a45
 

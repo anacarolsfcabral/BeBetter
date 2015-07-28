@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PBJVideoPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0992E8F86E68D096DF7020D18C5A845F</key>
+		<key>29B7F935E20F070836EC430D70F5B509</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>277B0C4BF83B4D8D1DEC8548033D7128</key>
+		<key>70127F4B027731F7B5446BDAFE00F5F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44333D7FA329710CCCA97A0D3B5A4624</key>
+		<key>816DCC803EC52048CC139F10235A974E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EA234CB23C9D43AF72B99883BF6AD08</key>
 		<dict>
 			<key>primary</key>
 			<true/>

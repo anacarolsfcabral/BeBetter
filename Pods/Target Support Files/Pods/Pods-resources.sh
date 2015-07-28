@@ -58,10 +58,12 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
   install_resource "PBJVision/Source/Shaders/Shader.fsh"
   install_resource "PBJVision/Source/Shaders/Shader.vsh"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
   install_resource "PBJVision/Source/Shaders/Shader.fsh"
   install_resource "PBJVision/Source/Shaders/Shader.vsh"
 fi

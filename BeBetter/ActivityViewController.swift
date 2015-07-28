@@ -156,6 +156,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         println(currentActivity.videoTutorial)
         
         videoPath = currentActivity.videoTutorial
+        exerciseNameLabel.text = currentActivity.name
         
         if isPractsingExercise == true {
             
