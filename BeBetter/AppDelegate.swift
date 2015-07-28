@@ -15,7 +15,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
+        //////////////////////
+        //Notificação
+        
+        //Actions
+        
+        var firstAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        firstAction.identifier = "FIRST_ACTION"
+        firstAction.title = "Adiar"
+        firstAction.activationMode = UIUserNotificationActivationMode.Background
+        firstAction.destructive = true
+        firstAction.authenticationRequired = false
+        
+        var secondAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        secondAction.identifier = "SECOND_ACTION"
+        secondAction.title = "Praticar"
+        secondAction.activationMode = UIUserNotificationActivationMode.Foreground
+        secondAction.destructive = false
+        secondAction.authenticationRequired = false
+        
+        var thirdAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        thirdAction.identifier = "THIRD_ACTION"
+        thirdAction.title = "Adiar por 1 hora"
+        thirdAction.activationMode = UIUserNotificationActivationMode.Background
+        thirdAction.destructive = false
+        thirdAction.authenticationRequired = false
+        
+        // Category
+        
+        var firstCategory: UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
+        firstCategory.identifier = "FIRST_CATEGORY"
+        
+        let defaultAction: NSArray = [firstAction, secondAction, thirdAction]
+        let minimalAction: NSArray = [firstAction, secondAction]
+        
+        firstCategory.setActions(defaultAction as [AnyObject], forContext: UIUserNotificationActionContext.Default)
+        firstCategory.setActions(minimalAction as [AnyObject], forContext: UIUserNotificationActionContext.Minimal)
+        
+        // NSSet of all our category
+        
+        let categories: NSSet = NSSet(objects: firstCategory)
+        
+        
+        
+        let types: UIUserNotificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge
+        
+        let mySettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: categories as Set<NSObject>)
+        
+        UIApplication.sharedApplication().registerUserNotificationSettings(mySettings)
+        
+        ///////////////////////////////////////////////////////////
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         self.window?.rootViewController = StartViewController(nibName:"StartView", bundle:NSBundle.mainBundle())

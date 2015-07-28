@@ -68,6 +68,42 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /////////////////////////
+        NSNotificationCenter.defaultCenter().addObserver(self , selector: "drawAShape:", name: "aactionOnePressed", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showAMessage:", name: "actionTwoPressed", object: nil)
+        
+        var currentDate = NSDate()
+        
+        let formatter = NSDateFormatter()
+        formatter.timeStyle = .MediumStyle
+        formatter.stringFromDate(currentDate)
+        println(formatter.stringFromDate(currentDate))
+        println(currentDate)
+        formatter.dateFormat = "yyyyMMdd"
+        formatter.dateStyle = .MediumStyle
+        formatter.stringFromDate(currentDate)
+        println(formatter.stringFromDate(currentDate))
+        
+        var dateComp: NSDateComponents = NSDateComponents()
+        dateComp.year = 2015
+        dateComp.month = 07
+        dateComp.day = 28
+        dateComp.hour = 11
+        dateComp.minute = 32
+        dateComp.timeZone = NSTimeZone.systemTimeZone()
+        
+        var calendar: NSCalendar = NSCalendar.currentCalendar()
+        var date: NSDate = calendar.dateFromComponents(dateComp)!
+
+        var notification: UILocalNotification = UILocalNotification()
+        notification.category = "FIRST_CATEGORY"
+        notification.alertBody = "Você já praticou hoje?"
+        notification.fireDate = date
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        
+        //////////////////////////////////////////
+        
         pageController.dataSource=self
         pageController.view.frame = self.view.bounds
         let initial :  StartChildViewController = self.viewcontrollerAtIndex(0)
