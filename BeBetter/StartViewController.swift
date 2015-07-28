@@ -89,7 +89,7 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
         dateComp.month = 07
         dateComp.day = 28
         dateComp.hour = 14
-        dateComp.minute = 45
+        dateComp.minute = 53
         dateComp.timeZone = NSTimeZone.systemTimeZone()
         
         var calendar: NSCalendar = NSCalendar.currentCalendar()
