@@ -43,6 +43,7 @@ class StartChildViewController: UIViewController {
             firstLabel.hidden = true
             secondLabel.hidden = true
             
+            goToBut.alpha = 0
             textView.alpha = 0
             
             patientLabel.alpha = 0
@@ -87,11 +88,11 @@ class StartChildViewController: UIViewController {
     {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(1.0, delay: 1.0, options: .CurveEaseIn, animations: {
+        UIView.animateWithDuration(1.0, delay: 0.7, options: .CurveEaseIn, animations: {
             self.firstLabel.alpha = 1.0
             }, completion: nil)
         
-        UIView.animateWithDuration(2.0, delay: 2.0, options: .CurveEaseIn, animations: {
+        UIView.animateWithDuration(2.0, delay: 1.7, options: .CurveEaseIn, animations: {
             self.secondLabel.alpha = 1.0
             }, completion: nil)
         
@@ -131,7 +132,15 @@ class StartChildViewController: UIViewController {
                         self.doctorLabel.alpha = 1.0
                         
                         UIView.animateWithDuration(4.0, delay: 2.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+                            
                             self.textView.alpha = 1.0
+                            
+                            UIView.animateWithDuration(5.0, delay: 4.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+                                
+                                self.goToBut.alpha = 1
+                                
+                            }, completion: nil)
+                            
                         }, completion: nil)
                         
                     }, completion: nil)
