@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>PBJVideoPlayer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,7 +37,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>29B7F935E20F070836EC430D70F5B509</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>44333D7FA329710CCCA97A0D3B5A4624</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>70127F4B027731F7B5446BDAFE00F5F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>816DCC803EC52048CC139F10235A974E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EA234CB23C9D43AF72B99883BF6AD08</key>
 		<dict>
 			<key>primary</key>
 			<true/>

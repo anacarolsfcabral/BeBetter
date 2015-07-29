@@ -13,6 +13,7 @@ class PerformanceCell: UITableViewCell {
     @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var evolutionImage: UIImageView!
     
+    @IBOutlet weak var exerciseDaysLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
