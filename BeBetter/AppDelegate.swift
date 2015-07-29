@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        //////////////////////
+        /////////////////////
+        
         //Notificação
         
         //Actions
@@ -65,11 +66,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().registerUserNotificationSettings(mySettings)
         
         ///////////////////////////////////////////////////////////
+        
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        self.window?.rootViewController = StartViewController(nibName:"StartView", bundle:NSBundle.mainBundle())
-//        self.window?.rootViewController = PerformanceViewController(nibName:"PerformanceView", bundle:NSBundle.mainBundle())
-//         self.window?.rootViewController = ActivityViewController(nibName:"ActivityView", bundle:NSBundle.mainBundle())
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let isAppAlreadyLaunchedOnce = defaults.stringForKey("isAppAlreadyLaunchedOnce"){
+            self.window?.rootViewController = CategoryViewController(nibName:"CategoryView", bundle:NSBundle.mainBundle())
+
+            
+        }else{
+            defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
+            self.window?.rootViewController = StartViewController(nibName:"StartView", bundle:NSBundle.mainBundle())
+        }
+        
         self.window?.makeKeyAndVisible()
         
         return true
