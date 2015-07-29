@@ -16,9 +16,8 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
         var vc = viewController as! StartChildViewController
-        
         var index = vc.index as Int
-
+        
         index++
         
         if (index == 2) {
@@ -26,33 +25,27 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
         }
     
         println("tela\(index)")
-
         return self.viewcontrollerAtIndex(index)
-     
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?{
         
         var vc = viewController as! StartChildViewController
-        
         var index = vc.index as Int
     
         
-        if index == 0  {
+        if index == 0{
             return nil
         }
         
         index--
         
-        
         return self.viewcontrollerAtIndex(index)
-
     }
     
     func viewcontrollerAtIndex(index: Int) -> StartChildViewController{
         let child = StartChildViewController(nibName: "StartChildView", bundle: nil)
         child.index=index
-        
         return child
     }
     
@@ -67,47 +60,8 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        /////////////////////////
-        NSNotificationCenter.defaultCenter().addObserver(self , selector: "drawAShape:", name: "aactionOnePressed", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self , selector: "showAMessage:", name: "actionTwoPressed", object: nil)
         
-        
-        var gregorian = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-        var calendar: NSCalendar = NSCalendar.currentCalendar()
-        var compYear = calendar.components(NSCalendarUnit.YearCalendarUnit, fromDate: NSDate())
-        var compDay = calendar.components(NSCalendarUnit.DayCalendarUnit, fromDate: NSDate())
-        var compMonth = calendar.components(NSCalendarUnit.MonthCalendarUnit, fromDate: NSDate())
-        
-//        let formatter = NSDateFormatter()
-//        formatter.timeStyle = .MediumStyle
-//        formatter.stringFromDate(currentDate)
-//        println(formatter.stringFromDate(currentDate))
-//        println(currentDate)
-//        formatter.dateFormat = "yyyyMMdd"
-//        formatter.dateStyle = .MediumStyle
-//        formatter.stringFromDate(currentDate)
-//        println(formatter.stringFromDate(currentDate))
-        
-        var dateComp: NSDateComponents = NSDateComponents()
-        dateComp.year = compYear.year
-        dateComp.month = compMonth.month
-        dateComp.day = compDay.day
-        dateComp.hour = 16
-        dateComp.minute = 06
-        dateComp.timeZone = NSTimeZone.systemTimeZone()
-        
-        
-        var date: NSDate = calendar.dateFromComponents(dateComp)!
-
-        var notification: UILocalNotification = UILocalNotification()
-        notification.category = "FIRST_CATEGORY"
-        notification.alertBody = "Você já praticou hoje?"
-        notification.fireDate = date
-        
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        
-        //////////////////////////////////////////
+        //////PageViewController///////
         
         pageController.dataSource=self
         pageController.view.frame = self.view.bounds
@@ -123,30 +77,13 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
         pageControl.currentPageIndicatorTintColor = UIColor.whiteColor()
         pageControl.backgroundColor = UIColor(red: 241/255, green: 230/255, blue: 225/255, alpha: 1)
 
-      
-        
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func drawAShape(notification: NSNotification){
-      println("oi")
-        
-    }
     
-    func showAMessage(notification: NSNotification){
-        var message : UIAlertController = UIAlertController(title: "mensagem da notifcação", message: "Lindo isso tudo", preferredStyle: UIAlertControllerStyle.Alert)
-        message.addAction(UIAlertAction(title: "OIII", style: UIAlertActionStyle.Default, handler: nil))
-        
-        self.presentViewController(message, animated: true, completion: nil)
-    }
-
-    
-
     /*
     // MARK: - Navigation
 

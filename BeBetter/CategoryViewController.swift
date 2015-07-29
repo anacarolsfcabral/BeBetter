@@ -19,52 +19,68 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //DAO.sharedInstance.saveActivity()
+        ///////Notificação/////////
+        DAO.sharedInstance.notification()
         
+        NSNotificationCenter.defaultCenter().addObserver(self , selector: "delayNotification:", name: "actionOnePressed", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self , selector: "showAMessage:", name: "actionTwoPressed", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self , selector: "delayNotificationForOneHour:", name: "actionThirdPressed", object: nil)
+        ///////////////////////////
+        
+        ///////Gesto para voltar para a StartViewController/////////
         var gesture = UIScreenEdgePanGestureRecognizer(target: self, action: "goToStartView:")
         gesture.edges = UIRectEdge.Left
         self.view.addGestureRecognizer(gesture)
+        ///////////////////////////
     }
 
-    override func didReceiveMemoryWarning() {
+    ///////Notificação - Funções para as opções da Notificação/////////
+    func delayNotification(notification: NSNotification){
+        DAO.sharedInstance.delayNotification(0, minute: 2)
+    }
+    func showAMessage(notification: NSNotification){
+        var message : UIAlertController = UIAlertController(title: "Vamos lá!", message: "A prática leva a perfeição", preferredStyle: UIAlertControllerStyle.Alert)
+        message.addAction(UIAlertAction(title: "Vamos Praticar", style: UIAlertActionStyle.Default, handler: nil))
+
+        self.presentViewController(message, animated: true, completion: nil)
+    }
+    func delayNotificationForOneHour(notification: NSNotification){
+        DAO.sharedInstance.delayNotification(1, minute: 0)
+    }
+   
+    
+    override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    ////////Função dos Botões das Categorias///////////
     @IBAction func setSpeechtherapy(sender: AnyObject) {
-        
         DAO.sharedInstance.setChoosenCategory("speechtherapy")
         goToPerformance()
     }
     
     @IBAction func setPhysiotherapy(sender: AnyObject) {
-        
         DAO.sharedInstance.setChoosenCategory("physiotherapy")
         goToPerformance()
     }
     
     @IBAction func setOphthalmology(sender: AnyObject) {
-        
         DAO.sharedInstance.setChoosenCategory("ophthalmology")
         goToPerformance()
     }
     
     
     func goToPerformance(){
-        
         let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
         self.presentViewController(nextWindow, animated: true, completion: nil)
     }
-
-    func goToStartView(gesture: UIScreenEdgePanGestureRecognizer)
-    {
+    
+    ///////Função do Gesture/////////
+    func goToStartView(gesture: UIScreenEdgePanGestureRecognizer){
         let nextWindow = StartViewController(nibName:"StartView", bundle: nil)
-        
-        
         self.presentViewController(nextWindow, animated: true, completion: nil)
     }
-    
-
     
 
     /*

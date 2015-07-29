@@ -335,5 +335,75 @@ class DAO {
         
         return false
     }
+    
+    func notification() {
+        
+        var gregorian = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        var calendar: NSCalendar = NSCalendar.currentCalendar()
+        var compYear = calendar.components(NSCalendarUnit.YearCalendarUnit, fromDate: NSDate())
+        var compDay = calendar.components(NSCalendarUnit.DayCalendarUnit, fromDate: NSDate())
+        var compMonth = calendar.components(NSCalendarUnit.MonthCalendarUnit, fromDate: NSDate())
+
+        var dateComp: NSDateComponents = NSDateComponents()
+        dateComp.year = compYear.year
+        dateComp.month = compMonth.month
+        dateComp.day = compDay.day
+        dateComp.hour = 17
+        dateComp.minute = 38
+        dateComp.timeZone = NSTimeZone.systemTimeZone()
+        
+        
+        var date: NSDate = calendar.dateFromComponents(dateComp)!
+        
+        var notification: UILocalNotification = UILocalNotification()
+        notification.category = "FIRST_CATEGORY"
+        notification.alertBody = "Você já praticou hoje?"
+        notification.fireDate = date
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+    
+    func delayNotification(hour: Int, minute: Int) {
+        var gregorian = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        var calendar: NSCalendar = NSCalendar.currentCalendar()
+        var compYear = calendar.components(NSCalendarUnit.YearCalendarUnit, fromDate: NSDate())
+        var compDay = calendar.components(NSCalendarUnit.DayCalendarUnit, fromDate: NSDate())
+        var compMonth = calendar.components(NSCalendarUnit.MonthCalendarUnit, fromDate: NSDate())
+        var compHour = calendar.components(NSCalendarUnit.HourCalendarUnit, fromDate: NSDate())
+        var compMinute = calendar.components(NSCalendarUnit.MinuteCalendarUnit, fromDate: NSDate())
+        
+        var newMinute = 0
+        var newHour = 0
+        
+        
+        if( (minute + compMinute.minute) > 60){
+            newMinute = (minute + compMinute.minute) - 60
+            newHour = hour + 1
+            
+        }else if ((minute + compMinute.minute) == 60 ){
+            newMinute = 00
+            newHour = compHour.hour + 1
+        }else{
+            newMinute = (minute + compMinute.minute)
+            newHour = (hour + compHour.hour)
+        }
+            
+        var dateComp: NSDateComponents = NSDateComponents()
+        dateComp.year = compYear.year
+        dateComp.month = compMonth.month
+        dateComp.day = compDay.day
+        dateComp.hour = newHour
+        dateComp.minute = newMinute
+        dateComp.timeZone = NSTimeZone.systemTimeZone()
+        
+        var date: NSDate = calendar.dateFromComponents(dateComp)!
+        
+        var notification: UILocalNotification = UILocalNotification()
+        notification.category = "FIRST_CATEGORY"
+        notification.alertBody = "Você já praticou hoje?"
+        notification.fireDate = date
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
 
 }

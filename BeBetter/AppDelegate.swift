@@ -84,6 +84,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        
+        if(identifier == "FIRST_ACTION"){
+            NSNotificationCenter.defaultCenter().postNotificationName("actionOnePressed", object: nil)
+        }else if(identifier == "SECOND_ACTION"){
+            NSNotificationCenter.defaultCenter().postNotificationName("actionTwoPressed", object: nil)
+        }else if(identifier == "THIRD_ACTION"){
+            NSNotificationCenter.defaultCenter().postNotificationName("actionThirdPressed", object: nil)
+        }
+        
+        completionHandler()
+    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
