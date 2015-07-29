@@ -70,29 +70,34 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
 
         /////////////////////////
         NSNotificationCenter.defaultCenter().addObserver(self , selector: "drawAShape:", name: "aactionOnePressed", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showAMessage:", name: "actionTwoPressed", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self , selector: "showAMessage:", name: "actionTwoPressed", object: nil)
         
-        var currentDate = NSDate()
         
-        let formatter = NSDateFormatter()
-        formatter.timeStyle = .MediumStyle
-        formatter.stringFromDate(currentDate)
-        println(formatter.stringFromDate(currentDate))
-        println(currentDate)
-        formatter.dateFormat = "yyyyMMdd"
-        formatter.dateStyle = .MediumStyle
-        formatter.stringFromDate(currentDate)
-        println(formatter.stringFromDate(currentDate))
+        var gregorian = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        var calendar: NSCalendar = NSCalendar.currentCalendar()
+        var compYear = calendar.components(NSCalendarUnit.YearCalendarUnit, fromDate: NSDate())
+        var compDay = calendar.components(NSCalendarUnit.DayCalendarUnit, fromDate: NSDate())
+        var compMonth = calendar.components(NSCalendarUnit.MonthCalendarUnit, fromDate: NSDate())
+        
+//        let formatter = NSDateFormatter()
+//        formatter.timeStyle = .MediumStyle
+//        formatter.stringFromDate(currentDate)
+//        println(formatter.stringFromDate(currentDate))
+//        println(currentDate)
+//        formatter.dateFormat = "yyyyMMdd"
+//        formatter.dateStyle = .MediumStyle
+//        formatter.stringFromDate(currentDate)
+//        println(formatter.stringFromDate(currentDate))
         
         var dateComp: NSDateComponents = NSDateComponents()
-        dateComp.year = 2015
-        dateComp.month = 07
-        dateComp.day = 28
-        dateComp.hour = 14
-        dateComp.minute = 53
+        dateComp.year = compYear.year
+        dateComp.month = compMonth.month
+        dateComp.day = compDay.day
+        dateComp.hour = 16
+        dateComp.minute = 06
         dateComp.timeZone = NSTimeZone.systemTimeZone()
         
-        var calendar: NSCalendar = NSCalendar.currentCalendar()
+        
         var date: NSDate = calendar.dateFromComponents(dateComp)!
 
         var notification: UILocalNotification = UILocalNotification()
@@ -128,8 +133,17 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func drawAShape(notification: NSNotification){
+      println("oi")
+        
+    }
     
-  
+    func showAMessage(notification: NSNotification){
+        var message : UIAlertController = UIAlertController(title: "mensagem da notifcação", message: "Lindo isso tudo", preferredStyle: UIAlertControllerStyle.Alert)
+        message.addAction(UIAlertAction(title: "OIII", style: UIAlertActionStyle.Default, handler: nil))
+        
+        self.presentViewController(message, animated: true, completion: nil)
+    }
 
     
 

@@ -314,5 +314,26 @@ class DAO {
     
         return false
     }
+    
+    func checkNotification() -> Bool {
+        var checkNotification = 0
+        
+        var numActivity = savedInformation.integerForKey("ActivityAmount")
+        
+        for ( var i = 0; i < numActivity; i++){
+            var frequencyDict = savedInformation.objectForKey("FREQUENCY_\(i)") as! NSMutableDictionary
+            var daysWithAmountForDay = frequencyDict.objectForKey("daysWithAmountForDay")  as! NSMutableDictionary
+            
+            for (var temp = 1; temp < 8; temp++ ){
+                var dayRepetition = daysWithAmountForDay.objectForKey("\(temp)") as! Int
+                if (dayRepetition > 0){
+                    checkNotification = 1
+                    return true
+                }
+            }
+        }
+        
+        return false
+    }
 
 }
