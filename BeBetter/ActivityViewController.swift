@@ -101,6 +101,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
             
             if gonnaStartRecording == true{
                 vision.startVideoCapture()
+                player.playFromBeginning()
                 gonnaStartRecording = false
                 buttonImagepause = UIImage(named: "isRecording")
                 pauseVideoBut.setImage(buttonImagepause, forState: UIControlState.Normal)
