@@ -279,7 +279,7 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         
         
         activity = Activity(name: nameExerciseTextField.text, videoTutorial: videoPath, category: DAO.sharedInstance.currentCategory,note: "")
-        frequency = FrequencyActivity(amountWeeks: amounts , daysWithAmountForDay: daysWithAmountForDay, selectedDaysCount: selectedDaysCount)
+        frequency = FrequencyActivity(amountWeeks: amounts , daysWithAmountForDay: daysWithAmountForDay as NSMutableDictionary , selectedDaysCount: selectedDaysCount)
         
         
         if ((nameExerciseTextField == "") || ( weekStepper.value == 0 ) || ( dayStepper.value == 0 ) || (isSaturdayBege==true && isSundayBege == true && isMondayBege==true && isTuesdayBege==true && isWednesdayBege==true && isThursdayBege==true && isFridayBege==true )){

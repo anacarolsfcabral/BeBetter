@@ -167,16 +167,16 @@ class DAO {
         var numActivity = savedInformation.integerForKey("ActivityAmount")
         println(numActivity)
         
-        let newDict = ["name": "\(newActivity.name)","category":"\(newActivity.category)", "id":"\(numActivity)","lastVideo":"\(newActivity.lastVideo)","note": "\(newActivity.note)","videoTutorial":"\(newActivity.videoTutorial)"]
+        let newDict: NSMutableDictionary = ["name": "\(newActivity.name)","category":"\(newActivity.category)", "id":"\(numActivity)","lastVideo":"\(newActivity.lastVideo)","note": "\(newActivity.note)","videoTutorial":"\(newActivity.videoTutorial)"]
         
         savedInformation.setObject(newDict, forKey: "ACTIVITY_\(numActivity)")
         
         
-        let newFreqDict = ["amountWeeks": newFrequency.amountWeeks,"daysWithAmountForDay": newFrequency.daysWithAmountForDay, "id":"\(numActivity)", "selectedDaysCount": newFrequency.selectedDaysCount]
+        let newFreqDict: NSMutableDictionary = ["amountWeeks": newFrequency.amountWeeks,"daysWithAmountForDay": newFrequency.daysWithAmountForDay as NSMutableDictionary , "id":"\(numActivity)", "selectedDaysCount": newFrequency.selectedDaysCount]
         
-        var daysWithAmountForDay = [ "1" : 0, "2" : 0, "3" : 0, "4" : 0, "5" : 0, "6" : 0, "7" : 0]
+        var daysWithAmountForDay: NSMutableDictionary = [ "1" : 0, "2" : 0, "3" : 0, "4" : 0, "5" : 0, "6" : 0, "7" : 0]
         
-        let dictPerformance = ["numberWeek": 0, "daysWithAmountForDay": daysWithAmountForDay, "id":"\(numActivity)", "completed": 0]
+        let dictPerformance: NSMutableDictionary = ["numberWeek": 0, "daysWithAmountForDay": daysWithAmountForDay , "id":"\(numActivity)", "completed": 0]
         
         savedInformation.setObject(dictPerformance, forKey: "PERFORMANCE_\(numActivity)")
 
@@ -194,32 +194,44 @@ class DAO {
     
     func updatePerformance(performance: PerformanceForWeek,weekDay: Int) -> PerformanceForWeek{
         
-        var dictPerformance: NSMutableDictionary = savedInformation.objectForKey("PERFORMANCE_\(performance.id)") as! NSMutableDictionary
+        var dictPerformance: NSMutableDictionary = savedInformation.objectForKey("PERFORMANCE_\(performance.id)")?.mutableCopy() as! NSMutableDictionary
         println(weekDay)
         
-        var dictDays: NSMutableDictionary = dictPerformance.objectForKey("daysWithAmountForDay") as! NSMutableDictionary
         
+        var dictDays: NSMutableDictionary = dictPerformance.objectForKey("daysWithAmountForDay")?.mutableCopy() as! NSMutableDictionary
+        println(dictDays)
         var dayRepetition = dictDays.objectForKey("\(weekDay)") as! Int
         
         dayRepetition += 1
         
-        dictDays.setValue(dayRepetition, forKey: "\(weekDay)")
+        
+        dictDays.setValue(dayRepetition as Int, forKey: "\(weekDay)")
         
         dictPerformance.setObject(dictDays, forKey: "daysWithAmountForDay")
         
-        
         savedInformation.setObject(dictPerformance, forKey: "PERFORMANCE_\(performance.id)")
         
-        performance.daysWithAmountForDay.setValue(dayRepetition, forKey: "\(weekDay)")
+        //performance.daysWithAmountForDay.setValue(dayRepetition, forKey: "\(weekDay)")
         
+        var performanceDict = savedInformation.objectForKey("PERFORMANCE_\(performance.id)") as! NSMutableDictionary
+
+        var amountWeeks = performanceDict.objectForKey("numberWeek") as! Int
+        var daysWithAmountForDay = performanceDict.objectForKey("daysWithAmountForDay")  as! NSMutableDictionary
+        var id = performanceDict.objectForKey("id") as! String
         
-        return performance
+        var completed = performanceDict.objectForKey("completed") as! Int
+        
+        var newPerformance = PerformanceForWeek(numberWeek: amountWeeks, daysWithAmountForDay: daysWithAmountForDay, completed: completed)
+        newPerformance.id = performance.id
+        println(newPerformance)
+        
+        return newPerformance
         
     }
     
     func updatePerformanceCompleted(performance: PerformanceForWeek) -> PerformanceForWeek{
         
-        var dictPerformance: NSMutableDictionary = savedInformation.objectForKey("PERFORMANCE_\(performance.id)") as! NSMutableDictionary
+        var dictPerformance: NSMutableDictionary = savedInformation.objectForKey("PERFORMANCE_\(performance.id)")?.mutableCopy() as! NSMutableDictionary
         
         var completed = dictPerformance.objectForKey("completed") as! Int
         
@@ -229,7 +241,17 @@ class DAO {
         
         savedInformation.setObject(dictPerformance, forKey: "PERFORMANCE_\(performance.id)")
         
-        performance.completed = completed
+        
+        var performanceDict = savedInformation.objectForKey("PERFORMANCE_\(performance.id)") as! NSMutableDictionary
+        
+        var amountWeeks = performanceDict.objectForKey("numberWeek") as! Int
+        var daysWithAmountForDay = performanceDict.objectForKey("daysWithAmountForDay")  as! NSMutableDictionary
+        var id = performanceDict.objectForKey("id") as! String
+        var newCompleted = performanceDict.objectForKey("completed") as! Int
+        
+        var newPerformance = PerformanceForWeek(numberWeek: amountWeeks, daysWithAmountForDay: daysWithAmountForDay, completed: newCompleted)
+        newPerformance.id = performance.id
+        println(newPerformance)
         
         return performance
         

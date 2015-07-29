@@ -75,21 +75,21 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     
     @IBAction func finished(sender: UIButton) {
         
-//    
-//        var gregorian = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-//        var comps = gregorian?.components(NSCalendarUnit.WeekdayCalendarUnit, fromDate: NSDate())
-//        var weekday: Int =  comps!.weekday as Int
-//        
-//        currentPerformance = DAO.sharedInstance.updatePerformance(currentPerformance, weekDay: weekday)
-//        
-//        var dayRepetitionDone = currentPerformance.daysWithAmountForDay.objectForKey("\(weekday)") as! Int
-//        var dayRepetitionToDo = currentFrequency.daysWithAmountForDay.objectForKey("\(weekday)") as! Int
-//        
-//        if dayRepetitionDone >= dayRepetitionToDo{
-//            
-//            currentPerformance = DAO.sharedInstance.updatePerformanceCompleted(currentPerformance)
-//            
-//        }
+    
+        var gregorian = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        var comps = gregorian?.components(NSCalendarUnit.WeekdayCalendarUnit, fromDate: NSDate())
+        var weekday: Int =  comps!.weekday as Int
+        
+        currentPerformance = DAO.sharedInstance.updatePerformance(currentPerformance, weekDay: weekday)
+        
+        var dayRepetitionDone = currentPerformance.daysWithAmountForDay.objectForKey("\(weekday)") as! Int
+        var dayRepetitionToDo = currentFrequency.daysWithAmountForDay.objectForKey("\(weekday)") as! Int
+        
+        if dayRepetitionDone >= dayRepetitionToDo{
+            
+            currentPerformance = DAO.sharedInstance.updatePerformanceCompleted(currentPerformance)
+            
+        }
         
         let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
         self.presentViewController(nextWindow, animated: true, completion: nil)
