@@ -49,11 +49,15 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     var currentPerformance: PerformanceForWeek = DAO.sharedInstance.getCurrentPerformance()
     var currentFrequency: FrequencyActivity = DAO.sharedInstance.getCurrentFrequency()
     
+    var blurView: UIVisualEffectView!
+    var tela: UIView!
+    var blur: UIBlurEffect!
     var cancelButton : UIButton!
     var dismissButton : UIButton!
     var saveButton : UIButton!
     var nomeText : UITextField!
     var titulo : UILabel!
+
     
     
     @IBAction func finished(sender: UIButton) {
@@ -332,8 +336,8 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         let alturaLabel:CGFloat = view.frame.height*0.09
         
         // Blur Effect
-        var blur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
-        var blurView = UIVisualEffectView(effect: blur)
+        blur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        blurView = UIVisualEffectView(effect: blur)
         blurView.frame = view.bounds
         
         //declaracao da area e definicao do tamanho//
@@ -341,7 +345,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
             , altura*6);
         
         //definindo que eh a view eh a tela//
-        var tela : UIView = UIView(frame: area)
+        tela = UIView(frame: area)
         //acessando uma propriedade da tela(UIView) alterando as bordas//
         tela.layer.cornerRadius = 5
         tela.backgroundColor = UIColor(red: 51/255, green: 151/255, blue: 150/255, alpha: 1)
@@ -360,27 +364,30 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         titulo = UILabel(frame: CGRectMake(spacingLabel, alturaLabel, area.width*0.7, alturaLabel/2))
         titulo.textAlignment = NSTextAlignment.Center
         titulo.text = "New Note"
-        titulo.textColor = UIColor.whiteColor()
-        titulo.font = UIFont(name: "AvenirNext-DemiBold", size: 28)
+        titulo.textColor = UIColor(red: 241/255, green: 230/255, blue: 225/255, alpha: 1)
+        titulo.font = UIFont(name: "AvenirNext-DemiBold", size: 20)
         
         //botao pra cancelar
         cancelButton = UIButton(frame: CGRectMake(spacing, altura/4, area.width*0.22, altura/2))
         cancelButton.setTitle("Cancel", forState: UIControlState.Normal)
         cancelButton.titleLabel!.font = UIFont(name: "AvenirNext-Medium", size: 20)
-        cancelButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        cancelButton.addTarget(self, action: "backToActivity:", forControlEvents: UIControlEvents.TouchUpInside)
+        cancelButton.setTitleColor(UIColor(red: 241/255, green: 230/255, blue: 225/255, alpha: 1), forState: UIControlState.Normal)
         
         //botao pra salver
         saveButton = UIButton(frame: CGRectMake(area.width - spacing - area.width*0.18, altura/4, area.width*0.2, altura/2))
         saveButton.setTitle("Save", forState: UIControlState.Normal)
         saveButton.titleLabel!.font = UIFont(name: "AvenirNext-Medium", size: 20)
-        saveButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        saveButton.addTarget(self, action: "saveNote:", forControlEvents: UIControlEvents.TouchUpInside)
+        saveButton.setTitleColor(UIColor(red: 241/255, green: 230/255, blue: 225/255, alpha: 1), forState: UIControlState.Normal)
         
         // Name Text Field
         
         nomeText = UITextField(frame: CGRectMake(spacing, cancelButton.frame.origin.y + altura/1.4, area.width, altura))
         nomeText.font = UIFont(name: "AvenirNext-Regular", size: 18)
         nomeText.autocorrectionType = UITextAutocorrectionType.No;
-        nomeText.placeholder = "Name"
+        nomeText.placeholder = "Write a note for this exercise"
+    
         
         blurView.addSubview(titulo)
         tela.addSubview(nomeText)
@@ -389,6 +396,23 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
 
         
     }
+    
+    func backToActivity(sender: UIButton){
+    
+        blurView.removeFromSuperview()
+        tela.removeFromSuperview()
+        dismissButton.removeFromSuperview()
+    
+    }
+    
+    func saveNote(sender: UIButton){
+        ////////// SALVA A NOTA AQUI IVEEEEEEEEEEEY
+        blurView.removeFromSuperview()
+        tela.removeFromSuperview()
+        dismissButton.removeFromSuperview()
+        
+    }
+
     
     /*
     // MARK: - Navigation
