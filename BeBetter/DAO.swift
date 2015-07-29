@@ -15,7 +15,6 @@ class DAO {
 
     class var sharedInstance: DAO{
         
-        
         return _DAO
     }
     
@@ -165,12 +164,12 @@ class DAO {
         
         
         var numActivity = savedInformation.integerForKey("ActivityAmount")
+        
         println(numActivity)
         
         let newDict: NSMutableDictionary = ["name": "\(newActivity.name)","category":"\(newActivity.category)", "id":"\(numActivity)","lastVideo":"\(newActivity.lastVideo)","note": "\(newActivity.note)","videoTutorial":"\(newActivity.videoTutorial)"]
         
         savedInformation.setObject(newDict, forKey: "ACTIVITY_\(numActivity)")
-        
         
         let newFreqDict: NSMutableDictionary = ["amountWeeks": newFrequency.amountWeeks,"daysWithAmountForDay": newFrequency.daysWithAmountForDay as NSMutableDictionary , "id":"\(numActivity)", "selectedDaysCount": newFrequency.selectedDaysCount]
         

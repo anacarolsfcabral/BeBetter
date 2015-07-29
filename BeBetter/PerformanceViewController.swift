@@ -79,6 +79,40 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         cell.backgroundColor = UIColor.whiteColor()
         cell.exerciseLabel.text = arrayActivity[indexPath.row].name
         
+        var arrayDaysExercises = ""
+        
+        var dict = arrayFrequency[indexPath.row].daysWithAmountForDay as NSMutableDictionary
+        println("PEIDEEEEEEIIIIIII")
+        println(dict)
+        //var dia = dict.objectForKey("1") as! Int
+        
+        if dict.objectForKey("1") as! Int > 0 {
+            arrayDaysExercises  = " Sun"
+        }
+        if dict.objectForKey("2") as! Int > 0 {
+            arrayDaysExercises = arrayDaysExercises + " Mon"
+        }
+        if dict.objectForKey("3") as! Int > 0 {
+            arrayDaysExercises = arrayDaysExercises + " Tue"
+        }
+        if dict.objectForKey("4") as! Int > 0 {
+            arrayDaysExercises = arrayDaysExercises + " Wed"
+        }
+        if dict.objectForKey("5") as! Int > 0 {
+            arrayDaysExercises = arrayDaysExercises + " Thu"
+        }
+        if dict.objectForKey("6") as! Int > 0 {
+            arrayDaysExercises = arrayDaysExercises + " Fri"
+        }
+        if dict.objectForKey("7") as! Int > 0 {
+            arrayDaysExercises = arrayDaysExercises + " Sat"
+        }
+        
+        println(arrayDaysExercises)
+        
+        cell.exerciseDaysLabel.text = arrayDaysExercises
+        
+        
         if arrayPerformance[indexPath.row].completed == 0
         {
             cell.evolutionImage.image = UIImage(named: "ad0")
