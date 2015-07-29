@@ -196,6 +196,12 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         performanceTable.reloadData()
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            //performanceTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
     
     
     /*
