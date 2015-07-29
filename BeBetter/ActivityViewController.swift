@@ -49,28 +49,11 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     var currentPerformance: PerformanceForWeek = DAO.sharedInstance.getCurrentPerformance()
     var currentFrequency: FrequencyActivity = DAO.sharedInstance.getCurrentFrequency()
     
-//    @IBAction func playVideo(sender: UIButton) {
-//        
-//        if isPlaying==true{
-//            
-//            playNew.stop()
-//            isPlaying = false
-//            buttonImagePlay = UIImage(named: "play")
-//            playVideoBut.setImage(buttonImagePlay, forState: UIControlState.Normal)
-//
-//            
-//        }
-//        else
-//        {
-//            playNew.playFromCurrentTime()
-//            isPlaying = true
-//            buttonImagePlay = UIImage(named: "pause")
-//            playVideoBut.setImage(buttonImagePlay, forState: UIControlState.Normal)
-//            
-//        }
-//    }
-    
-    
+    var cancelButton : UIButton!
+    var dismissButton : UIButton!
+    var saveButton : UIButton!
+    var nomeText : UITextField!
+    var titulo : UILabel!
     
     
     @IBAction func finished(sender: UIButton) {
@@ -187,9 +170,6 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         exerciseNameLabel.text = currentActivity.name
         
         if isPractsingExercise == true {
-            
-//            playVideoBut.alpha = 0.6
-//            playVideoBut.enabled = false
             changeBut.enabled = false
         }
         
@@ -233,7 +213,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
 
         
         setup()
-        // Do any additional setup after loading the view.
+        
     }
     
     func setup(){
@@ -331,19 +311,6 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     
     func visionDidEndVideoCapture(vision: PBJVision) {
         
-//        println("ended")
-//        
-//        NSString *videoPath = [_currentVideo  objectForKey:PBJVisionVideoPathKey];
-//        
-//        
-        
-//        [_assetLibrary writeVideoAtPathToSavedPhotosAlbum:[NSURL URLWithString:videoPath] completionBlock:^(NSURL *assetURL, NSError *error1) {
-//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Saved!" message: @"Saved to the camera roll."
-//            delegate:self
-//            cancelButtonTitle:nil
-//            otherButtonTitles:@"OK", nil];
-//            [alert show];
-//            }];
     }
     
     func vision(vision: PBJVision, capturedVideo videoDict: [NSObject : AnyObject]?, error: NSError?) {
@@ -356,22 +323,72 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
             changeBut.enabled = true
         }
         
-    
-//        println(videoDict?.keys)
-//        println(videoDict?.values)
-
-
-        
-//        for (key, value) in videoDict! {
-//            
-////            println(key)
-//            if value is String {
-//                println(value)
-//
-//            }
-//        }
     }
     
+    @IBAction func addNote(sender: UIButton) {
+        
+        
+        let altura:CGFloat = view.frame.height*0.08;
+        let alturaLabel:CGFloat = view.frame.height*0.09
+        
+        // Blur Effect
+        var blur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        var blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = view.bounds
+        
+        //declaracao da area e definicao do tamanho//
+        var area:CGRect = CGRectMake(view.frame.width*0.05, view.frame.height*0.2, view.frame.width*0.90
+            , altura*6);
+        
+        //definindo que eh a view eh a tela//
+        var tela : UIView = UIView(frame: area)
+        //acessando uma propriedade da tela(UIView) alterando as bordas//
+        tela.layer.cornerRadius = 5
+        tela.backgroundColor = UIColor(red: 51/255, green: 151/255, blue: 150/255, alpha: 1)
+        dismissButton = UIButton(frame: CGRectMake(0,0, view.frame.width, view.frame.height))
+        
+        
+        //adicionando uma subview(tela) dentro da tela principal//
+        view.addSubview(blurView)
+        view.addSubview(dismissButton)
+        view.addSubview(tela)
+        
+        //criando campos de texto//
+        let spacing:CGFloat = area.width*0.05;
+        let spacingLabel: CGFloat = (blurView.frame).width*0.18
+        
+        titulo = UILabel(frame: CGRectMake(spacingLabel, alturaLabel, area.width*0.7, alturaLabel/2))
+        titulo.textAlignment = NSTextAlignment.Center
+        titulo.text = "New Note"
+        titulo.textColor = UIColor.whiteColor()
+        titulo.font = UIFont(name: "AvenirNext-DemiBold", size: 28)
+        
+        //botao pra cancelar
+        cancelButton = UIButton(frame: CGRectMake(spacing, altura/4, area.width*0.22, altura/2))
+        cancelButton.setTitle("Cancel", forState: UIControlState.Normal)
+        cancelButton.titleLabel!.font = UIFont(name: "AvenirNext-Medium", size: 20)
+        cancelButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        
+        //botao pra salver
+        saveButton = UIButton(frame: CGRectMake(area.width - spacing - area.width*0.18, altura/4, area.width*0.2, altura/2))
+        saveButton.setTitle("Save", forState: UIControlState.Normal)
+        saveButton.titleLabel!.font = UIFont(name: "AvenirNext-Medium", size: 20)
+        saveButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        
+        // Name Text Field
+        
+        nomeText = UITextField(frame: CGRectMake(spacing, cancelButton.frame.origin.y + altura/1.4, area.width, altura))
+        nomeText.font = UIFont(name: "AvenirNext-Regular", size: 18)
+        nomeText.autocorrectionType = UITextAutocorrectionType.No;
+        nomeText.placeholder = "Name"
+        
+        blurView.addSubview(titulo)
+        tela.addSubview(nomeText)
+        tela.addSubview(cancelButton)
+        tela.addSubview(saveButton)
+
+        
+    }
     
     /*
     // MARK: - Navigation

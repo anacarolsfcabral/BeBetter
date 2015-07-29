@@ -21,16 +21,20 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     var arrayPerformance = [PerformanceForWeek]()
     
     @IBAction func backButton(sender: UIButton) {
-       //self.dismissViewControllerAnimated(true, completion: nil)
         let nextWindow = CategoryViewController(nibName:"CategoryView", bundle: nil)
         self.presentViewController(nextWindow, animated: true, completion: nil)
-
-        
     }
     @IBAction func addExercise(sender: UIButton) {
         
         let nextWindow = RegisterVideoViewController(nibName:"RegisterVideoView", bundle: nil)
         self.presentViewController(nextWindow, animated: true, completion: nil)
+    }
+    
+    @IBAction func goToNotes(sender: UIButton) {
+        
+        let nextWindow = NotesViewController(nibName:"NotesView", bundle: nil)
+        self.presentViewController(nextWindow, animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad() {
@@ -130,26 +134,6 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
             cell.evolutionImage.image = UIImage(named: "a\(arrayFrequency[indexPath.row].selectedDaysCount)d\(arrayPerformance[indexPath.row].completed)")
         }
         
-        
-        //self.performanceTable.registerClass(PerformanceCell.self, forCellWithReuseIdentifier: "PerformanceCell")
-        // 3
-        // Configure the cell...
-//        switch (indexPath.section) {
-//        case 0:
-//            cell.backgroundColor=UIColor.whiteColor()
-//        case 1:
-//            cell.backgroundColor=UIColor.whiteColor()
-//        case 2:
-//            cell.backgroundColor=UIColor.whiteColor()
-//            //return sectionHeaderView
-//        case 3:
-//            cell.backgroundColor=UIColor.whiteColor()
-//        case 4:
-//            cell.backgroundColor=UIColor.whiteColor()
-//        default:
-//            cell.backgroundColor=UIColor.whiteColor()
-//        }
-        
         return cell
     }
     
@@ -161,27 +145,6 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         headerCell.backgroundColor = UIColor(red: 244/255, green: 235/255, blue: 231/255, alpha: 1)
     
         headerCell.weekLabel.text = weeks[section]
-
-        
-//        switch (section) {
-//        case 0:
-//            headerCell.backgroundColor = UIColor.redColor()
-//            //return sectionHeaderView
-//        case 1:
-//            headerCell.backgroundColor = UIColor.blackColor()
-//
-//            //return sectionHeaderView
-//        case 2:
-//            headerCell.backgroundColor = UIColor.blueColor()
-//            //return sectionHeaderView
-//        case 3:
-//            headerCell.backgroundColor = UIColor.blueColor()
-//        case 4:
-//            headerCell.backgroundColor = UIColor.blueColor()
-//        default:
-//            //headerCell.backgroundColor = UIColor.greenColor()
-//
-//        }
         
         return headerCell
     }

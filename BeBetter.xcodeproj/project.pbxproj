@@ -16,6 +16,10 @@
 		BE7868F21B5EBB150097E1DE /* PerformanceForWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7868F11B5EBB150097E1DE /* PerformanceForWeek.swift */; };
 		BE7C554D1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */; };
 		BE7C554E1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */; };
+		F011C36A1B69606800662BB2 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011C3681B69606800662BB2 /* NotesViewController.swift */; };
+		F011C36B1B69606800662BB2 /* NotesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F011C3691B69606800662BB2 /* NotesView.xib */; };
+		F011C36E1B6962C700662BB2 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011C36C1B6962C700662BB2 /* NotesCell.swift */; };
+		F011C36F1B6962C700662BB2 /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F011C36D1B6962C700662BB2 /* NotesCell.xib */; };
 		F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA21F1B5E869A002C2EF6 /* AppDelegate.swift */; };
 		F01AA2221B5E869A002C2EF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA2211B5E869A002C2EF6 /* ViewController.swift */; };
 		F01AA2251B5E869A002C2EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2231B5E869A002C2EF6 /* Main.storyboard */; };
@@ -59,6 +63,10 @@
 		BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceHeaderCell.swift; sourceTree = "<group>"; };
 		BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceHeaderCell.xib; sourceTree = "<group>"; };
 		E0732AF362222D149925E985 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F011C3681B69606800662BB2 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		F011C3691B69606800662BB2 /* NotesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesView.xib; sourceTree = "<group>"; };
+		F011C36C1B6962C700662BB2 /* NotesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		F011C36D1B6962C700662BB2 /* NotesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = "<group>"; };
 		F01AA21A1B5E869A002C2EF6 /* BeBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01AA21E1B5E869A002C2EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F01AA21F1B5E869A002C2EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +202,8 @@
 				F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */,
 				BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */,
 				F01AA2551B5E9485002C2EF6 /* ActivityView.xib */,
+				F011C3691B69606800662BB2 /* NotesView.xib */,
+				F011C36D1B6962C700662BB2 /* NotesCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -209,6 +219,8 @@
 				F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */,
 				BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */,
 				F01AA2541B5E9485002C2EF6 /* ActivityViewController.swift */,
+				F011C3681B69606800662BB2 /* NotesViewController.swift */,
+				F011C36C1B6962C700662BB2 /* NotesCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -314,7 +326,9 @@
 				F01AA22A1B5E869A002C2EF6 /* LaunchScreen.xib in Resources */,
 				F01AA2271B5E869A002C2EF6 /* Images.xcassets in Resources */,
 				F61689C31B667203007F1828 /* Data.plist in Resources */,
+				F011C36B1B69606800662BB2 /* NotesView.xib in Resources */,
 				6FE4E1F11B64175700B237D8 /* StartChildView.xib in Resources */,
+				F011C36F1B6962C700662BB2 /* NotesCell.xib in Resources */,
 				F01AA24F1B5E907A002C2EF6 /* RegisterVideoView.xib in Resources */,
 				F01AA2451B5E8946002C2EF6 /* PerformanceView.xib in Resources */,
 				F01AA2571B5E9485002C2EF6 /* ActivityView.xib in Resources */,
@@ -372,6 +386,7 @@
 				F01AA25D1B5EB729002C2EF6 /* DAO.swift in Sources */,
 				6FC54A1D1B62F8F000291999 /* StartViewController.swift in Sources */,
 				6FE4E1F01B64175700B237D8 /* StartChildViewController.swift in Sources */,
+				F011C36E1B6962C700662BB2 /* NotesCell.swift in Sources */,
 				BE7C554D1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift in Sources */,
 				F01AA2221B5E869A002C2EF6 /* ViewController.swift in Sources */,
 				F01AA26E1B5EF031002C2EF6 /* PerformanceCell.swift in Sources */,
@@ -380,6 +395,7 @@
 				F01AA2561B5E9485002C2EF6 /* ActivityViewController.swift in Sources */,
 				BE7868F01B5EBB050097E1DE /* FrequencyActivity.swift in Sources */,
 				F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */,
+				F011C36A1B69606800662BB2 /* NotesViewController.swift in Sources */,
 				BE7868F21B5EBB150097E1DE /* PerformanceForWeek.swift in Sources */,
 				F01AA25F1B5EB74E002C2EF6 /* Activity.swift in Sources */,
 				F01AA2441B5E8946002C2EF6 /* PerformanceViewController.swift in Sources */,
