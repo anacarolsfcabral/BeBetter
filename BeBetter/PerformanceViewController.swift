@@ -200,7 +200,27 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         if editingStyle == UITableViewCellEditingStyle.Delete {
             //performanceTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
+        else if editingStyle == UITableViewCellEditingStyle.Insert
+        {
+            
+        }
+        
     }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        
+        let delete = UITableViewRowAction(style: .Default, title: "Delete") { action, index in
+            println("delete")
+        }
+
+        let edit = UITableViewRowAction(style: .Normal, title: "Edit") { action, index in
+            println("edit")
+        }
+        edit.backgroundColor = UIColor(red: 51/255, green: 151/255, blue: 150/255, alpha: 1)
+        
+        return [edit, delete]
+    }
+
     
     
     
