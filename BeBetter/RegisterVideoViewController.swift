@@ -67,114 +67,89 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     @IBOutlet weak var saturdayButton: UIButton!
     
     
-    @IBAction func sundayButton(sender: AnyObject)
-    {
+    @IBAction func sundayButton(sender: AnyObject){
         if isSundayBege == true {
             buttonImageSunday = UIImage(named: "S")
             sundayButton.setImage(buttonImageSunday, forState: UIControlState.Normal)
             isSundayBege = false
         }
-        else
-        {
+        else{
             buttonImageSunday = UIImage(named: "SD")
             sundayButton.setImage(buttonImageSunday, forState: UIControlState.Normal)
             isSundayBege = true
         }
-        
     }
     
-    @IBAction func mondayButton(sender: AnyObject)
-    {
+    @IBAction func mondayButton(sender: AnyObject){
         if isMondayBege == true{
         
             buttonImageMonday = UIImage(named: "M")
             mondayButton.setImage(buttonImageMonday, forState: UIControlState.Normal)
             isMondayBege = false
-        }
-        else
-        {
+        }else{
             buttonImageMonday = UIImage(named: "MD")
             mondayButton.setImage(buttonImageMonday, forState: UIControlState.Normal)
             isMondayBege = true
-
         }
     }
 
-    @IBAction func tuesdayButton(sender: AnyObject)
-    {
+    @IBAction func tuesdayButton(sender: AnyObject){
         if isTuesdayBege == true{
             buttonImageTuesday = UIImage(named: "T")
             tuesdayButton.setImage(buttonImageTuesday, forState: UIControlState.Normal)
             isTuesdayBege = false
-        }
-        else
-        {
+        }else{
             buttonImageTuesday = UIImage(named: "TD")
             tuesdayButton.setImage(buttonImageTuesday, forState: UIControlState.Normal)
             isTuesdayBege = true
         }
     }
     
-    @IBAction func wednesdayButton(sender: AnyObject)
-    {
+    @IBAction func wednesdayButton(sender: AnyObject){
         if isWednesdayBege == true{
             buttonImageWednesday = UIImage(named: "W")
             wednesdayButton.setImage(buttonImageWednesday, forState: UIControlState.Normal)
             isWednesdayBege = false
-        }
-        else
-        {
+        }else{
             buttonImageWednesday = UIImage(named: "WD")
             wednesdayButton.setImage(buttonImageWednesday, forState: UIControlState.Normal)
             isWednesdayBege = true
-
         }
     }
     
-    @IBAction func thursdayButton(sender: AnyObject)
-    {
+    @IBAction func thursdayButton(sender: AnyObject){
         if isThursdayBege == true {
             buttonImageThursday = UIImage(named: "T")
             thursdayButton.setImage(buttonImageThursday, forState: UIControlState.Normal)
             isThursdayBege=false
-        }
-        else
-        {
+        }else{
             buttonImageThursday = UIImage(named: "TD")
             thursdayButton.setImage(buttonImageThursday, forState: UIControlState.Normal)
             isThursdayBege=true
         }
     }
     
-    @IBAction func fridayButton(sender: AnyObject)
-    {
+    @IBAction func fridayButton(sender: AnyObject){
         if isFridayBege == true{
             buttonImageFriday = UIImage(named: "F")
             fridayButton.setImage(buttonImageFriday, forState: UIControlState.Normal)
             isFridayBege = false
-        }
-        else
-        {
+        }else{
             buttonImageFriday = UIImage(named: "FD")
             fridayButton.setImage(buttonImageFriday, forState: UIControlState.Normal)
             isFridayBege = true
-
         }
     }
  
-    @IBAction func saturdayButtonPressed(sender: AnyObject)
-    {
+    @IBAction func saturdayButtonPressed(sender: AnyObject){
         if isSaturdayBege == true {
             buttonImageSaturday = UIImage(named: "S")
             saturdayButton.setImage(buttonImageSaturday, forState: UIControlState.Normal)
             isSaturdayBege = false
-        }
-        else
-        {
+        }else{
             buttonImageSaturday = UIImage(named: "SD")
             saturdayButton.setImage(buttonImageSaturday, forState: UIControlState.Normal)
             isSaturdayBege = true
-            
         }
     }
     
@@ -191,114 +166,80 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
         var activity : Activity
         var frequency : FrequencyActivity
         
-        if isSundayBege == true
-        {
-            
+        if isSundayBege == true{
             daysWithAmountForDay.setValue(0, forKey: "1")
-        }
-        else
-        {
+        }else{
             daysWithAmountForDay.setValue(dayStepper.value, forKey: "1")
             selectedDaysCount++
-            
         }
         
-        if isMondayBege == true
-        {
+        if isMondayBege == true{
             daysWithAmountForDay.setValue(0, forKey: "2")
-
-        }
-        else
-        {
+        }else{
             daysWithAmountForDay.setValue(dayStepper.value, forKey: "2")
             selectedDaysCount++
-
         }
         
-        if isTuesdayBege == true
-        {
+        if isTuesdayBege == true{
             daysWithAmountForDay.setValue(0, forKey: "3")
-        }
-        else
-        {
+        }else{
             daysWithAmountForDay.setValue(dayStepper.value, forKey: "3")
             selectedDaysCount++
-
         }
         
-        if isWednesdayBege == true
-        {
+        if isWednesdayBege == true{
             daysWithAmountForDay.setValue(0, forKey: "4")
-        }
-        else
-        {
+        }else{
             daysWithAmountForDay.setValue(dayStepper.value, forKey: "4")
             selectedDaysCount++
-
         }
-
-        if isThursdayBege == true
-        {
+        
+        if isThursdayBege == true{
             daysWithAmountForDay.setValue(0, forKey: "5")
-        }
-        else
-        {
+        }else{
             daysWithAmountForDay.setValue(dayStepper.value, forKey: "5")
             selectedDaysCount++
-
         }
         
         if isFridayBege == true {
             daysWithAmountForDay.setValue(0, forKey: "6")
-        }
-        else {
+        }else {
             daysWithAmountForDay.setValue(dayStepper.value, forKey: "6")
             selectedDaysCount++
-
         }
         if isSaturdayBege == true {
             daysWithAmountForDay.setValue(0, forKey: "7")
-        }
-        else {
+        }else {
             daysWithAmountForDay.setValue(dayStepper.value, forKey: "7")
             selectedDaysCount++
-
         }
         
         var amounts = Int(weekStepper.value)
-        
         var videoData: NSData = NSData(contentsOfURL: tempImage)!
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths[0] as! String
-        
         var numActivities = DAO.sharedInstance.savedInformation.integerForKey("ActivityAmount")
-        
         var videoPath = documentsDirectory.stringByAppendingFormat("/video_\(numActivities).mov")
         
         videoData.writeToFile(videoPath, atomically: false)
-        
-        
+    
         activity = Activity(name: nameExerciseTextField.text, videoTutorial: videoPath, category: DAO.sharedInstance.currentCategory,note: "")
         frequency = FrequencyActivity(amountWeeks: amounts , daysWithAmountForDay: daysWithAmountForDay as NSMutableDictionary , selectedDaysCount: selectedDaysCount)
         
         
         if ((nameExerciseTextField == "") || ( weekStepper.value == 0 ) || ( dayStepper.value == 0 ) || (isSaturdayBege==true && isSundayBege == true && isMondayBege==true && isTuesdayBege==true && isWednesdayBege==true && isThursdayBege==true && isFridayBege==true )){
-            
+
             var alert = UIAlertController(title: "Alert", message: "You must complete all the informations before continuing ", preferredStyle:UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
-        }
-            
-        else
-        {
+        }else{
              isSaved = DAO.sharedInstance.saveActivity(activity, newFrequency: frequency)
             
             if isSaved == true {
                 let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
                 self.presentViewController(nextWindow, animated: true, completion: nil)
 //                NSNotificationCenter.defaultCenter().postNotificationName("insertCell", object: nil)
-            }
-            else{
+            }else{
                 var alert = UIAlertController(title: "Ops", message: "An error occurred while saving your activity", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
@@ -307,23 +248,18 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     }
     
     @IBAction func weekStepper(sender: UIStepper) {
-        
         weekLabel.text = Int(sender.value).description
     }
     
     @IBAction func dayStepper(sender: UIStepper) {
-        
         dayLabel.text = Int(sender.value).description
     }
-    
     
     override func viewDidAppear(animated: Bool) {
         
         if alreadyRecorded == false && didCancel == false{
             
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-                
-                
                 println("captureVideoPressed and camera available.")
                 
                 var imagePicker = UIImagePickerController()
@@ -332,23 +268,13 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
                 imagePicker.sourceType = .Camera;
                 imagePicker.mediaTypes = [kUTTypeMovie!]
                 imagePicker.allowsEditing = false
-                
                 imagePicker.showsCameraControls = true
                 
-                
                 self.presentViewController(imagePicker, animated: true, completion: nil)
-                
-            }
-                
-            else {
+            }else{
                 println("Camera not available.")
             }
-        }
-        
-        else {
-            
-            
-            println("ola")
+        }else {
             self.screenTap = UITapGestureRecognizer(target: self, action: "keyboardTap:")
             self.view.addGestureRecognizer(screenTap)
             
@@ -361,8 +287,6 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
             dayStepper.maximumValue = 20
             self.videoLoop = UITapGestureRecognizer(target: self, action: "playerLoopControl:")
             self.videoPlayerView.addGestureRecognizer(videoLoop)
-            
-            
         }
     }
     
@@ -408,19 +332,15 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     
     func playerLoopControl(tap: UITapGestureRecognizer) {
         
-        if videoIsPlaying == true
-        {
+        if videoIsPlaying == true{
             player.stop()
             videoIsPlaying = false
             videoStatusImage.image = UIImage(named: "playRegister")
-        }
-        else if videoIsPlaying == false
-        {
+        }else if videoIsPlaying == false{
             player.playFromCurrentTime()
             videoIsPlaying = true
             videoStatusImage.image = UIImage(named: "pauseRegister")
         }
-        
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -431,23 +351,18 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
     
     
     func videoPlayerBufferringStateDidChange(videoPlayer: PBJVideoPlayerController!) {
-        
     }
     
     func videoPlayerPlaybackWillStartFromBeginning(videoPlayer: PBJVideoPlayerController!) {
-        
     }
     
     func videoPlayerPlaybackDidEnd(videoPlayer: PBJVideoPlayerController!) {
-        
     }
     
     func videoPlayerPlaybackStateDidChange(videoPlayer: PBJVideoPlayerController!) {
-        
     }
     
     func videoPlayerReady(videoPlayer: PBJVideoPlayerController!) {
-        
     }
     
 }

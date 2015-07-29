@@ -117,33 +117,25 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         cell.exerciseDaysLabel.text = arrayDaysExercises
         
         
-        if arrayPerformance[indexPath.row].completed == 0
-        {
+        if arrayPerformance[indexPath.row].completed == 0{
             cell.evolutionImage.image = UIImage(named: "ad0")
         }
-        else if arrayPerformance[indexPath.row].completed == arrayFrequency[indexPath.row].selectedDaysCount
-        {
+        else if arrayPerformance[indexPath.row].completed == arrayFrequency[indexPath.row].selectedDaysCount{
             cell.evolutionImage.image = UIImage(named: "ad1")
         }
-        else if ((arrayFrequency[indexPath.row].selectedDaysCount - arrayPerformance[indexPath.row].completed) == arrayFrequency[indexPath.row].selectedDaysCount / 2)
-        {
+        else if ((arrayFrequency[indexPath.row].selectedDaysCount - arrayPerformance[indexPath.row].completed) == arrayFrequency[indexPath.row].selectedDaysCount / 2){
             cell.evolutionImage.image = UIImage(named: "a2d1")
         }
-        else
-        {
+        else{
             cell.evolutionImage.image = UIImage(named: "a\(arrayFrequency[indexPath.row].selectedDaysCount)d\(arrayPerformance[indexPath.row].completed)")
         }
-        
         return cell
     }
-    
-    
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let  headerCell = performanceTable.dequeueReusableCellWithIdentifier("PerformanceHeaderCell") as! PerformanceHeaderCell
         headerCell.backgroundColor = UIColor(red: 244/255, green: 235/255, blue: 231/255, alpha: 1)
-    
         headerCell.weekLabel.text = weeks[section]
         
         return headerCell
@@ -151,21 +143,18 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     
     func addActivity(notification : NSNotification){
         //vai fazer algo com o DAO
-        
         self.exercises += ["4th exercise"]
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.performanceTable.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-        
         performanceTable.reloadData()
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
         if editingStyle == UITableViewCellEditingStyle.Delete {
             //performanceTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
-        else if editingStyle == UITableViewCellEditingStyle.Insert
-        {
-            
+        else if editingStyle == UITableViewCellEditingStyle.Insert{
+
         }
         
     }

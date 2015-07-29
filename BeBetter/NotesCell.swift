@@ -10,8 +10,8 @@ import UIKit
 
 class NotesCell: UITableViewCell {
     @IBOutlet weak var exerciseNameLabel: UILabel!
-
     @IBOutlet weak var noteLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

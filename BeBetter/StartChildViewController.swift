@@ -65,7 +65,6 @@ class StartChildViewController: UIViewController {
     var index: Int!
 
     @IBAction func goToButton(sender: UIButton) {
-        println("clicou")
         let nextWindow = CategoryViewController(nibName:"CategoryView", bundle: nil)
         self.presentViewController(nextWindow, animated: true, completion: nil)
 

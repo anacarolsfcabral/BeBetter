@@ -11,13 +11,19 @@ import UIKit
 class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var notesTable: UITableView!
+    //var currentActivity: Activity = DAO.sharedInstance.getCurrentAcivity()
+    var arrayActivity = [Activity]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        arrayActivity = DAO.sharedInstance.getActivitiesForCategory()
         
         notesTable.registerNib(UINib(nibName: "NotesCell", bundle: nil), forCellReuseIdentifier: "NotesCell")
         notesTable.delegate = self
         notesTable.dataSource = self
 
+        
         // Do any additional setup after loading the view.
     }
 
@@ -27,7 +33,6 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func backToPerformance(sender: UIButton) {
-        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -38,22 +43,31 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
+    ////// fazer uma função para pegar as activitys que tem notas..../////
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = notesTable.dequeueReusableCellWithIdentifier("NotesCell", forIndexPath: indexPath) as! NotesCell
         
+        if(arrayActivity[indexPath.row].note != ""){
+            cell.exerciseNameLabel.text = arrayActivity[indexPath.row].name
+            cell.noteLabel.text = arrayActivity[indexPath.row].note
+        }
+        else if(arrayActivity[indexPath.row].note == ""){
+            cell.exerciseNameLabel.text = "peidei"
+            cell.noteLabel.text = "preidei"
+        }
+        
         return cell
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
         if editingStyle == UITableViewCellEditingStyle.Delete {
             //performanceTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
-        else if editingStyle == UITableViewCellEditingStyle.Insert
-        {
+        else if editingStyle == UITableViewCellEditingStyle.Insert{
             
         }
-        
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
@@ -61,7 +75,6 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let delete = UITableViewRowAction(style: .Default, title: "Delete") { action, index in
             println("delete")
         }
-        
         
         return [delete]
     }

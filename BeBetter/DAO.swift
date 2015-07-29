@@ -86,27 +86,20 @@ class DAO {
         for ( var i = 0; i < numActivity; i++){
             var activityDict = savedInformation.objectForKey("ACTIVITY_\(i)") as! NSMutableDictionary
             var activityCategory = activityDict.objectForKey("category") as! NSString
-            println(activityCategory)
                 
-            if (activityCategory.isEqualToString(currentCategory))
-            {
-                    
+            if (activityCategory.isEqualToString(currentCategory)){
                 var name = activityDict.objectForKey("name") as! String
                 var videoTutorial = activityDict.objectForKey("videoTutorial") as! String
                 var note = activityDict.objectForKey("note") as! String
                 var lastVideo = activityDict.objectForKey("lastVideo") as! String
                 var id = activityDict.objectForKey("id") as! String
                 var category = activityDict.objectForKey("category") as! String
-                    
                 var newActivity  = Activity(name: name, videoTutorial: videoTutorial, category: category, note: note)
-                    
+                
                 newActivity.id = id
-                    
                 arrayActivity.append(newActivity)
-                    
             }
         }
-        println(savedInformation.dictionaryRepresentation())
         return arrayActivity
     }
     
@@ -164,140 +157,71 @@ class DAO {
         
         
         var numActivity = savedInformation.integerForKey("ActivityAmount")
-        
-        println(numActivity)
+   
         
         let newDict: NSMutableDictionary = ["name": "\(newActivity.name)","category":"\(newActivity.category)", "id":"\(numActivity)","lastVideo":"\(newActivity.lastVideo)","note": "\(newActivity.note)","videoTutorial":"\(newActivity.videoTutorial)"]
-        
         savedInformation.setObject(newDict, forKey: "ACTIVITY_\(numActivity)")
         
         let newFreqDict: NSMutableDictionary = ["amountWeeks": newFrequency.amountWeeks,"daysWithAmountForDay": newFrequency.daysWithAmountForDay as NSMutableDictionary , "id":"\(numActivity)", "selectedDaysCount": newFrequency.selectedDaysCount]
         
-        var daysWithAmountForDay: NSMutableDictionary = [ "1" : 0, "2" : 0, "3" : 0, "4" : 0, "5" : 0, "6" : 0, "7" : 0]
-        
-        let dictPerformance: NSMutableDictionary = ["numberWeek": 0, "daysWithAmountForDay": daysWithAmountForDay , "id":"\(numActivity)", "completed": 0]
-        
-        savedInformation.setObject(dictPerformance, forKey: "PERFORMANCE_\(numActivity)")
-
         savedInformation.setObject(newFreqDict, forKey: "FREQUENCY_\(numActivity)")
         
+        var daysWithAmountForDay: NSMutableDictionary = [ "1" : 0, "2" : 0, "3" : 0, "4" : 0, "5" : 0, "6" : 0, "7" : 0]
+        let dictPerformance: NSMutableDictionary = ["numberWeek": 0, "daysWithAmountForDay": daysWithAmountForDay , "id":"\(numActivity)", "completed": 0]
+        savedInformation.setObject(dictPerformance, forKey: "PERFORMANCE_\(numActivity)")
+
         numActivity+=1
         savedInformation.setInteger(numActivity, forKey: "ActivityAmount")
-        
         savedInformation.synchronize()
 
-        println(savedInformation.dictionaryRepresentation())
-        
         return true
     }
     
     func updatePerformance(performance: PerformanceForWeek,weekDay: Int) -> PerformanceForWeek{
         
         var dictPerformance: NSMutableDictionary = savedInformation.objectForKey("PERFORMANCE_\(performance.id)")?.mutableCopy() as! NSMutableDictionary
-        println(weekDay)
-        
-        
         var dictDays: NSMutableDictionary = dictPerformance.objectForKey("daysWithAmountForDay")?.mutableCopy() as! NSMutableDictionary
-        println(dictDays)
         var dayRepetition = dictDays.objectForKey("\(weekDay)") as! Int
         
         dayRepetition += 1
         
-        
         dictDays.setValue(dayRepetition as Int, forKey: "\(weekDay)")
-        
         dictPerformance.setObject(dictDays, forKey: "daysWithAmountForDay")
         
         savedInformation.setObject(dictPerformance, forKey: "PERFORMANCE_\(performance.id)")
         
-        //performance.daysWithAmountForDay.setValue(dayRepetition, forKey: "\(weekDay)")
-        
         var performanceDict = savedInformation.objectForKey("PERFORMANCE_\(performance.id)") as! NSMutableDictionary
-
         var amountWeeks = performanceDict.objectForKey("numberWeek") as! Int
         var daysWithAmountForDay = performanceDict.objectForKey("daysWithAmountForDay")  as! NSMutableDictionary
         var id = performanceDict.objectForKey("id") as! String
-        
         var completed = performanceDict.objectForKey("completed") as! Int
-        
         var newPerformance = PerformanceForWeek(numberWeek: amountWeeks, daysWithAmountForDay: daysWithAmountForDay, completed: completed)
         newPerformance.id = performance.id
-        println(newPerformance)
         
         return newPerformance
-        
     }
     
     func updatePerformanceCompleted(performance: PerformanceForWeek) -> PerformanceForWeek{
         
         var dictPerformance: NSMutableDictionary = savedInformation.objectForKey("PERFORMANCE_\(performance.id)")?.mutableCopy() as! NSMutableDictionary
-        
         var completed = dictPerformance.objectForKey("completed") as! Int
         
         completed += 1
         
         dictPerformance.setValue(completed, forKey: "completed")
-        
         savedInformation.setObject(dictPerformance, forKey: "PERFORMANCE_\(performance.id)")
         
         
         var performanceDict = savedInformation.objectForKey("PERFORMANCE_\(performance.id)") as! NSMutableDictionary
-        
         var amountWeeks = performanceDict.objectForKey("numberWeek") as! Int
         var daysWithAmountForDay = performanceDict.objectForKey("daysWithAmountForDay")  as! NSMutableDictionary
         var id = performanceDict.objectForKey("id") as! String
         var newCompleted = performanceDict.objectForKey("completed") as! Int
-        
         var newPerformance = PerformanceForWeek(numberWeek: amountWeeks, daysWithAmountForDay: daysWithAmountForDay, completed: newCompleted)
         newPerformance.id = performance.id
-        println(newPerformance)
         
         return performance
-        
     }
-    
-//    
-//    func saveFrequency(newFrequency: FrequencyActivity){
-//        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as   NSArray
-//        let documentsDirectory = paths[0] as! String
-//        let path = documentsDirectory.stringByAppendingPathComponent("Data.plist")
-//        let fileManager = NSFileManager.defaultManager()
-//        
-//        //check if file exists
-//        if(!fileManager.fileExistsAtPath(path))
-//        {
-//            // If it doesn't, copy it from the default file in the Bundle
-//            if let bundlePath = NSBundle.mainBundle().pathForResource("Data", ofType: "plist")
-//            {
-//                let resultDictionary = NSMutableDictionary(contentsOfFile: bundlePath)
-//                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
-//            }
-//            else
-//            {
-//                println("Data.plist not found. Please, make sure it is part of the bundle.")
-//            }
-//            
-//        }
-//        else
-//        {
-//            println("Data.plist already exits at path.")
-//            // use this to delete file from documents directory
-//            //fileManager.removeItemAtPath(path, error: nil)
-//        }
-//        
-//        var root : NSMutableDictionary! = NSMutableDictionary(contentsOfFile: path)
-//        var frequency : NSMutableDictionary! = root.objectForKey("FrequencyActivity") as! NSMutableDictionary
-//        println(frequency)
-//        var numActivity = root.objectForKey("ActivityAmount") as! Int
-//        
-//        let newDict = ["amountWeeks": "\(newFrequency.amountWeeks)","daysWithAmountForDay": newFrequency.daysWithAmountForDay, "id":"\(numActivity)"]
-//        
-//        frequency.setObject(newDict, forKey: "FREQUENCY_\(numActivity)")
-//        println(frequency)
-//        root.writeToFile(path, atomically: true)
-//
-//    }
-
     
     func deleteActivity(newActivity: Activity) -> Bool{
         

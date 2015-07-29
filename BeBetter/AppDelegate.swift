@@ -15,12 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        /////////////////////
-        
-        //Notificação
-        
-        //Actions
-        
+        //////Notificação////////
         var firstAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
         firstAction.identifier = "FIRST_ACTION"
         firstAction.title = "Adiar"
@@ -68,18 +63,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ///////////////////////////////////////////////////////////
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
         let defaults = NSUserDefaults.standardUserDefaults()
         
         if let isAppAlreadyLaunchedOnce = defaults.stringForKey("isAppAlreadyLaunchedOnce"){
             self.window?.rootViewController = CategoryViewController(nibName:"CategoryView", bundle:NSBundle.mainBundle())
-
-            
         }else{
             defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
             self.window?.rootViewController = StartViewController(nibName:"StartView", bundle:NSBundle.mainBundle())
         }
-        
         self.window?.makeKeyAndVisible()
         
         return true

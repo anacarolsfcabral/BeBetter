@@ -23,8 +23,7 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
         if (index == 2) {
             return nil;
         }
-    
-        println("tela\(index)")
+
         return self.viewcontrollerAtIndex(index)
     }
     
