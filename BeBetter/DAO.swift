@@ -77,7 +77,6 @@ class DAO {
     }
     
     func getActivitiesForCategory() -> [Activity]{
-        
    
         var numActivity = savedInformation.integerForKey("ActivityAmount")
         
@@ -91,6 +90,33 @@ class DAO {
                 var name = activityDict.objectForKey("name") as! String
                 var videoTutorial = activityDict.objectForKey("videoTutorial") as! String
                 var note = activityDict.objectForKey("note") as! String
+                var lastVideo = activityDict.objectForKey("lastVideo") as! String
+                var id = activityDict.objectForKey("id") as! String
+                var category = activityDict.objectForKey("category") as! String
+                var newActivity  = Activity(name: name, videoTutorial: videoTutorial, category: category, note: note)
+                
+                newActivity.id = id
+                arrayActivity.append(newActivity)
+            }
+        }
+        return arrayActivity
+    }
+    
+    func getActivitiesThatHaveNote()-> [Activity]{
+        
+        var numActivity = savedInformation.integerForKey("ActivityAmount")
+        
+        var arrayActivity : [Activity] = [Activity]()
+        
+        for ( var i = 0; i < numActivity; i++){
+            var activityDict = savedInformation.objectForKey("ACTIVITY_\(i)") as! NSMutableDictionary
+            var note = activityDict.objectForKey("note") as! NSString
+            
+            if (note != "" ){
+                var name = activityDict.objectForKey("name") as! String
+                var videoTutorial = activityDict.objectForKey("videoTutorial") as! String
+                var note = activityDict.objectForKey("note") as! String
+                println(note)
                 var lastVideo = activityDict.objectForKey("lastVideo") as! String
                 var id = activityDict.objectForKey("id") as! String
                 var category = activityDict.objectForKey("category") as! String
@@ -228,7 +254,6 @@ class DAO {
         return true
     }
     
-    
     func increaseAmountForDay() -> Bool {
     
         return true
@@ -328,6 +353,16 @@ class DAO {
         notification.fireDate = date
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+    
+    func uptadeActivityNotas(newNote: String, activity: Activity){
+        
+        var dictActivity: NSMutableDictionary = savedInformation.objectForKey("ACTIVITY_\(activity.id)")?.mutableCopy() as! NSMutableDictionary
+        var note = dictActivity.objectForKey("note") as! String
+        note = newNote
+        dictActivity.setValue(note , forKey: "note")
+        savedInformation.setObject(dictActivity, forKey: "ACTIVITY_\(activity.id)")
+        
     }
 
 }

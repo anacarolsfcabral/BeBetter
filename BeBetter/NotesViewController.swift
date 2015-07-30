@@ -13,16 +13,16 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var notesTable: UITableView!
     //var currentActivity: Activity = DAO.sharedInstance.getCurrentAcivity()
     var arrayActivity = [Activity]()
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        arrayActivity = DAO.sharedInstance.getActivitiesForCategory()
+        arrayActivity = DAO.sharedInstance.getActivitiesThatHaveNote()
+
         
         notesTable.registerNib(UINib(nibName: "NotesCell", bundle: nil), forCellReuseIdentifier: "NotesCell")
         notesTable.delegate = self
         notesTable.dataSource = self
-
         
         // Do any additional setup after loading the view.
     }
@@ -41,22 +41,18 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return arrayActivity.count
     }
     ////// fazer uma função para pegar as activitys que tem notas..../////
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = notesTable.dequeueReusableCellWithIdentifier("NotesCell", forIndexPath: indexPath) as! NotesCell
         
-        if(arrayActivity[indexPath.row].note != ""){
-            cell.exerciseNameLabel.text = arrayActivity[indexPath.row].name
-            cell.noteLabel.text = arrayActivity[indexPath.row].note
-        }
-        else if(arrayActivity[indexPath.row].note == ""){
-            cell.exerciseNameLabel.text = "peidei"
-            cell.noteLabel.text = "preidei"
-        }
+        cell.exerciseNameLabel.text = arrayActivity[indexPath.row].name
+        cell.noteLabel.text = arrayActivity[indexPath.row].note as String
+        
         
         return cell
     }

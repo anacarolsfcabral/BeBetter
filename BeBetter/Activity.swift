@@ -22,7 +22,7 @@ class Activity {
         self.name = name
         self.videoTutorial = videoTutorial
         self.category = category
-        self.note = ""
+        self.note = note
         self.lastVideo = ""
         self.id = ""
     }

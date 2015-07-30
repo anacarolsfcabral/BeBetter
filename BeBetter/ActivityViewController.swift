@@ -58,7 +58,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     var nomeText : UITextField!
     var titulo : UILabel!
 
-    
+    var noteText  = ""
     
     @IBAction func finished(sender: UIButton) {
         
@@ -331,7 +331,6 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     
     @IBAction func addNote(sender: UIButton) {
         
-        
         let altura:CGFloat = view.frame.height*0.08;
         let alturaLabel:CGFloat = view.frame.height*0.09
         
@@ -388,7 +387,6 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         nomeText.autocorrectionType = UITextAutocorrectionType.No;
         nomeText.placeholder = "Write a note for this exercise"
     
-        
         blurView.addSubview(titulo)
         tela.addSubview(nomeText)
         tela.addSubview(cancelButton)
@@ -406,7 +404,8 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     }
     
     func saveNote(sender: UIButton){
-        ////////// SALVA A NOTA AQUI IVEEEEEEEEEEEY
+        noteText = nomeText.text
+        DAO.sharedInstance.uptadeActivityNotas(noteText, activity: currentActivity)
         blurView.removeFromSuperview()
         tela.removeFromSuperview()
         dismissButton.removeFromSuperview()

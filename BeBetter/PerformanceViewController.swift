@@ -19,6 +19,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     var arrayActivity = [Activity]()
     var arrayFrequency = [FrequencyActivity]()
     var arrayPerformance = [PerformanceForWeek]()
+    var arrayActivityNote = [Activity]()
     
     @IBAction func backButton(sender: UIButton) {
         let nextWindow = CategoryViewController(nibName:"CategoryView", bundle: nil)
@@ -31,10 +32,14 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     }
     
     @IBAction func goToNotes(sender: UIButton) {
-        
-        let nextWindow = NotesViewController(nibName:"NotesView", bundle: nil)
-        self.presentViewController(nextWindow, animated: true, completion: nil)
-        
+        if (arrayActivityNote.count == 0){
+            var message : UIAlertController = UIAlertController(title: "Ops!", message: "Você ainda não possui nenhuma nota!", preferredStyle: UIAlertControllerStyle.Alert)
+            message.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(message, animated: true, completion: nil)
+        }else{
+            let nextWindow = NotesViewController(nibName:"NotesView", bundle: nil)
+            self.presentViewController(nextWindow, animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
@@ -43,6 +48,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         arrayActivity = DAO.sharedInstance.getActivitiesForCategory()
         arrayFrequency = DAO.sharedInstance.getFrequency(arrayActivity)
         arrayPerformance = DAO.sharedInstance.getPerformance(arrayActivity)
+        arrayActivityNote = DAO.sharedInstance.getActivitiesThatHaveNote()
         
         performanceTable.delegate = self
         performanceTable.dataSource = self
@@ -86,10 +92,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         var arrayDaysExercises = ""
         
         var dict = arrayFrequency[indexPath.row].daysWithAmountForDay as NSMutableDictionary
-        println("PEIDEEEEEEIIIIIII")
-        println(dict)
-        //var dia = dict.objectForKey("1") as! Int
-        
+   
         if dict.objectForKey("1") as! Int > 0 {
             arrayDaysExercises  = " Sun"
         }
@@ -111,9 +114,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         if dict.objectForKey("7") as! Int > 0 {
             arrayDaysExercises = arrayDaysExercises + " Sat"
         }
-        
-        println(arrayDaysExercises)
-        
+  
         cell.exerciseDaysLabel.text = arrayDaysExercises
         
         
