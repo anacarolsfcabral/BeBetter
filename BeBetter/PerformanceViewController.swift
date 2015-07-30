@@ -90,33 +90,40 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         cell.exerciseLabel.text = arrayActivity[indexPath.row].name
         
         var arrayDaysExercises = ""
-        
+        var num = 0
         var dict = arrayFrequency[indexPath.row].daysWithAmountForDay as NSMutableDictionary
    
         if dict.objectForKey("1") as! Int > 0 {
             arrayDaysExercises  = " Sun"
+            num = dict.objectForKey("1") as! Int
         }
         if dict.objectForKey("2") as! Int > 0 {
             arrayDaysExercises = arrayDaysExercises + " Mon"
+            num = dict.objectForKey("2") as! Int
         }
         if dict.objectForKey("3") as! Int > 0 {
             arrayDaysExercises = arrayDaysExercises + " Tue"
+            num = dict.objectForKey("3") as! Int
         }
         if dict.objectForKey("4") as! Int > 0 {
             arrayDaysExercises = arrayDaysExercises + " Wed"
+            num = dict.objectForKey("4") as! Int
         }
         if dict.objectForKey("5") as! Int > 0 {
             arrayDaysExercises = arrayDaysExercises + " Thu"
+            num = dict.objectForKey("5") as! Int
         }
         if dict.objectForKey("6") as! Int > 0 {
             arrayDaysExercises = arrayDaysExercises + " Fri"
+            num = dict.objectForKey("6") as! Int
         }
         if dict.objectForKey("7") as! Int > 0 {
             arrayDaysExercises = arrayDaysExercises + " Sat"
+            num = dict.objectForKey("7") as! Int
         }
   
         cell.exerciseDaysLabel.text = arrayDaysExercises
-        
+        cell.exerciseAmount.text = "x\(num)"
         
         if arrayPerformance[indexPath.row].completed == 0{
             cell.evolutionImage.image = UIImage(named: "ad0")
