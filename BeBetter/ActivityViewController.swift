@@ -55,7 +55,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     var cancelButton : UIButton!
     var dismissButton : UIButton!
     var saveButton : UIButton!
-    var nomeText : UITextField!
+    var nomeText : UITextView!
     var titulo : UILabel!
 
     var noteText  = ""
@@ -332,7 +332,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     @IBAction func addNote(sender: UIButton) {
         
         let altura:CGFloat = view.frame.height*0.08;
-        let alturaLabel:CGFloat = view.frame.height*0.09
+        let alturaLabel:CGFloat = view.frame.height*0.13
         
         // Blur Effect
         blur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
@@ -340,7 +340,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         blurView.frame = view.bounds
         
         //declaracao da area e definicao do tamanho//
-        var area:CGRect = CGRectMake(view.frame.width*0.05, view.frame.height*0.2, view.frame.width*0.90
+        var area:CGRect = CGRectMake(view.frame.width*0.05, (view.frame.height*0.21)+10, view.frame.width*0.90
             , altura*6);
         
         //definindo que eh a view eh a tela//
@@ -382,11 +382,18 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         
         // Name Text Field
         
-        nomeText = UITextField(frame: CGRectMake(spacing, cancelButton.frame.origin.y + altura/1.4, area.width, altura))
+        nomeText = UITextView(frame: CGRectMake(spacing, cancelButton.frame.origin.y + altura/1.4, view.frame.width*0.8, view.frame.height*0.3))
         nomeText.font = UIFont(name: "AvenirNext-Regular", size: 18)
         nomeText.autocorrectionType = UITextAutocorrectionType.No;
-        nomeText.placeholder = "Write a note for this exercise"
-    
+        //nomeText.placeholder = "Write a note for this exercise"
+        //nomeText.text = "Write a note for this exercise"
+        nomeText.textColor = UIColor.whiteColor()
+        nomeText.scrollEnabled = true
+        //nomeText.userInteractionEnabled = true
+        //nomeText.editable = false
+        nomeText.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0)
+        nomeText.becomeFirstResponder()
+        
         blurView.addSubview(titulo)
         tela.addSubview(nomeText)
         tela.addSubview(cancelButton)
@@ -394,6 +401,7 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
 
         
     }
+    
     
     func backToActivity(sender: UIButton){
     
