@@ -23,6 +23,9 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         notesTable.registerNib(UINib(nibName: "NotesCell", bundle: nil), forCellReuseIdentifier: "NotesCell")
         notesTable.delegate = self
         notesTable.dataSource = self
+        notesTable.rowHeight = UITableViewAutomaticDimension
+        notesTable.estimatedRowHeight = 160.0
+        
         
         // Do any additional setup after loading the view.
     }
@@ -52,10 +55,14 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         cell.exerciseNameLabel.text = arrayActivity[indexPath.row].name
         cell.noteLabel.text = arrayActivity[indexPath.row].note as String
-        
+       // cell.textLabel?.numberOfLines = 0
+       // cell.textLabel?.lineBreakMode = NSLineBreakMode.self.ByWordWrapping
+    
         
         return cell
     }
+    
+    
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
         if editingStyle == UITableViewCellEditingStyle.Delete {
@@ -74,6 +81,7 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         return [delete]
     }
+    
 
     /*
     // MARK: - Navigation
