@@ -16,12 +16,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xwp-rH-K9D">
-                    <rect key="frame" x="0.0" y="75" width="600" height="525"/>
+                    <rect key="frame" x="0.0" y="45" width="600" height="555"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOe-CR-gj5">
-                    <rect key="frame" x="13" y="27" width="34" height="33"/>
-                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                    <rect key="frame" x="13" y="21" width="38" height="36"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Back">
                         <color key="titleColor" red="0.18988928199999999" green="0.59845912459999995" blue="0.59655743839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,9 +45,9 @@
             <constraints>
                 <constraint firstItem="UOe-CR-gj5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="13" id="4RU-xa-j7Y"/>
                 <constraint firstAttribute="trailing" secondItem="xwp-rH-K9D" secondAttribute="trailing" id="F6D-7M-gTP"/>
-                <constraint firstItem="xwp-rH-K9D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="IxA-bx-rhy"/>
+                <constraint firstItem="xwp-rH-K9D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="IxA-bx-rhy"/>
                 <constraint firstItem="smb-HQ-Dbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="QeH-Qu-O2W"/>
-                <constraint firstItem="UOe-CR-gj5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="Smr-Ef-Ttw"/>
+                <constraint firstItem="UOe-CR-gj5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="Smr-Ef-Ttw"/>
                 <constraint firstItem="xwp-rH-K9D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="agk-91-oTR"/>
                 <constraint firstAttribute="centerX" secondItem="smb-HQ-Dbf" secondAttribute="centerX" id="biR-L6-2yS"/>
                 <constraint firstAttribute="bottom" secondItem="xwp-rH-K9D" secondAttribute="bottom" id="oQb-Aa-fup"/>
