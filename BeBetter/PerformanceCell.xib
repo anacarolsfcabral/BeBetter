@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="performanceCount" translatesAutoresizingMaskIntoConstraints="NO" id="Oxt-f0-ODx">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="performanceCount" translatesAutoresizingMaskIntoConstraints="NO" id="Oxt-f0-ODx">
                         <rect key="frame" x="5" y="1" width="105" height="73"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="105" id="XIt-yy-5eN"/>
@@ -22,7 +22,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHo-pd-u7w">
-                        <rect key="frame" x="115" y="18" width="277" height="21"/>
+                        <rect key="frame" x="112" y="31" width="277" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="274" id="dSC-vB-3dv"/>
                             <constraint firstAttribute="height" constant="21" id="zMb-bC-c0N"/>
@@ -37,7 +37,7 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="415-dl-o4t" userLabel="amount">
-                        <rect key="frame" x="353" y="41" width="30.5" height="16.5"/>
+                        <rect key="frame" x="350" y="54" width="31" height="17"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30.5" id="alR-A9-el7"/>
                         </constraints>
@@ -46,7 +46,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEd-xX-hGY" userLabel="days">
-                        <rect key="frame" x="115" y="41" width="208" height="16.5"/>
+                        <rect key="frame" x="112" y="54" width="208" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="0Jr-lJ-HQo"/>
                         </constraints>
@@ -62,20 +62,20 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="yHo-pd-u7w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="115" id="5ug-wA-cjN"/>
-                    <constraint firstAttribute="trailing" secondItem="yHo-pd-u7w" secondAttribute="trailing" constant="17" id="66h-Z3-39N"/>
+                    <constraint firstAttribute="trailing" secondItem="yHo-pd-u7w" secondAttribute="trailing" constant="20" id="66h-Z3-39N"/>
                     <constraint firstAttribute="bottom" secondItem="yHo-pd-u7w" secondAttribute="bottom" constant="25.5" id="DTI-e5-lVL"/>
                     <constraint firstItem="FEd-xX-hGY" firstAttribute="top" secondItem="yHo-pd-u7w" secondAttribute="bottom" constant="2" id="Ddk-zf-MSf"/>
                     <constraint firstItem="415-dl-o4t" firstAttribute="leading" secondItem="FEd-xX-hGY" secondAttribute="trailing" constant="30" id="Df6-uE-0PD"/>
                     <constraint firstItem="Oxt-f0-ODx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="OYv-3v-jHb"/>
-                    <constraint firstItem="yHo-pd-u7w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="ShQ-HC-eMA"/>
+                    <constraint firstItem="yHo-pd-u7w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="ShQ-HC-eMA"/>
                     <constraint firstItem="FEd-xX-hGY" firstAttribute="leading" secondItem="Oxt-f0-ODx" secondAttribute="trailing" constant="81" id="TsA-gg-3Lv"/>
-                    <constraint firstItem="FEd-xX-hGY" firstAttribute="leading" secondItem="Oxt-f0-ODx" secondAttribute="trailing" constant="5" id="XRU-Hh-nln"/>
+                    <constraint firstItem="FEd-xX-hGY" firstAttribute="leading" secondItem="Oxt-f0-ODx" secondAttribute="trailing" constant="2" id="XRU-Hh-nln"/>
                     <constraint firstAttribute="centerY" secondItem="Oxt-f0-ODx" secondAttribute="centerY" constant="-0.5" id="a4G-bI-gID"/>
                     <constraint firstItem="FEd-xX-hGY" firstAttribute="top" secondItem="yHo-pd-u7w" secondAttribute="bottom" constant="2" id="g9Y-it-hgH"/>
                     <constraint firstAttribute="trailingMargin" secondItem="FEd-xX-hGY" secondAttribute="trailing" constant="25" id="lQu-NC-qMM"/>
                     <constraint firstItem="FEd-xX-hGY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="107" id="laF-sE-1Ho"/>
-                    <constraint firstItem="yHo-pd-u7w" firstAttribute="leading" secondItem="Oxt-f0-ODx" secondAttribute="trailing" constant="5" id="p7C-EC-qsf"/>
-                    <constraint firstAttribute="trailing" secondItem="415-dl-o4t" secondAttribute="trailing" constant="25" id="uSN-0J-uUM"/>
+                    <constraint firstItem="yHo-pd-u7w" firstAttribute="leading" secondItem="Oxt-f0-ODx" secondAttribute="trailing" constant="2" id="p7C-EC-qsf"/>
+                    <constraint firstAttribute="trailing" secondItem="415-dl-o4t" secondAttribute="trailing" constant="28" id="uSN-0J-uUM"/>
                     <constraint firstItem="415-dl-o4t" firstAttribute="top" secondItem="yHo-pd-u7w" secondAttribute="bottom" constant="2" id="xLJ-kt-bk8"/>
                 </constraints>
                 <variation key="default">
