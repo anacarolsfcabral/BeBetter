@@ -79,7 +79,8 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
         }
         
         let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
-        self.presentViewController(nextWindow, animated: true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(true)
+//        self.presentViewController(nextWindow, animated: true, completion: nil)
 
     }
     

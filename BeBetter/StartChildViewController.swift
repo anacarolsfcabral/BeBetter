@@ -67,7 +67,8 @@ class StartChildViewController: UIViewController {
 
     @IBAction func goToButton(sender: UIButton) {
         let nextWindow = CategoryViewController(nibName:"CategoryView", bundle: nil)
-        self.presentViewController(nextWindow, animated: true, completion: nil)
+        self.navigationController?.pushViewController(nextWindow, animated: true)
+//        self.presentViewController(nextWindow, animated: true, completion: nil)
 
     }
     override func didReceiveMemoryWarning() {

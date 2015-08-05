@@ -9,6 +9,8 @@
 import UIKit
 
 class StartViewController: UIViewController, UIPageViewControllerDataSource {
+    
+    var index : Int = 0
 
     var pageController = UIPageViewController(transitionStyle: .Scroll ,navigationOrientation: .Horizontal, options: nil)
     var pageControl = UIPageControl.appearance()
@@ -16,37 +18,43 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
         var vc = viewController as! StartChildViewController
-        var index = vc.index as Int
-        
-        index++
-        
-        if (index == 2) {
-            return nil;
+        self.index = vc.index as Int
+        self.index++
+
+        if(self.index == 2)
+        {
+            return nil
         }
 
-        return self.viewcontrollerAtIndex(index)
+//        return self.viewcontrollerAtIndex(index)
+        let cat = self.viewcontrollerAtIndex(self.index)
+        
+        let nav = UINavigationController(nibName: "nav", bundle: nil)
+        nav.viewControllers = [cat]
+        nav.navigationBar.hidden = true
+        
+        return cat
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?{
         
         var vc = viewController as! StartChildViewController
-        var index = vc.index as Int
-    
+        self.index = vc.index as Int
         
-    
-        
-        if index == 0{
+        if self.index == 0
+        {
             return nil
         }
         
-        index--
+        self.index--
         
         return self.viewcontrollerAtIndex(index)
     }
     
-    func viewcontrollerAtIndex(index: Int) -> StartChildViewController{
+    func viewcontrollerAtIndex(index: Int) -> StartChildViewController
+    {
         let child = StartChildViewController(nibName: "StartChildView", bundle: nil)
-        child.index=index
+        child.index=self.index
         return child
     }
     
@@ -80,7 +88,8 @@ class StartViewController: UIViewController, UIPageViewControllerDataSource {
 
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

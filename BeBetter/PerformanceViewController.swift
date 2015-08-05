@@ -21,9 +21,11 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     var arrayPerformance = [PerformanceForWeek]()
     var arrayActivityNote = [Activity]()
     
-    @IBAction func backButton(sender: UIButton) {
-        let nextWindow = CategoryViewController(nibName:"CategoryView", bundle: nil)
-        self.presentViewController(nextWindow, animated: true, completion: nil)
+    @IBAction func backButton(sender: UIButton)
+    {
+//        let nextWindow = CategoryViewController(nibName:"CategoryView", bundle: nil)
+        self.navigationController?.popViewControllerAnimated(true)
+//        self.presentViewController(nextWindow, animated: true, completion: nil)
     }
     @IBAction func addExercise(sender: UIButton) {
         
@@ -78,7 +80,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         DAO.sharedInstance.setcurrentActivity(arrayActivity[indexPath.row])
         let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
-        self.presentViewController(nextWindow, animated: true, completion: nil)
+        self.navigationController?.pushViewController(nextWindow, animated: true)
+//        self.presentViewController(nextWindow, animated: true, completion: nil)
     }
 
     

@@ -30,7 +30,7 @@ class CategoryViewController: UIViewController {
         ///////Gesto para voltar para a StartViewController/////////
         var gesture = UIScreenEdgePanGestureRecognizer(target: self, action: "goToStartView:")
         gesture.edges = UIRectEdge.Left
-        self.view.addGestureRecognizer(gesture)
+//        self.view.addGestureRecognizer(gesture)
         ///////////////////////////
     }
 
@@ -71,16 +71,17 @@ class CategoryViewController: UIViewController {
     }
     
     
-    func goToPerformance(){
+    func goToPerformance()
+    {
         let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
-        self.presentViewController(nextWindow, animated: true, completion: nil)
+        self.navigationController?.pushViewController(nextWindow, animated: true)
+//        self.presentViewController(nextWindow, animated: true, completion: nil)
     }
     
-    ///////Função do Gesture/////////
-    func goToStartView(gesture: UIScreenEdgePanGestureRecognizer){
-        let nextWindow = StartViewController(nibName:"StartView", bundle: nil)
-        self.presentViewController(nextWindow, animated: true, completion: nil)
-    }
+//    func goToStartView(gesture: UIScreenEdgePanGestureRecognizer){
+//        let nextWindow = StartViewController(nibName:"StartView", bundle: nil)
+//        self.presentViewController(nextWindow, animated: true, completion: nil)
+//    }
     
 
     /*

@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController" customModule="BeBetter" customModuleProvider="target">
             <connections>
-                <outlet property="edgeGesture" destination="rHL-tx-uGU" id="hsk-hX-oV5"/>
                 <outlet property="firstButton" destination="qYn-xv-ynG" id="tLs-F7-NSJ"/>
                 <outlet property="secondButton" destination="Wnd-OB-Va0" id="dI1-bZ-0Dg"/>
                 <outlet property="thirdButton" destination="JuS-90-oW3" id="Eo2-QT-MOS"/>
@@ -80,12 +79,8 @@
                 <constraint firstAttribute="centerX" secondItem="Wnd-OB-Va0" secondAttribute="centerX" id="usa-A4-CzY"/>
                 <constraint firstItem="Idc-hX-UR3" firstAttribute="centerY" secondItem="Wnd-OB-Va0" secondAttribute="centerY" id="xvl-f8-4TR"/>
             </constraints>
-            <connections>
-                <outletCollection property="gestureRecognizers" destination="rHL-tx-uGU" appends="YES" id="NfM-r2-trU"/>
-            </connections>
             <point key="canvasLocation" x="147" y="265"/>
         </view>
-        <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="rHL-tx-uGU"/>
     </objects>
     <resources>
         <image name="backButton" width="133" height="250"/>
