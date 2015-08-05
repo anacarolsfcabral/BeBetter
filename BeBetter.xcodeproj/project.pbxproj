@@ -38,6 +38,8 @@
 		F01AA2651B5EC3CA002C2EF6 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */; };
 		F01AA26E1B5EF031002C2EF6 /* PerformanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */; };
 		F01AA26F1B5EF031002C2EF6 /* PerformanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */; };
+		F050E2C61B72B3B300A38F37 /* EditActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050E2C41B72B3B300A38F37 /* EditActivityViewController.swift */; };
+		F050E2C71B72B3B300A38F37 /* EditActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F050E2C51B72B3B300A38F37 /* EditActivityView.xib */; };
 		F61689C31B667203007F1828 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = F61689C21B667203007F1828 /* Data.plist */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
 		F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceCell.swift; sourceTree = "<group>"; };
 		F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerformanceCell.xib; sourceTree = "<group>"; };
+		F050E2C41B72B3B300A38F37 /* EditActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditActivityViewController.swift; sourceTree = "<group>"; };
+		F050E2C51B72B3B300A38F37 /* EditActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditActivityView.xib; sourceTree = "<group>"; };
 		F61689C21B667203007F1828 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		FEA7346DA65B93E276568E4D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -198,6 +202,7 @@
 				6FE4E1EF1B64175700B237D8 /* StartChildView.xib */,
 				F01AA2631B5EC3CA002C2EF6 /* CategoryView.xib */,
 				F01AA24D1B5E907A002C2EF6 /* RegisterVideoView.xib */,
+				F050E2C51B72B3B300A38F37 /* EditActivityView.xib */,
 				F01AA2431B5E8946002C2EF6 /* PerformanceView.xib */,
 				F01AA26D1B5EF031002C2EF6 /* PerformanceCell.xib */,
 				BE7C554C1B5FE6E7005D23B0 /* PerformanceHeaderCell.xib */,
@@ -215,6 +220,7 @@
 				6FE4E1EE1B64175700B237D8 /* StartChildViewController.swift */,
 				F01AA2621B5EC3CA002C2EF6 /* CategoryViewController.swift */,
 				F01AA24C1B5E907A002C2EF6 /* RegisterVideoViewController.swift */,
+				F050E2C41B72B3B300A38F37 /* EditActivityViewController.swift */,
 				F01AA2421B5E8946002C2EF6 /* PerformanceViewController.swift */,
 				F01AA26C1B5EF031002C2EF6 /* PerformanceCell.swift */,
 				BE7C554B1B5FE6E7005D23B0 /* PerformanceHeaderCell.swift */,
@@ -325,6 +331,7 @@
 				F01AA2251B5E869A002C2EF6 /* Main.storyboard in Resources */,
 				F01AA22A1B5E869A002C2EF6 /* LaunchScreen.xib in Resources */,
 				F01AA2271B5E869A002C2EF6 /* Images.xcassets in Resources */,
+				F050E2C71B72B3B300A38F37 /* EditActivityView.xib in Resources */,
 				F61689C31B667203007F1828 /* Data.plist in Resources */,
 				F011C36B1B69606800662BB2 /* NotesView.xib in Resources */,
 				6FE4E1F11B64175700B237D8 /* StartChildView.xib in Resources */,
@@ -395,6 +402,7 @@
 				F01AA2561B5E9485002C2EF6 /* ActivityViewController.swift in Sources */,
 				BE7868F01B5EBB050097E1DE /* FrequencyActivity.swift in Sources */,
 				F01AA2201B5E869A002C2EF6 /* AppDelegate.swift in Sources */,
+				F050E2C61B72B3B300A38F37 /* EditActivityViewController.swift in Sources */,
 				F011C36A1B69606800662BB2 /* NotesViewController.swift in Sources */,
 				BE7868F21B5EBB150097E1DE /* PerformanceForWeek.swift in Sources */,
 				F01AA25F1B5EB74E002C2EF6 /* Activity.swift in Sources */,
