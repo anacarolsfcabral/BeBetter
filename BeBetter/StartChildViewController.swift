@@ -27,7 +27,7 @@ class StartChildViewController: UIViewController {
         
         if index == 0
         {
-            goToBut.hidden=true
+            goToBut.hidden = true
             patientImg.hidden = true
             doctorImg.hidden = true
             patientLabel.hidden = true
@@ -43,6 +43,7 @@ class StartChildViewController: UIViewController {
             firstLabel.hidden = true
             secondLabel.hidden = true
             
+            goToBut.userInteractionEnabled = false
             goToBut.alpha = 0
             textView.alpha = 0
             
@@ -134,11 +135,15 @@ class StartChildViewController: UIViewController {
                             
                             self.textView.alpha = 1.0
                             
-                            UIView.animateWithDuration(5.0, delay: 4.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+                            UIView.animateWithDuration(4.5, delay: 5.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
                                 
-                                self.goToBut.alpha = 1
-                                
-                            }, completion: nil)
+                                    if self.index == 1
+                                    {
+                                        self.goToBut.hidden = false
+                                        self.goToBut.alpha = 1
+                                        self.goToBut.userInteractionEnabled = true
+                                    }
+                                }, completion: nil)
                             
                         }, completion: nil)
                         
@@ -149,9 +154,7 @@ class StartChildViewController: UIViewController {
             }, completion: nil)
         
         }, completion: nil)
-    
     }
-
     
     /*
     // MARK: - Navigation
