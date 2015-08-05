@@ -9,6 +9,23 @@
 import UIKit
 
 class EditActivityViewController: UIViewController {
+    
+    @IBOutlet var videoPlayerView: UIView!
+    @IBOutlet var nameExerciseTextField: UITextField!
+    @IBOutlet var weekLabel: UILabel!
+    @IBOutlet var weekStepper: UIStepper!
+    
+    @IBOutlet var dayLabel: UILabel!
+    @IBOutlet var dayStepper: UIStepper!
+    
+    
+    @IBOutlet weak var sundayButton: UIButton!
+    @IBOutlet weak var mondayButton: UIButton!
+    @IBOutlet weak var tuesdayButton: UIButton!
+    @IBOutlet weak var wednesdayButton: UIButton!
+    @IBOutlet weak var thursdayButton: UIButton!
+    @IBOutlet weak var fridayButton: UIButton!
+    @IBOutlet weak var saturdayButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +38,11 @@ class EditActivityViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveButton(sender: UIButton) {
+    }
 
+    @IBAction func cancelButton(sender: UIButton) {
+    }
     /*
     // MARK: - Navigation
 

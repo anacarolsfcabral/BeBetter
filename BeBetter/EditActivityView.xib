@@ -4,7 +4,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditActivityViewController" customModule="BeBetter" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditActivityViewController" customModule="BeBetter" customModuleProvider="target">
+            <connections>
+                <outlet property="dayLabel" destination="Gg1-aY-yEz" id="9MD-Y1-U6t"/>
+                <outlet property="dayStepper" destination="c0P-15-3pY" id="pgS-gs-GiO"/>
+                <outlet property="fridayButton" destination="a4M-yx-qCh" id="c0k-eL-DY3"/>
+                <outlet property="mondayButton" destination="Pup-2O-Ggy" id="cyi-nU-wgc"/>
+                <outlet property="nameExerciseTextField" destination="YzO-uA-KXd" id="mjc-dC-jEc"/>
+                <outlet property="saturdayButton" destination="F4a-EC-mMn" id="44o-lM-187"/>
+                <outlet property="sundayButton" destination="bd9-c4-1Rq" id="UTO-uw-4Uw"/>
+                <outlet property="thursdayButton" destination="xtp-We-gye" id="kL0-Bt-abq"/>
+                <outlet property="tuesdayButton" destination="wRy-qe-gkQ" id="3jI-zj-O3v"/>
+                <outlet property="videoPlayerView" destination="Vgl-Ms-NnJ" id="ATb-1i-XQx"/>
+                <outlet property="wednesdayButton" destination="X2g-Pa-n0C" id="J1n-PY-GaQ"/>
+                <outlet property="weekLabel" destination="Tdc-vD-neB" id="D8c-0W-YAc"/>
+                <outlet property="weekStepper" destination="7Tc-IT-s21" id="ggQ-li-tLD"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="uUi-MR-RBn">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -81,6 +97,9 @@
                         <color key="titleColor" red="0.16078431369999999" green="0.5450980392" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="dts-P4-X4Z"/>
+                    </connections>
                 </button>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7Tc-IT-s21">
                     <rect key="frame" x="138" y="432" width="94" height="29"/>
@@ -139,6 +158,9 @@
                         <color key="titleColor" red="0.16078431369999999" green="0.5450980392" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="cancelButton:" destination="-1" eventType="touchUpInside" id="NLP-jp-3kq"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily repetitions     " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7j-nq-0eA">
                     <rect key="frame" x="9" y="534" width="139" height="22"/>
