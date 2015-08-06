@@ -364,5 +364,26 @@ class DAO {
         savedInformation.setObject(dictActivity, forKey: "ACTIVITY_\(activity.id)")
         
     }
+    
+    func updateActivity(activity: Activity, frequency: FrequencyActivity, id: String)->Bool{
+
+        let newDict: NSMutableDictionary = ["name": "\(activity.name)","category":"\(activity.category)", "id":"\(id)","lastVideo":"\(activity.lastVideo)","note": "\(activity.note)","videoTutorial":"\(activity.videoTutorial)"]
+        savedInformation.setObject(newDict, forKey: "ACTIVITY_\(id)")
+
+        let newFreqDict: NSMutableDictionary = ["amountWeeks": frequency.amountWeeks,"daysWithAmountForDay": frequency.daysWithAmountForDay as NSMutableDictionary , "id":"\(id)", "selectedDaysCount": frequency.selectedDaysCount]
+
+        savedInformation.setObject(newFreqDict, forKey: "FREQUENCY_\(id)")
+
+        var daysWithAmountForDay: NSMutableDictionary = [ "1" : 0, "2" : 0, "3" : 0, "4" : 0, "5" : 0, "6" : 0, "7" : 0]
+        
+        let dictPerformance: NSMutableDictionary = ["numberWeek": 0, "daysWithAmountForDay": daysWithAmountForDay , "id":"\(activity.id)", "completed": 0]
+
+        savedInformation.setObject(dictPerformance, forKey: "PERFORMANCE_\(id)")
+        
+        savedInformation.synchronize()
+        
+        return true
+
+    }
 
 }

@@ -16,6 +16,7 @@
                 <outlet property="thursdayButton" destination="xtp-We-gye" id="kL0-Bt-abq"/>
                 <outlet property="tuesdayButton" destination="wRy-qe-gkQ" id="3jI-zj-O3v"/>
                 <outlet property="videoPlayerView" destination="Vgl-Ms-NnJ" id="ATb-1i-XQx"/>
+                <outlet property="view" destination="uUi-MR-RBn" id="T6G-s6-gmg"/>
                 <outlet property="wednesdayButton" destination="X2g-Pa-n0C" id="J1n-PY-GaQ"/>
                 <outlet property="weekLabel" destination="Tdc-vD-neB" id="D8c-0W-YAc"/>
                 <outlet property="weekStepper" destination="7Tc-IT-s21" id="ggQ-li-tLD"/>
@@ -45,6 +46,9 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="highlighted" image="M"/>
+                    <connections>
+                        <action selector="mondayButton:" destination="-1" eventType="touchUpInside" id="2ev-1M-PpE"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRy-qe-gkQ">
                     <rect key="frame" x="93" y="482" width="40" height="40"/>
@@ -55,6 +59,9 @@
                     <state key="normal" image="TD">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="tuesdayButton:" destination="-1" eventType="touchUpInside" id="dpn-T7-2B5"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-Pa-n0C">
                     <rect key="frame" x="138" y="482" width="40" height="40"/>
@@ -65,6 +72,9 @@
                     <state key="normal" title="4" image="WD">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="wednesdayButton:" destination="-1" eventType="touchUpInside" id="Pag-Op-Dgg"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4M-yx-qCh">
                     <rect key="frame" x="228" y="482" width="40" height="40"/>
@@ -75,6 +85,9 @@
                     <state key="normal" title="6" image="FD">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="fridayButton:" destination="-1" eventType="touchUpInside" id="qoT-qT-I5o"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4a-EC-mMn">
                     <rect key="frame" x="273" y="482" width="40" height="40"/>
@@ -85,6 +98,9 @@
                     <state key="normal" image="SD">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="saturdayButtonPressed:" destination="-1" eventType="touchUpInside" id="2mC-2w-GvV"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUi-6P-Uhj">
                     <rect key="frame" x="528" y="19" width="44" height="44"/>
@@ -104,6 +120,9 @@
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7Tc-IT-s21">
                     <rect key="frame" x="138" y="432" width="94" height="29"/>
                     <color key="tintColor" red="0.16078431369999999" green="0.5450980392" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="weekStepper:" destination="-1" eventType="valueChanged" id="IQq-0b-FqX"/>
+                    </connections>
                 </stepper>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-vD-neB">
                     <rect key="frame" x="81" y="435" width="46" height="25"/>
@@ -127,6 +146,9 @@
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="c0P-15-3pY">
                     <rect key="frame" x="185" y="531" width="94" height="29"/>
                     <color key="tintColor" red="0.16078431369999999" green="0.5450980392" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="dayStepper:" destination="-1" eventType="valueChanged" id="u4T-xc-N6W"/>
+                    </connections>
                 </stepper>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgl-Ms-NnJ">
                     <rect key="frame" x="5" y="85" width="590" height="250"/>
@@ -177,6 +199,9 @@
                     <state key="normal" title="1" image="SD">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="sundayButton:" destination="-1" eventType="touchUpInside" id="Bcw-Jj-Nq2"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtp-We-gye">
                     <rect key="frame" x="183" y="482" width="40" height="40"/>
@@ -187,6 +212,9 @@
                     <state key="normal" title="5" image="TD">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="thursdayButton:" destination="-1" eventType="touchUpInside" id="SqK-iC-hdk"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
