@@ -14,7 +14,10 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     @IBOutlet var videoTutorialView: UIView!
     @IBOutlet var recordVideoView: UIView!
     @IBAction func backButton(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        //self.dismissViewControllerAnimated(true, completion: nil)
+        let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
+        //self.presentViewController(nextWindow, animated: true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
 
@@ -289,11 +292,13 @@ class ActivityViewController: UIViewController, PBJVideoPlayerControllerDelegate
     }
     
     
-    @IBAction func goToPerformance(sender: AnyObject)
-    {
-        let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
-        self.presentViewController(nextWindow, animated: true, completion: nil)
-    }
+//    @IBAction func goToPerformance(sender: AnyObject)
+//    {
+//        let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
+//        //self.presentViewController(nextWindow, animated: true, completion: nil)
+//        self.navigationController?.popViewControllerAnimated(true)
+//
+//    }
     
     @IBAction func moveVideos(sender: UIPanGestureRecognizer) {
         

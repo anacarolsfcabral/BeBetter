@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -125,16 +125,6 @@
                                 <action selector="changeMode:" destination="-1" eventType="touchUpInside" id="3ut-mS-3ka"/>
                             </connections>
                         </button>
-                        <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnF-PK-pxn">
-                            <rect key="frame" x="502" y="7" width="40" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="40" id="E4d-Tc-MsY"/>
-                                <constraint firstAttribute="height" constant="40" id="sxw-TX-FIZ"/>
-                            </constraints>
-                            <state key="normal" title="Button" image="notification">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
                         <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBn-AA-hFK" userLabel="NotificationButton">
                             <rect key="frame" x="548" y="7" width="40" height="40"/>
                             <constraints>
@@ -154,7 +144,6 @@
                         <constraint firstItem="gb5-hU-nUp" firstAttribute="leading" secondItem="YVF-3L-0zs" secondAttribute="trailing" constant="6" id="1HS-kO-PR4"/>
                         <constraint firstAttribute="height" constant="54" id="2gF-Fg-b2q"/>
                         <constraint firstAttribute="centerY" secondItem="uBn-AA-hFK" secondAttribute="centerY" id="4oh-hd-WR8"/>
-                        <constraint firstItem="uBn-AA-hFK" firstAttribute="leading" secondItem="CnF-PK-pxn" secondAttribute="trailing" constant="6" id="AID-Ki-af8"/>
                         <constraint firstItem="gb5-hU-nUp" firstAttribute="leading" secondItem="YVF-3L-0zs" secondAttribute="trailing" constant="6" id="BgO-T9-DgF"/>
                         <constraint firstItem="YVF-3L-0zs" firstAttribute="leading" secondItem="c9i-qG-5hf" secondAttribute="leading" constant="12" id="C0m-OH-e41"/>
                         <constraint firstAttribute="centerY" secondItem="gb5-hU-nUp" secondAttribute="centerY" constant="-4" id="Fn7-XX-o4L"/>
@@ -163,7 +152,6 @@
                         <constraint firstAttribute="centerY" secondItem="gb5-hU-nUp" secondAttribute="centerY" id="WAW-kR-gl3"/>
                         <constraint firstAttribute="trailing" secondItem="uBn-AA-hFK" secondAttribute="trailing" constant="12" id="YiF-ki-vo2"/>
                         <constraint firstAttribute="centerY" secondItem="KQ7-Zh-qv2" secondAttribute="centerY" id="ass-xO-guE"/>
-                        <constraint firstAttribute="centerY" secondItem="CnF-PK-pxn" secondAttribute="centerY" id="nBT-O1-32I"/>
                         <constraint firstAttribute="centerY" secondItem="KQ7-Zh-qv2" secondAttribute="centerY" constant="-4.5" id="tqp-CA-noj"/>
                         <constraint firstAttribute="centerY" secondItem="YVF-3L-0zs" secondAttribute="centerY" id="y9v-o8-1uL"/>
                     </constraints>
@@ -235,7 +223,6 @@
         <image name="finishRecord" width="150" height="150"/>
         <image name="notRecording" width="150" height="150"/>
         <image name="notes" width="150" height="150"/>
-        <image name="notification" width="150" height="150"/>
         <image name="seeActivity" width="150" height="150"/>
     </resources>
 </document>
