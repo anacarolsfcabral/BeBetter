@@ -177,6 +177,9 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         }
 
         let edit = UITableViewRowAction(style: .Normal, title: "Edit") { action, index in
+            DAO.sharedInstance.setcurrentActivity(self.arrayActivity[indexPath.row])
+            let nextWindow = EditActivityViewController(nibName:"EditActivityView", bundle: nil)
+            self.presentViewController(nextWindow, animated: true, completion: nil)
             println("edit")
         }
         edit.backgroundColor = UIColor(red: 51/255, green: 151/255, blue: 150/255, alpha: 1)
