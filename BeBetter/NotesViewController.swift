@@ -9,7 +9,7 @@
 import UIKit
 
 class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var notesTable: UITableView!
     //var currentActivity: Activity = DAO.sharedInstance.getCurrentAcivity()
     var arrayActivity = [Activity]()
@@ -26,6 +26,8 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         notesTable.rowHeight = UITableViewAutomaticDimension
         notesTable.estimatedRowHeight = 160.0
         
+//        var nav = UINavigationController(nibName: "nav", bundle: nil)
+//        nav.navigationBar.hidden = true
         
         // Do any additional setup after loading the view.
     }
@@ -36,7 +38,10 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func backToPerformance(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+//        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        self.navigationController?.popViewControllerAnimated(true)
+
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

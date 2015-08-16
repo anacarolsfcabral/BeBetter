@@ -136,7 +136,7 @@ class StartChildViewController: UIViewController {
                             
                             self.textView.alpha = 1.0
                             
-                            UIView.animateWithDuration(4.5, delay: 5.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+                            UIView.animateWithDuration(4.5, delay: 2.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
                                 
                                     if self.index == 1
                                     {

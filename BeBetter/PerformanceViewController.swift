@@ -30,7 +30,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     @IBAction func addExercise(sender: UIButton) {
         
         let nextWindow = RegisterVideoViewController(nibName:"RegisterVideoView", bundle: nil)
-        self.presentViewController(nextWindow, animated: true, completion: nil)
+//        self.presentViewController(nextWindow, animated: true, completion: nil)
+        self.navigationController?.pushViewController(nextWindow, animated: true)
     }
     
     @IBAction func goToNotes(sender: UIButton) {
@@ -40,7 +41,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
             self.presentViewController(message, animated: true, completion: nil)
         }else{
             let nextWindow = NotesViewController(nibName:"NotesView", bundle: nil)
-            self.presentViewController(nextWindow, animated: true, completion: nil)
+//            self.presentViewController(nextWindow, animated: true, completion: nil)
+            self.navigationController?.pushViewController(nextWindow, animated: true)
         }
     }
     
