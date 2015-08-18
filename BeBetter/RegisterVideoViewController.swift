@@ -237,7 +237,8 @@ class RegisterVideoViewController: UIViewController,UIImagePickerControllerDeleg
             
             if isSaved == true {
                 let nextWindow = PerformanceViewController(nibName:"PerformanceView", bundle: nil)
-                self.presentViewController(nextWindow, animated: true, completion: nil)
+                self.navigationController?.popViewControllerAnimated(true)
+//                self.presentViewController(nextWindow, animated: true, completion: nil)
 //                NSNotificationCenter.defaultCenter().postNotificationName("insertCell", object: nil)
             }else{
                 var alert = UIAlertController(title: "Ops", message: "An error occurred while saving your activity", preferredStyle: UIAlertControllerStyle.Alert)

@@ -46,13 +46,20 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewWillAppear(animated: Bool)
+    {
         arrayActivity = DAO.sharedInstance.getActivitiesForCategory()
         arrayFrequency = DAO.sharedInstance.getFrequency(arrayActivity)
         arrayPerformance = DAO.sharedInstance.getPerformance(arrayActivity)
         arrayActivityNote = DAO.sharedInstance.getActivitiesThatHaveNote()
+        
+        self.performanceTable.reloadData()
+
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         
         performanceTable.delegate = self
         performanceTable.dataSource = self
@@ -82,7 +89,16 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         DAO.sharedInstance.setcurrentActivity(arrayActivity[indexPath.row])
         let nextWindow = ActivityViewController(nibName:"ActivityView", bundle: nil)
-        self.navigationController?.pushViewController(nextWindow, animated: true)
+        
+        if(self.navigationController != nil)
+        {
+            self.navigationController?.pushViewController(nextWindow, animated: true)
+        }
+        else
+        {
+            println("deu merda")
+        }
+        
 //        self.presentViewController(nextWindow, animated: true, completion: nil)
     }
 
@@ -181,7 +197,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate , UITable
         let edit = UITableViewRowAction(style: .Normal, title: "Edit") { action, index in
             DAO.sharedInstance.setcurrentActivity(self.arrayActivity[indexPath.row])
             let nextWindow = EditActivityViewController(nibName:"EditActivityView", bundle: nil)
-            self.presentViewController(nextWindow, animated: true, completion: nil)
+//            self.presentViewController(nextWindow, animated: true, completion: nil)
+            self.navigationController?.pushViewController(nextWindow, animated: true)
             println("edit")
         }
         edit.backgroundColor = UIColor(red: 51/255, green: 151/255, blue: 150/255, alpha: 1)

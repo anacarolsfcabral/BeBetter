@@ -80,7 +80,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else
         {
             defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
-            self.window?.rootViewController = StartViewController(nibName:"StartView", bundle:NSBundle.mainBundle())
+            let start = StartViewController(nibName:"StartView", bundle:NSBundle.mainBundle())
+            let nav = UINavigationController(nibName: "nav", bundle: nil)
+            nav.navigationBar.hidden = true
+            nav.viewControllers = [start]
+            self.window?.rootViewController = nav
         }
         self.window?.makeKeyAndVisible()
         
