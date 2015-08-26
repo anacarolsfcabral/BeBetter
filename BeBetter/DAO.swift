@@ -297,8 +297,8 @@ class DAO {
         dateComp.year = compYear.year
         dateComp.month = compMonth.month
         dateComp.day = compDay.day
-        dateComp.hour = 9
-        dateComp.minute = 25
+        dateComp.hour = 10
+        dateComp.minute = 43
         dateComp.timeZone = NSTimeZone.systemTimeZone()
         
         
